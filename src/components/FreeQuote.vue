@@ -90,8 +90,7 @@
 												<v-card>
 													<v-card-title>
 														<span class="headline">{{ formTitle }}</span>
-													</v-card-title>
-// https://www.raymondcamden.com/2017/12/05/building-related-selects-with-vuejs
+													</v-card-title>// https://www.raymondcamden.com/2017/12/05/building-related-selects-with-vuejs
 													<v-card-text>
 														<v-container>
 															<v-row>
@@ -130,8 +129,8 @@
 										</v-toolbar>
 									</template>
 									<template v-slot:item.action="{ item }">
-										<v-icon small class="mr-2" @click="editItem(item)">edit</v-icon>
-										<v-icon small @click="deleteItem(item)">delete</v-icon>
+										<v-icon small class="mr-2" @click="editItem(item)">Edit</v-icon>
+										<v-icon small @click="deleteItem(item)">Delete</v-icon>
 									</template>
 									<template v-slot:no-data>
 										<v-btn color="primary" @click="initialize">Reset</v-btn>
