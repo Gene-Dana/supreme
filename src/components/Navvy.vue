@@ -18,7 +18,7 @@
 					<v-card-text
 						class="black--text font-weight-black ma-0 py-0 px-0"
 						:class="fontSize"
-					>CALL NOW 305-901-9981</v-card-text>
+					>CALL NOW 954-947-3700</v-card-text>
 				</v-card>
 			</v-flex>
 		</v-layout>

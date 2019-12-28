@@ -7,17 +7,15 @@
 			</v-card>
 
 			<v-card flat class="transparent">
-				<v-card-text class="pa-2">305-902-9982</v-card-text>
+				<v-card-text class="pa-2">(954) 947-3700</v-card-text>
 			</v-card>
 
 			<v-spacer />
 
-			<v-card flat tile class="transparent">
-				<v-icon>email</v-icon>
-			</v-card>
+		
 
 			<v-card flat class="transparent pa-0">
-				<v-card-text class="pa-2">someone@supreme.com</v-card-text>
+				<v-card-text class="pa-2">Dade - Broward - Palm Beach</v-card-text>
 			</v-card>
 		</v-container>
 	</v-app-bar>
