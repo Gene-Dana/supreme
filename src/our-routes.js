@@ -1,7 +1,7 @@
 import Home from './components/Home.vue'
 import About from './components/About.vue';
 import FreeQuote from './components/FreeQuote'
-import Products from '/components/Products'
+import Products from './components/Products'
 
 
 export default [

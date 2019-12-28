@@ -35,7 +35,7 @@
 
 						<v-flex xs6 sm3 md3 lg3 xl3>
 							<v-card flat shaped class="text-center">
-								<router-link to="/about" class="black--text title" style="text-decoration: none;">Products</router-link>
+								<router-link to="/products" class="black--text title" style="text-decoration: none;">Products</router-link>
 							</v-card>
 						</v-flex>
 
