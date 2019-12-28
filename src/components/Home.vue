@@ -24,7 +24,7 @@
 
 								<v-card flat color="transparent" class="ma-0">
 									<v-card-title
-										class="headline font-weight-black pa-2 justify-center text-center"
+										class="headline font-weight-black pa-2 justify-center text-center fix"
 									>Affordable. Reliable. Hurricane Protection.</v-card-title>
 								</v-card>
 
