@@ -57,7 +57,7 @@
 										<v-card-title
 											class="justify-center title font-weight-black pt-0"
 											color="light blue darken-4"
-										>(305) 901-9981</v-card-title>
+										>(954) 947-3700</v-card-title>
 									</v-card>
 								</v-card>
 							</v-flex>
