@@ -95,7 +95,7 @@ export default {
 
 <style scoped>
 .cellphone {
-	font-size: 2em;
+	font-size: 1.8em;
 }
 
 .tool {

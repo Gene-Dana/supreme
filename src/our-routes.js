@@ -1,6 +1,7 @@
 import Home from './components/Home.vue'
 import About from './components/About.vue';
 import FreeQuote from './components/FreeQuote'
+import Products from '/components/Products'
 
 
 export default [
@@ -20,5 +21,9 @@ export default [
   {
     path: '/freequote',
     component: FreeQuote
+  },
+  {
+    path: '/products',
+    component: Products
   }
 ];

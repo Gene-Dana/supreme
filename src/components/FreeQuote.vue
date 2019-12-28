@@ -1,16 +1,20 @@
 <template>
-	<v-container min-width="100%" max-width="100%" class="pa-0" fluid>
+	<v-container min-width="100%" max-width="100%" class="pa-0 ma-0" fluid>
 		<v-layout column>
 			<v-flex>
-				<v-card class="pa-3 ma-0" color="grey lighten-3" id="dashboard">
+				<v-card class="pa-0 ma-0" color="grey lighten-3" id="dashboard">
 					<v-card class="pa-3 ma-0">
+						<v-snackbar v-model="snackbar2" absolute top right color="success">
+							<span>Message sent!</span>
+							<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+						</v-snackbar>
 						<v-layout wrap>
 							<v-flex xs12 sm8 md8 lg8 xl8>
 								<v-card flat color="transparent" class="ma-0">
 									<p class="text-center display-1 font-weight-black">Free Quote</p>
 									<v-subheader>Steps to get a quote</v-subheader>
 									<v-list flat subheader three-line>
-										<v-list-item-group v-model="settings" multiple active-class>
+										<v-list-item-group multiple active-class>
 											<v-list-item>
 												<template v-slot:default="{ active }">
 													<v-list-item-action>
@@ -55,13 +59,16 @@
 								</v-card>
 
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
-									<v-img
-										src="../assets/window.jpg"
-										lazy-src="https://picsum.photos/id/11/10/6"
-										class="grey lighten-2"
-										max-width="500"
-										max-height="300"
-									></v-img>
+									<v-flex class="d-flex justify-center">
+										<v-img
+											src="../assets/window.jpg"
+											lazy-src="https://picsum.photos/id/11/10/6"
+											class="grey lighten-2"
+											max-width="500"
+											max-height="300"
+										></v-img>
+									</v-flex>
+
 									<p class="red--text headline text-center">Important Note</p>
 									<p>
 										When measuring the window or door for a hurricane shutter, make sure that you are measuring
@@ -69,76 +76,108 @@
 										measure from the inner walls of the inset.
 									</p>
 								</v-card>
+
+								<!------------------------=--- Shutter Form ------------------------------------------------->
 								<p class="text-center display-1 font-weight-black">Shutter Form</p>
-								<v-data-table
-									:headers="headers"
-									:items="shutters"
-									disable-sort="true"
-									hide-default-footer
-									disable-pagination="true"
-									class="elevation-1"
-								>
-									<template v-slot:top>
-										<v-toolbar flat color="white">
-											<v-toolbar-title>Quote Calculator</v-toolbar-title>
-											<v-divider class="mx-4" inset vertical></v-divider>
-											<v-spacer></v-spacer>
-											<v-dialog v-model="dialog" max-width="500px">
-												<template v-slot:activator="{ on }">
-													<v-btn color="primary" dark class="mb-2" v-on="on">New Shutter</v-btn>
-												</template>
-												<v-card>
-													<v-card-title>
-														<span class="headline">{{ formTitle }}</span>
-													</v-card-title>// https://www.raymondcamden.com/2017/12/05/building-related-selects-with-vuejs
-													<v-card-text>
-														<v-container>
-															<v-row>
-																<v-col cols="12" sm="12" md="12">
-																	<v-text-field v-model="editedItem.name" label="Opening Name"></v-text-field>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-text-field v-model="editedItem.width" label="Width"></v-text-field>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-text-field v-model="editedItem.height" label="Height"></v-text-field>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-select :items="types" v-model="editedItem.type" label="Shutter Type"></v-select>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-text-field v-model="editedItem.header" label="header"></v-text-field>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-text-field v-model="editedItem.footer" label="footer"></v-text-field>
-																</v-col>
-																<v-col cols="12" sm="6" md="6">
-																	<v-text-field v-model="editedItem.color" label="Color"></v-text-field>
-																</v-col>
-															</v-row>
-														</v-container>
-													</v-card-text>
+								<v-form ref="quoteForm" @submit.prevent="submit">
+									<v-card class="pa-3">
+										<v-data-table
+											:headers="headers"
+											:items="shutters"
+											disable-sort
+											hide-default-footer
+											disable-pagination
+											class="elevation-1"
+										>
+											<template v-slot:top>
+												<v-toolbar flat color="white">
+													<v-toolbar-title>Quote Calculator</v-toolbar-title>
+													<v-divider class="mx-4" inset vertical></v-divider>
+													<v-spacer></v-spacer>
+													<v-dialog v-model="dialog" max-width="500px">
+														<template v-slot:activator="{ on }">
+															<v-btn color="primary" dark class="mb-2" v-on="on">New Shutter</v-btn>
+														</template>
 
-													<v-card-actions>
-														<v-spacer></v-spacer>
-														<v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-														<v-btn color="blue darken-1" text @click="save">Save</v-btn>
-													</v-card-actions>
-												</v-card>
-											</v-dialog>
-										</v-toolbar>
-									</template>
-									<template v-slot:item.action="{ item }">
-										<v-icon small class="mr-2" @click="editItem(item)">edit</v-icon>
-										<v-icon small @click="deleteItem(item)">delete</v-icon>
-									</template>
-									<template v-slot:no-data>
-										<v-btn color="primary" @click="initialize">Reset</v-btn>
-									</template>
-								</v-data-table>
+														<v-card>
+															<v-card-title>
+																<span class="headline">{{ formTitle }}</span>
+															</v-card-title>
+															<v-card-text>
+																<v-container>
+																	<v-row>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.name" label="Opening Name"></v-text-field>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.width" label="Width"></v-text-field>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.height" label="Height"></v-text-field>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-select :items="types" v-model="editedItem.type" label="Shutter Type"></v-select>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.header" label="header"></v-text-field>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.footer" label="footer"></v-text-field>
+																		</v-col>
+																		<v-col cols="12" sm="12" md="12">
+																			<v-text-field v-model="editedItem.color" label="Color"></v-text-field>
+																		</v-col>
+																	</v-row>
+																</v-container>
+															</v-card-text>
+
+															<v-card-actions>
+																<v-spacer></v-spacer>
+																<v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
+																<v-btn color="blue darken-1" text @click="save">Save</v-btn>
+															</v-card-actions>
+														</v-card>
+													</v-dialog>
+												</v-toolbar>
+											</template>
+											<template v-slot:item.action="{ item }">
+												<v-icon small class="mr-2" @click="editItem(item)">edit</v-icon>
+												<v-icon small @click="deleteItem(item)">delete</v-icon>
+											</template>
+											<template v-slot:no-data>
+												<v-btn color="primary" @click="initialize">Reset</v-btn>
+											</template>
+										</v-data-table>
+										<v-btn class="ma-3">Submit Form</v-btn>
+									</v-card>
+								</v-form>
 							</v-flex>
-
+							<!---------------------------- Side Panel ------------------------------------------------->
 							<v-flex xs12 sm4 md4 lg4 xl4>
+								<v-card
+									flat
+									color="red darken-4"
+									max-width="40em"
+									max-height="15em"
+									class="mx-auto px-3 mt-7 text-center"
+								>
+									<v-card-title class="justify-center title white--text">OUR PRODUCTS!</v-card-title>
+								</v-card>
+								<router-link to="/about">
+									<v-card class="px-3 py-4" flat>
+										<v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
+									</v-card>
+								</router-link>
+								<router-link to="/about">
+									<v-card class="px-3 py-4" flat>
+										<v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
+									</v-card>
+								</router-link>
+								<router-link to="/about">
+									<v-card class="px-3 py-4" flat>
+										<v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
+									</v-card>
+								</router-link>
 								<v-card
 									flat
 									color="red darken-4"
@@ -156,7 +195,7 @@
 									<v-form ref="form" @submit.prevent="submit">
 										<v-text-field v-model="form.name" label="Name" required></v-text-field>
 
-										<v-text-field v-model="form.email" label="E-mail">required</v-text-field>
+										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
 
 										<v-text-field v-model="form.number" label="Phone" required></v-text-field>
 
@@ -261,6 +300,12 @@ export default {
 			number: "",
 			message: ""
 		});
+		const quoteForm = Object.freeze({
+			name: "",
+			email: "",
+			number: "",
+			message: ""
+		});
 
 		return {
 			types: [
@@ -317,10 +362,19 @@ export default {
 					val => (val || "").length > 0 || "This field is required"
 				]
 			},
-
-			conditions: false,
+			//Data for the Contact Us form
+			qform: Object.assign({}, quoteForm),
+			rules2: {
+				email: [
+					val => (val || "").length > 0 || "This field is required"
+				],
+				name: [
+					val => (val || "").length > 0 || "This field is required"
+				],
+			},
+			
 			snackbar: false,
-			terms: false,
+			snackbar2: false,
 			defaultForm
 		};
 	}

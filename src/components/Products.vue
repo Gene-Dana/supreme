@@ -135,7 +135,8 @@ const slide3 = require("../assets/plasticPanel.jpg");
 const slide4 = require("../assets/roll.jpg");
 
 export default {
-	name: "Home",
+	name: "Products",
+	
 	components: {
 		VideoPlayer
 	},
