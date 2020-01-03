@@ -8,7 +8,7 @@
 						class="shrink mr-2"
 						contain
 						src="../assets/logo.png"
-						transition="scale-transition"
+						
 					/>
 				</v-card>
 			</v-flex>
@@ -25,33 +25,42 @@
 
 		<v-layout align-center>
 			<v-flex>
-				<v-toolbar style="background: rgb(255, 79, 79);" width="100%" :height= navSize2 >
+				<v-toolbar class="red" width="100%" :height="navSize2">
 					<v-container fill-height fluid :class="navSize">
 						<v-flex xs6 sm3 md3 lg3 xl3>
 							<v-card flat light shaped class="text-center">
-								<router-link to="/home" class="black--text title" style="text-decoration: none;">Home</router-link>
+								<v-btn text block to="/home">Home</v-btn>
+							</v-card>
+						</v-flex>
+						<v-flex xs6 sm3 md3 lg3 xl3>
+							<v-card flat shaped class="text-center">
+								<v-btn text block to="/about us">About Us</v-btn>
+							</v-card>
+						</v-flex>
+						<v-flex xs6 sm3 md3 lg3 xl3>
+							<v-card flat shaped class="text-center">
+								<v-menu offset-y>
+									<template v-slot:activator="{ on }">
+										<v-btn v-on="on" text block>Products</v-btn>
+									</template>
+									<v-list>
+										<v-list-item  to="/accordion">
+											<v-list-item-title>Accordion</v-list-item-title>
+										</v-list-item>
+										<v-list-item  to="/panel">
+											<v-list-item-title>Panels</v-list-item-title>
+										</v-list-item>
+										<v-list-item  to="/rolldown">
+											<v-list-item-title>Rolldown</v-list-item-title>
+										</v-list-item>
+									</v-list>
+								</v-menu>
 							</v-card>
 						</v-flex>
 
 						<v-flex xs6 sm3 md3 lg3 xl3>
 							<v-card flat shaped class="text-center">
-								<router-link to="/products" class="black--text title" style="text-decoration: none;">Products</router-link>
-							</v-card>
-						</v-flex>
-
-						<v-flex xs6 sm3 md3 lg3 xl3>
-							<v-card flat shaped class="text-center">
-								<router-link
-									to="/freequote"
-									class="black--text title "
-									style="text-decoration: none;"
-								>Free Quote</router-link>
-							</v-card>
-						</v-flex>
-
-						<v-flex xs6 sm3 md3 lg3 xl3>
-							<v-card flat shaped class="text-center">
-								<router-link to="/home" class="black--text title" style="text-decoration: none;">Contact</router-link>
+								<v-btn text block to="/free quote">Free Quote</v-btn>
 							</v-card>
 						</v-flex>
 					</v-container>
@@ -64,6 +73,14 @@
 <script>
 export default {
 	name: "Navvy",
+	data: () => ({
+		items: [
+			{ title: "Click Me" },
+			{ title: "Click Me" },
+			{ title: "Click Me" },
+			{ title: "Click Me 2" }
+		]
+	}),
 	computed: {
 		fontSize() {
 			switch (this.$vuetify.breakpoint.name) {
@@ -86,7 +103,7 @@ export default {
 				case "xs":
 					return "90%";
 				default:
-					return "" ;
+					return "";
 			}
 		}
 	}

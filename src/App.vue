@@ -5,19 +5,22 @@
 			<Navvy />
 			<router-view></router-view>
 		</v-content>
+		<Footer />
 	</v-app>
 </template>
 
 <script>
 import AppBar from "./components/AppBar";
 import Navvy from "./components/Navvy";
+import Footer from "./components/Footer"
 
 export default {
 	name: "App",
 
 	components: {
 		AppBar,
-		Navvy
+		Navvy,
+		Footer
 	},
 
 	computed: {

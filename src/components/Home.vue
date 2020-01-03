@@ -51,21 +51,12 @@
 										get a free online estimate today!
 									</p>
 								</v-card>
-								<v-card flat outlined max-height="15em" class="ma-auto pa-3 mb-4" color="grey lighten-4">
-									<v-card max-height="15em" class="mx-auto px-3 text-center" color="blue lighten-3">
-										<v-card-title class="justify-center headline">Have Questions?</v-card-title>
-										<v-card-title
-											class="justify-center title font-weight-black pt-0"
-											color="light blue darken-4"
-										>(954) 947-3700</v-card-title>
-									</v-card>
-								</v-card>
 							</v-flex>
-
+							<!--------------------------- Begin Side Panel  --------------------------------->
 							<v-flex xs12 sm4 md4 lg4 xl4>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red "
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -89,7 +80,7 @@
 								</router-link>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red "
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -119,6 +110,72 @@
 
 										<v-btn :disabled="!formIsValid" text color="success" class="mr-3" type="submit">Send</v-btn>
 									</v-form>
+								</v-card>
+							</v-flex>
+							<v-flex xs12 sm12 md12 lg12 xl2>
+								<!------------------------------- Begin Our Products section ------------------------------------------->
+								<v-divider class="mt-4"></v-divider>
+								<v-layout justify-center align-center>
+									<v-card flat class="mt-1">
+										<v-card-text class="display-1 font-weight-black black--text">Our Products</v-card-text>
+									</v-card>
+								</v-layout>
+								<v-divider></v-divider>
+								<v-layout justify-center align-center row class="ma-4 mb-4">
+									<v-card class max-width="300">
+										<v-img class="white--text align-end" height="200px" src="../assets/accordion4.jpg">
+											<v-card-title>Accordion Shutters</v-card-title>
+										</v-img>
+
+										<v-card-actions>
+											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+										</v-card-actions>
+									</v-card>
+									<v-card class max-width="300">
+										<v-img class="black--text align-end" height="200px" src="../assets/steelPanel.jpg">
+											<v-card-title>Steel Panel Shutters</v-card-title>
+										</v-img>
+
+										<v-card-actions>
+											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+										</v-card-actions>
+									</v-card>
+									<v-card class max-width="300">
+										<v-img class="white--text align-end" height="200px" src="../assets/rolling.jpg">
+											<v-card-title>Rolling Shutters</v-card-title>
+										</v-img>
+
+										<v-card-actions>
+											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+										</v-card-actions>
+									</v-card>
+								</v-layout>
+								<v-divider></v-divider>
+								<!--------------------- Begin Guarantee Section --------------------------------->
+								<v-card class="mt-4">
+									<v-card-title class="red">
+										<v-icon large class="ma-0 white--text">mdi-check-decagram</v-icon>
+										<span class="title white--text font-weight-light ml-2">Price Match Guarantee</span>
+									</v-card-title>
+
+									<v-card-text class="pa-2">
+										We check thousands of competitor prices every day to make sure
+										that you pay less for your shutters. You won't find a shutter
+										cheaper. But if you do, we'll refund you the difference. Thats
+										our Price Match Guarantee and it's just one of the ways we help
+										deliver the best products!
+									</v-card-text>
+
+									<v-card-text
+										class="pa-2 display-1 red--text font-weight-black"
+									>With our Price Match Guarantee, you can:</v-card-text>
+									<v-card-text>
+										<ul>
+											<li>Be confident you always have the lowest price</li>
+											<li>Save time searching for cheaper hurricane shutters</li>
+											<li>Get the lowest prices on over 15 different types of shutters and colors</li>
+										</ul>
+									</v-card-text>
 								</v-card>
 							</v-flex>
 						</v-layout>

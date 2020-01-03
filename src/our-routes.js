@@ -19,7 +19,7 @@ export default [
     component: About
   },
   {
-    path: '/freequote',
+    path: '/free quote',
     component: FreeQuote
   },
   {
