@@ -67,16 +67,18 @@ export default {
 			/* eslint no-console: */
 			console.log(this.form2);
 
+			const axiosConfig = {
+				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			};
 			axios
-				.post("/", {
-					headers: {
-						"Content-Type": "application/x-www-form-urlencoded"
-					},
-					body: this.encode({
+				.post(
+					"/",
+					this.encode({
 						"form-name": "ask-question",
-						...this.form2
-					})
-				})
+						...this.form
+					}),
+					axiosConfig
+				)
 				.then(() => {
 					this.$router.push("thanks");
 				})
