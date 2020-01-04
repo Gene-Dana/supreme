@@ -1,18 +1,34 @@
 <template>
 	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 		<input type="hidden" name="form-name" value="ask-question" />
-		<label v-for="(panelist, index) in panelists" :key="index">
-			<input
-				type="radio"
-				name="panelist"
-				@input="ev => form.askPerson = ev.target.value"
-				:value="panelist"
-				:checked="form.askPerson === panelist"
-			/>
-			<span>{{ panelist }}</span>
-		</label>
-		...
-		<button>Submit</button>
+		<v-card color="transparent" class="pa-5">
+			<v-snackbar v-model="snackbar" absolute top right color="success">
+				<span>Message sent!</span>
+				<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+			</v-snackbar>
+			<v-text-field v-model="form2.name" label="Name" required></v-text-field>
+
+			<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
+
+			<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
+
+			<v-textarea v-model="form2.message" color="teal">
+				<template v-slot:label>
+					<div>
+						Message
+						<small>(optional)</small>
+					</div>
+				</template>
+			</v-textarea>
+			<v-btn
+				:disabled="!formIsValid2"
+				text
+				color="success"
+				class="mr-3"
+				type="submit"
+				
+			>Send</v-btn>
+		</v-card>
 	</form>
 </template>
 
@@ -23,17 +39,22 @@ export default {
 	name: "QAForm",
 	data() {
 		return {
-			form: {
-				askPerson: ""
+			form2: {
+				name: "",
+				email: "",
+				number: "",
+				message: ""
 			},
-			panelists: ["Evan You", "Chris Fritz", "yo momma"],
-			currentPanelist: 'Evan You'
+			snackbar: false,
+
 		};
 	},
+	computed: {
+		formIsValid2() {
+			return this.form2.name && this.form2.email && this.form2.number;
+		}
+	},
 	methods: {
-		updatePanelist(ev) {
-			this.currentPanelist = ev.target.value;
-		},
 		encode(data) {
 			return Object.keys(data)
 				.map(
