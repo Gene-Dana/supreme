@@ -108,17 +108,17 @@
 								>
 									<v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
 								</v-card>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
 									</v-card>
 								</router-link>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
 									</v-card>
 								</router-link>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
 									</v-card>

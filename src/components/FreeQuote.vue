@@ -12,7 +12,7 @@
 							<v-flex xs12 sm8 md8 lg8 xl8>
 								<v-card flat color="transparent" class="ma-0">
 									<p class="text-center display-1 font-weight-black">Free Quote</p>
-									<v-subheader>Steps to get a quote</v-subheader>
+									<v-subheader>Steps to get a free quote</v-subheader>
 									<v-list flat subheader three-line>
 										<v-list-item-group multiple active-class>
 											<v-list-item>
@@ -23,7 +23,7 @@
 
 													<v-list-item-content>
 														<v-list-item-title>Measure</v-list-item-title>
-														<v-list-item-subtitle>All doors and windows, starting from front door and clockwise around the house</v-list-item-subtitle>
+														<v-list-item-subtitle>Follow directions from <a to="/how to measure">'How To Measure'</a></v-list-item-subtitle>
 													</v-list-item-content>
 												</template>
 											</v-list-item>
@@ -58,26 +58,18 @@
 								</v-card>
 
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
-									<v-flex class="d-flex justify-center">
-										<v-img
-											src="../assets/window.jpg"
-											lazy-src="https://picsum.photos/id/11/10/6"
-											class="grey lighten-2"
-											max-width="500"
-											max-height="300"
-										></v-img>
-									</v-flex>
+								
 
 									<p class="red--text headline text-center">Important Note</p>
 									<p>
 										When measuring the window or door for a hurricane shutter, make sure that you are measuring
 										from the inner walls or the outermost edge. For example, if the door is inset into the wall,
-										measure from the inner walls of the inset.
+										measure from the inner walls of the inset. 
 									</p>
 								</v-card>
 
 								<!------------------------=--- Shutter Form ------------------------------------------------->
-								<p class="text-center display-1 font-weight-black">Shutter Form</p>
+								<p class="text-center display-1 font-weight-black">Free Quote Form</p>
 								<v-form ref="quoteForm" @submit.prevent="submit">
 									<v-card class="pa-3">
 										<v-data-table
@@ -117,12 +109,7 @@
 																		<v-col cols="12" sm="12" md="12">
 																			<v-select :items="types" v-model="editedItem.type" label="Shutter Type"></v-select>
 																		</v-col>
-																		<v-col cols="12" sm="12" md="12">
-																			<v-text-field v-model="editedItem.header" label="header"></v-text-field>
-																		</v-col>
-																		<v-col cols="12" sm="12" md="12">
-																			<v-text-field v-model="editedItem.footer" label="footer"></v-text-field>
-																		</v-col>
+																		
 																		<v-col cols="12" sm="12" md="12">
 																			<v-text-field v-model="editedItem.color" label="Color"></v-text-field>
 																		</v-col>
@@ -147,39 +134,32 @@
 												<v-btn color="primary" @click="initialize">Reset</v-btn>
 											</template>
 										</v-data-table>
-										<v-btn class="ma-3">Submit Form</v-btn>
+
+										<v-layout row wrap justify-center align-center class="pa-3">
+											<v-flex xs12 sm12 md4 lg4>
+												<v-text-field class="ma-3"  v-model="form.name" type="text" name="name" label="name" required></v-text-field>
+											</v-flex>
+											<v-flex xs12 sm12 md4 lg4>
+												<v-text-field class="ma-3" v-model="form.name" type="text" name="umber" label="number" required></v-text-field>
+											</v-flex>
+											<v-flex xs12 sm12 md4 lg4>
+												<v-text-field class="ma-3" v-model="form.email" type="text" name="email" label="email" required></v-text-field>
+											</v-flex>
+											
+											<v-spacer> </v-spacer>
+											<v-flex sm4 md4 lg4 pl-2>
+												<v-btn type="submit" @click.prevent="handleSubmit" class="grey">Send Quote</v-btn>
+											</v-flex>
+										</v-layout>
 									</v-card>
 								</v-form>
 							</v-flex>
 							<!---------------------------- Side Panel ------------------------------------------------->
 							<v-flex xs12 sm4 md4 lg4 xl4>
+								
 								<v-card
 									flat
-									color="red darken-4"
-									max-width="40em"
-									max-height="15em"
-									class="mx-auto px-3 mt-7 text-center"
-								>
-									<v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
-								</v-card>
-								<router-link to="/about">
-									<v-card class="px-3 py-4" flat>
-										<v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
-									</v-card>
-								</router-link>
-								<router-link to="/about">
-									<v-card class="px-3 py-4" flat>
-										<v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
-									</v-card>
-								</router-link>
-								<router-link to="/about">
-									<v-card class="px-3 py-4" flat>
-										<v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
-									</v-card>
-								</router-link>
-								<v-card
-									flat
-									color="red darken-4"
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -192,7 +172,7 @@
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
 									<v-form ref="form" @submit.prevent="submit">
-										<v-text-field v-model="form.name" label="Name" required></v-text-field>
+										<v-text-field v-model="form.name" label="Name" required ></v-text-field>
 
 										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
 
@@ -230,8 +210,6 @@ export default {
 					height: "96",
 					width: "36",
 					type: ".050 Aluminum",
-					header: "H-Header",
-					footer: "F-Track",
 					color: "White"
 				}
 			];
@@ -326,8 +304,6 @@ export default {
 				{ text: "Width (in)", value: "width", sortable: false },
 				{ text: "Height (in)", value: "height", sortable: false },
 				{ text: "Shutter Type", value: "type", sortable: false },
-				{ text: "Header", value: "header", sortable: false },
-				{ text: "Footer", value: "footer", sortable: false },
 				{ text: "Color", value: "color", sortable: false },
 				{ text: "Actions", value: "action", sortable: false }
 			],
@@ -338,8 +314,6 @@ export default {
 				width: "",
 				height: "",
 				type: "",
-				header: "",
-				footer: "",
 				color: ""
 			},
 			defaultItem: {
@@ -347,8 +321,6 @@ export default {
 				width: "",
 				height: "",
 				type: "",
-				header: "",
-				footer: "",
 				color: ""
 			},
 			//Data for the Contact Us form
@@ -369,9 +341,9 @@ export default {
 				],
 				name: [
 					val => (val || "").length > 0 || "This field is required"
-				],
+				]
 			},
-			
+
 			snackbar: false,
 			snackbar2: false,
 			defaultForm

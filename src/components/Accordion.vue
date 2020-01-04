@@ -77,17 +77,17 @@
 								>
 									<v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
 								</v-card>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
 									</v-card>
 								</router-link>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
 									</v-card>
 								</router-link>
-								<router-link to="/about">
+								<router-link to="/free quote">
 									<v-card class="px-3 py-4" flat>
 										<v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
 									</v-card>
@@ -152,13 +152,13 @@
 											a male and female. The unimate option allows for the use of locking pins and push lock.
 										</p>
 										<p>
-											Compact stacking is a great feature of the Genesis Shutter. The unimate centermate makes 
-											it possible for the shutter stack to take up less space. This feature gives the shutters, 
+											Compact stacking is a great feature of the Genesis Shutter. The unimate centermate makes
+											it possible for the shutter stack to take up less space. This feature gives the shutters,
 											when opened, a more elegant and discreet look.
 										</p>
 										<p>
-											Genesis has a blade coverage of 7 inches, where most shutters have coverage of 6 to 6.5 
-											inches. This allows for less shutter blades to cover the same area. Keep in mind that 
+											Genesis has a blade coverage of 7 inches, where most shutters have coverage of 6 to 6.5
+											inches. This allows for less shutter blades to cover the same area. Keep in mind that
 											shutter strength is not diminished due to this feature.
 										</p>
 									</v-card>
