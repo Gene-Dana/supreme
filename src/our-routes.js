@@ -6,6 +6,8 @@ import Accordion from './components/Accordion'
 import Panels from './components/Panels'
 import Rolldown from './components/Rolldown'
 import HowToMeasure from './components/HowToMeasure'
+import SubmissionSuccess from './components/SubmissionSuccess'
+import SubmissionFail from './components/SubmissionFail'
 
 
 export default [
@@ -46,5 +48,15 @@ export default [
     path: '/how to measure',
     component: HowToMeasure
   },
+  {
+    path: '/thanks',
+    name: 'success',
+    component: SubmissionSuccess
+  },
+  {
+    path: '/404',
+    name: 'fail',
+    component: SubmissionFail
+  }
 
 ];
