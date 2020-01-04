@@ -1,5 +1,11 @@
 <template>
-	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
+	<form
+		name="ask-question"
+		method="post"
+		data-netlify="true"
+		data-netlify-honeypot="bot-field"
+		@submit.prevent="handleSubmit"
+	>
 		<input type="hidden" name="form-name" value="ask-question" />
 		<v-card color="transparent" class="pa-5">
 			<v-snackbar v-model="snackbar" absolute top right color="success">
@@ -20,14 +26,7 @@
 					</div>
 				</template>
 			</v-textarea>
-			<v-btn
-				:disabled="!formIsValid2"
-				text
-				color="success"
-				class="mr-3"
-				type="submit"
-				
-			>Send</v-btn>
+			<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
 		</v-card>
 	</form>
 </template>
@@ -40,13 +39,12 @@ export default {
 	data() {
 		return {
 			form2: {
-				name: '',
-				email: '',
-				number: '',
-				message: ''
+				name: "",
+				email: "",
+				number: "",
+				message: ""
 			},
-			snackbar: false,
-
+			snackbar: false
 		};
 	},
 	computed: {
@@ -67,21 +65,18 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log(this.form2)
-			
-			
-			const axiosConfig = {
-				header: { "Content-Type": "application/x-www-form-urlencoded" }
-			};
+			console.log(this.form2);
+
 			axios
-				.post(
-					"/",
-					this.encode({
-						"form-name": "ask-questions",
+				.post("/", {
+					headers: {
+						"Content-Type": "application/x-www-form-urlencoded"
+					},
+					body: this.encode({
+						"form-name": "ask-question",
 						...this.form2
-					}),
-					axiosConfig
-				)
+					})
+				})
 				.then(() => {
 					this.$router.push("thanks");
 				})
