@@ -38,8 +38,8 @@
 													</v-list-item-action>
 
 													<v-list-item-content>
-														<v-list-item-title>Record</v-list-item-title>
-														<v-list-item-subtitle>Fill out the form below with the required measurements and data</v-list-item-subtitle>
+														<v-list-item-title>Fill Out Form</v-list-item-title>
+														<v-list-item-subtitle>Record required measurements and data in the form below</v-list-item-subtitle>
 													</v-list-item-content>
 												</template>
 											</v-list-item>
