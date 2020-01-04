@@ -213,10 +213,10 @@ export default {
 			this.form = Object.assign({}, this.defaultForm);
 			this.$refs.form.reset();
 		},
-		submit() {
-			this.snackbar = true;
-			this.resetForm();
-		},
+		// submit() {
+		// 	this.snackbar = true;
+		// 	this.resetForm();
+		// },
 		encode(data) {
 			return Object.keys(data)
 				.map(
