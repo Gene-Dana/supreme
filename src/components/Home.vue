@@ -99,8 +99,7 @@
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
 									<form
-										name="form2"
-										netlify
+										
 										method="POST"
 										data-netlify="true"
 										id="form2"
@@ -287,8 +286,6 @@ export default {
 				.catch(err => {
 					alert(err);
 				});
-			this.snackbar = true;
-			this.resetForm2();
 		}
 	},
 	computed: {
