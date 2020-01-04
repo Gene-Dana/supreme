@@ -203,6 +203,7 @@
 				</v-card>
 			</v-flex>
 		</v-layout>
+		<QAform> </QAform>
 	</v-container>
 </template>
 <script>
@@ -217,11 +218,13 @@ const slide9 = require("../assets/accord2.jpg");
 const slide10 = require("../assets/accord3.jpg");
 const slide11 = require("../assets/accord4.jpg");
 import axios from "axios";
+import QAform from './QAform'
 
 export default {
 	name: "Home",
 	components: {
-		VideoPlayer
+		VideoPlayer,
+		QAform
 	},
 	methods: {
 		resetForm() {
