@@ -16,7 +16,7 @@
 				<v-spacer />
 
 				<v-card flat class="transparent pa-0 ">
-					<v-card-text class="pa-0 font-weight-bold white--text">3620 NW 118 Ave #3</v-card-text>
+					<v-card-text class="pa-0 font-weight-bold white--text">3610 NW 118 Ave #3</v-card-text>
 					<v-card-text class="pa-0 font-weight-bold white--text">Coral Springs, FL </v-card-text>
 				</v-card>
 			</v-container>
