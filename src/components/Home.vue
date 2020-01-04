@@ -122,7 +122,14 @@
 											</template>
 										</v-textarea>
 
-										<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit" @click.prevent="handleSubmit2">Send</v-btn>
+										<v-btn
+											:disabled="!formIsValid2"
+											text
+											color="success"
+											class="mr-3"
+											type="submit"
+											@click.prevent="handleSubmit2"
+										>Send</v-btn>
 									</form>
 								</v-card>
 							</v-flex>
@@ -264,14 +271,22 @@ export default {
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
-			axios.post(
-				"/",
-				this.encode({
-					"form-name": "contact",
-					...this.form2
-				}),
-				axiosConfig
-			);
+			axios
+				.post(
+					"/",
+					this.encode({
+						"form-name": "contact",
+						...this.form2
+					}),
+					axiosConfig
+				)
+				.then(() => {
+					this.snackbar = true;
+					this.resetForm2();
+				})
+				.catch(err => {
+					alert(err);
+				});
 			this.snackbar = true;
 			this.resetForm2();
 		}
