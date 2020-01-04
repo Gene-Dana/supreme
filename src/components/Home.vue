@@ -232,7 +232,6 @@ export default {
 			console.log(this.form);
 		
 			this.snackbar = true;
-			this.resetForm();
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -245,6 +244,8 @@ export default {
 				}),
 				axiosConfig
 			);
+
+			this.resetForm();
 		}
 	},
 	computed: {
