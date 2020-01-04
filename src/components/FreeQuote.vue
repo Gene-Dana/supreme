@@ -23,7 +23,10 @@
 
 													<v-list-item-content>
 														<v-list-item-title>Measure</v-list-item-title>
-														<v-list-item-subtitle>Follow directions from <a to="/how to measure">'How To Measure'</a></v-list-item-subtitle>
+														<v-list-item-subtitle>
+															Follow directions from
+															<a to="/how to measure">'How To Measure'</a>
+														</v-list-item-subtitle>
 													</v-list-item-content>
 												</template>
 											</v-list-item>
@@ -55,17 +58,6 @@
 											</v-list-item>
 										</v-list-item-group>
 									</v-list>
-								</v-card>
-
-								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
-								
-
-									<p class="red--text headline text-center">Important Note</p>
-									<p>
-										When measuring the window or door for a hurricane shutter, make sure that you are measuring
-										from the inner walls or the outermost edge. For example, if the door is inset into the wall,
-										measure from the inner walls of the inset. 
-									</p>
 								</v-card>
 
 								<!------------------------=--- Shutter Form ------------------------------------------------->
@@ -109,7 +101,7 @@
 																		<v-col cols="12" sm="12" md="12">
 																			<v-select :items="types" v-model="editedItem.type" label="Shutter Type"></v-select>
 																		</v-col>
-																		
+
 																		<v-col cols="12" sm="12" md="12">
 																			<v-text-field v-model="editedItem.color" label="Color"></v-text-field>
 																		</v-col>
@@ -137,16 +129,37 @@
 
 										<v-layout row wrap justify-center align-center class="pa-3">
 											<v-flex xs12 sm12 md4 lg4>
-												<v-text-field class="ma-3"  v-model="form.name" type="text" name="name" label="name" required></v-text-field>
+												<v-text-field
+													class="ma-3"
+													v-model="form.name"
+													type="text"
+													name="name"
+													label="name"
+													required
+												></v-text-field>
 											</v-flex>
 											<v-flex xs12 sm12 md4 lg4>
-												<v-text-field class="ma-3" v-model="form.name" type="text" name="umber" label="number" required></v-text-field>
+												<v-text-field
+													class="ma-3"
+													v-model="form.name"
+													type="text"
+													name="umber"
+													label="number"
+													required
+												></v-text-field>
 											</v-flex>
 											<v-flex xs12 sm12 md4 lg4>
-												<v-text-field class="ma-3" v-model="form.email" type="text" name="email" label="email" required></v-text-field>
+												<v-text-field
+													class="ma-3"
+													v-model="form.email"
+													type="text"
+													name="email"
+													label="email"
+													required
+												></v-text-field>
 											</v-flex>
-											
-											<v-spacer> </v-spacer>
+
+											<v-spacer></v-spacer>
 											<v-flex sm4 md4 lg4 pl-2>
 												<v-btn type="submit" @click.prevent="handleSubmit" class="grey">Send Quote</v-btn>
 											</v-flex>
@@ -156,7 +169,6 @@
 							</v-flex>
 							<!---------------------------- Side Panel ------------------------------------------------->
 							<v-flex xs12 sm4 md4 lg4 xl4>
-								
 								<v-card
 									flat
 									color="red"
@@ -172,7 +184,7 @@
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
 									<v-form ref="form" @submit.prevent="submit">
-										<v-text-field v-model="form.name" label="Name" required ></v-text-field>
+										<v-text-field v-model="form.name" label="Name" required></v-text-field>
 
 										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
 
