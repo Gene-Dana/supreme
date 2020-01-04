@@ -180,7 +180,7 @@
 										<ul>
 											<li>Be confident you always have the lowest price</li>
 											<li>Save time searching for cheaper hurricane shutters</li>
-											<li>Get the lowest prices on over 15 different types of shutters and colors</li>
+											<li>Get the lowest prices on different types and colors</li>
 										</ul>
 									</v-card-text>
 								</v-card>
