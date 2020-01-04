@@ -86,7 +86,8 @@ export default {
 				.then(() => {
 					this.snackbar = true;
 				})
-				.catch(() => {
+				.catch((err) => {
+					alert(err)
 					this.$router.push("404");
 				});
 		}
