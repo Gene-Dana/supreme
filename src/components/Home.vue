@@ -93,7 +93,7 @@
 								>
 									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
 								</v-card>
-								<v-card color="transparent" class="pa-5">
+								<!-- <v-card color="transparent" class="pa-5">
 									<v-snackbar v-model="snackbar" absolute top right color="success">
 										<span>Message sent!</span>
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
@@ -130,7 +130,9 @@
 											@click.prevent="handleSubmit2"
 										>Send</v-btn>
 									</form>
-								</v-card>
+								</v-card>-->
+
+								<QAform></QAform>
 							</v-flex>
 							<v-flex xs12 sm12 md12 lg12 xl2>
 								<!------------------------------- Begin Our Products section ------------------------------------------->
@@ -203,7 +205,6 @@
 				</v-card>
 			</v-flex>
 		</v-layout>
-		<QAform> </QAform>
 	</v-container>
 </template>
 <script>
@@ -218,7 +219,7 @@ const slide9 = require("../assets/accord2.jpg");
 const slide10 = require("../assets/accord3.jpg");
 const slide11 = require("../assets/accord4.jpg");
 import axios from "axios";
-import QAform from './QAform'
+import QAform from "./QAform";
 
 export default {
 	name: "Home",
