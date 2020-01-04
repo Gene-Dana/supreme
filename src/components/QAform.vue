@@ -25,7 +25,7 @@ export default {
 			form: {
 				askPerson: ""
 			},
-			panelists: ["Evan You", "Chris Fritz"]
+			panelists: ["Evan You", "Chris Fritz", "yo momma"]
 		};
 	},
 	methods: {
