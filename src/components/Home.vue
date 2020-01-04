@@ -228,15 +228,16 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
+			/* eslint no-console: */
 			console.log(this.form);
-			alert("Your request has been submitted!"); // display string message
+		
 			this.snackbar = true;
 			this.resetForm();
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
-			axios.post(
+			this.axios.post(
 				"/",
 				this.encode({
 					"form-name": "contact",
@@ -269,7 +270,7 @@ export default {
 					val => (val || "").length > 0 || "This field is required"
 				]
 			},
-
+			snackbar: false,
 			defaultForm,
 			items: [
 				{
