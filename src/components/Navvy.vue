@@ -47,7 +47,7 @@
 										<v-list-item  to="/accordion">
 											<v-list-item-title>Accordion</v-list-item-title>
 										</v-list-item>
-										<v-list-item  to="/panel">
+										<v-list-item  to="/panels">
 											<v-list-item-title>Panels</v-list-item-title>
 										</v-list-item>
 										<v-list-item  to="/rolldown">

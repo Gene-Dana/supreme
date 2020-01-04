@@ -2,6 +2,9 @@ import Home from './components/Home.vue'
 import About from './components/About.vue';
 import FreeQuote from './components/FreeQuote'
 import Products from './components/Products'
+import Accordion from './components/Accordion'
+import Panels from './components/Panels'
+import Rolldown from './components/Rolldown'
 
 
 export default [
@@ -25,5 +28,17 @@ export default [
   {
     path: '/products',
     component: Products
+  },
+  {
+    path: '/accordion',
+    component: Accordion
+  },
+  {
+    path: '/panels',
+    component: Panels
+  },
+  {
+    path: '/rolldown',
+    component: Rolldown
   }
 ];

@@ -56,7 +56,7 @@
 							<v-flex xs12 sm4 md4 lg4 xl4>
 								<v-card
 									flat
-									color="red "
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -80,7 +80,7 @@
 								</router-link>
 								<v-card
 									flat
-									color="red "
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"

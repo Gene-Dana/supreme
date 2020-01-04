@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     video-player
-      source(src="https://youtu.be/eqPj7Bq7M2U" type="video/mp4")
+      source(src="../assets/supremevid.mp4" type="video/mp4")
 </template>
  
 <script>
