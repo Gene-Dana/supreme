@@ -79,7 +79,9 @@ export default {
 					"/",
 					this.encode({
 						"form-name": "ask-questions",
-						...this.form2
+						"form-info": this.form2.name,
+						"form-number": this.form2.number,
+
 					}),
 					axiosConfig
 				)
