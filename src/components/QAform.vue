@@ -79,7 +79,7 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-questions",
+						
 						...jform
 					}),
 					axiosConfig
