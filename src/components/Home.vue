@@ -98,14 +98,7 @@
 										<span>Message sent!</span>
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
-									<form
-										name="form"
-										id="form"
-										@submit.prevent="handleSubmit"
-										netlify
-										method="POST"
-										data-netlify="true"
-									>
+									<form ref="form" @submit.prevent="handleSubmit" netlify method="POST" data-netlify="true">
 										<v-text-field v-model="form.name" label="Name" required></v-text-field>
 
 										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
@@ -237,7 +230,7 @@ export default {
 		handleSubmit() {
 			/* eslint no-console: */
 			console.log(this.form);
-
+		
 			this.snackbar = true;
 
 			const axiosConfig = {
