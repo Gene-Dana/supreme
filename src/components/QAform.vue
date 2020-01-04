@@ -1,5 +1,22 @@
 <template>
-	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
+<v-container class="ma-0 pa-0">
+	<form name="ask-question"  netlify netlify-honeypot="bot-field" hidden>
+	
+		<v-card color="transparent" class="pa-5">
+			
+			<v-text-field v-model="form2.name" label="Name" required></v-text-field>
+
+			<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
+
+			<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
+
+			<v-textarea v-model="form2.message" color="teal">
+				
+			</v-textarea>
+			
+		</v-card>
+	</form>
+	<form name="ask-question" method="post" data-netlify="true" @submit.prevent="handleSubmit">
 		<input type="hidden" name="form-name" value="ask-question" />
 		<v-card color="transparent" class="pa-5">
 			<v-snackbar v-model="snackbar" absolute top right color="success">
@@ -30,6 +47,7 @@
 			>Send</v-btn>
 		</v-card>
 	</form>
+</v-container>
 </template>
 
 <script>
@@ -53,6 +71,11 @@ export default {
 		formIsValid2() {
 			return this.form2.name && this.form2.email && this.form2.number;
 		}
+	},
+	created() {
+		console.log("newly"
+
+		)
 	},
 	methods: {
 		encode(data) {
