@@ -98,7 +98,15 @@
 										<span>Message sent!</span>
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
-									<form ref="form" @submit.prevent="handleSubmit" netlify method="POST" data-netlify="true">
+									<form
+										name="form"
+										netlify
+										method="POST"
+										data-netlify="true"
+										id="form"
+										ref="form"
+										@submit.prevent="handleSubmit"
+									>
 										<v-text-field v-model="form.name" label="Name" required></v-text-field>
 
 										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
@@ -202,6 +210,7 @@ const slide8 = require("../assets/accord1.jpg");
 const slide9 = require("../assets/accord2.jpg");
 const slide10 = require("../assets/accord3.jpg");
 const slide11 = require("../assets/accord4.jpg");
+import axios from "axios";
 
 export default {
 	name: "Home",
@@ -230,13 +239,13 @@ export default {
 		handleSubmit() {
 			/* eslint no-console: */
 			console.log(this.form);
-		
+
 			this.snackbar = true;
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
-			this.axios.post(
+			axios.post(
 				"/",
 				this.encode({
 					"form-name": "contact",
