@@ -5,7 +5,7 @@
 		</v-layout>
 		<v-layout column>
 			<v-flex>
-				<v-card class="pa-0 ma-0" color="grey lighten-3" id="dashboard">
+				<v-card class="pa-3 ma-0" color="grey lighten-3" id="dashboard">
 					<v-card class="pa-3 ma-0">
 						<v-snackbar v-model="snackbar2" absolute top right color="success">
 							<span>Message sent!</span>
