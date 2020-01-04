@@ -1,34 +1,41 @@
 <template>
-	<form
-		name="ask-question"
-		method="post"
-		data-netlify="true"
-		netlify
-	
-		@submit.prevent="handleSubmit"
-	>
-		<v-card color="transparent" class="pa-5">
-			<v-snackbar v-model="snackbar" absolute top right color="success">
-				<span>Message sent!</span>
-				<v-icon dark>mdi-checkbox-marked-circle</v-icon>
-			</v-snackbar>
-			<v-text-field v-model="form2.name" type="text" label="Name" required></v-text-field>
+	<v-container class="ma-0 pa-0">
+		<form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+			<v-text-field type="text" label="name" />
+			<v-text-field type="text" label="email" />
+			<v-text-field type="text" label="phone" />
+			<v-textarea type="text" label="message"/>
+		</form>
+		<form
+			name="ask-question"
+			method="post"
+			data-netlify="true"
+			netlify
+			@submit.prevent="handleSubmit"
+		>
+			<v-card color="transparent" class="pa-5">
+				<v-snackbar v-model="snackbar" absolute top right color="success">
+					<span>Message sent!</span>
+					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+				</v-snackbar>
+				<v-text-field v-model="form2.name" type="text" label="Name" required></v-text-field>
 
-			<v-text-field v-model="form2.email" type="text" label="E-mail" required></v-text-field>
+				<v-text-field v-model="form2.email" type="text" label="E-mail" required></v-text-field>
 
-			<v-text-field v-model="form2.number" type="text" label="Phone" required></v-text-field>
+				<v-text-field v-model="form2.number" type="text" label="Phone" required></v-text-field>
 
-			<v-textarea v-model="form2.message" type="text" color="teal">
-				<template v-slot:label>
-					<div>
-						Message
-						<small>(optional)</small>
-					</div>
-				</template>
-			</v-textarea>
-			<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
-		</v-card>
-	</form>
+				<v-textarea v-model="form2.message" type="text" color="teal">
+					<template v-slot:label>
+						<div>
+							Message
+							<small>(optional)</small>
+						</div>
+					</template>
+				</v-textarea>
+				<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
+			</v-card>
+		</form>
+	</v-container>
 </template>
 
 <script>
@@ -65,7 +72,7 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-				console.log("submited")
+			console.log("submited");
 			// const jform = JSON.stringify(this.form2);
 			// console.log(jform);
 
