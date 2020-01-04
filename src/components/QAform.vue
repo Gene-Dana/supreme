@@ -1,38 +1,54 @@
 <template>
-  <form
-    name="ask-question"
-    method="post"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    >
-    <input type="hidden" name="form-name" value="ask-question" />
-    <label v-for="(panelist, index) in panelists" :key="index">
-      <input
-        type="radio"
-        name="panelist"
-        :value="panelist"
-        @input="ev => updatePanelist"
-        :checked="panelist === currentPanelist"
-      />
-      <span>{{ panelist }}</span>
-    </label>
-    ...
-    <button>Submit</button>
-  </form>
+	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+		<label v-for="(panelist, index) in panelists" :key="index">
+			<input
+				type="radio"
+				name="panelist"
+				@input="ev => form.askPerson = ev.target.value"
+				:value="panelist"
+				:checked="form.askPerson === panelist"
+			/>
+			<span>{{ panelist }}</span>
+		</label>
+		...
+		<button>Submit</button>
+	</form>
 </template>
+
 <script>
+import axios from "axios";
+
 export default {
-  name: "QAForm",
-  methods: {
-    updatePanelist (ev) {
-      this.currentPanelist = ev.target.value
-    }
-  },
-  data () {
-    return {
-      panelists: ['Evan You', 'Chris Fritz'],
-      currentPanelist: 'Evan You'
+	name: "QAForm",
+	data() {
+		return {
+			form: {
+				askPerson: ""
+			},
+			panelists: ["Evan You", "Chris Fritz"]
+		};
+	},
+	methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "ask-question",
+          ...this.form
+        }),
+        axiosConfig
+      );
     }
   }
-}
+};
 </script>
