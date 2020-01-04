@@ -184,31 +184,7 @@
 										</ul>
 									</v-card-text>
 								</v-card>
-								<v-divider></v-divider>
-								<!----------------------- Important Information Section ------------------------------->
-
-								<v-card flat>
-									<v-card flat class="mt-1">
-										<v-card-title
-											class="display-1 font-weight-black black--text text-center justify-center fix"
-										>Important Information</v-card-title>
-										<v-card-text
-											class="black--text text-center justify-center"
-										>Linked here are specific documents necessary for home owners to apply for the shutters permit</v-card-text>
-									</v-card>
-									<v-layout align-center justify-center row>
-										<v-btn
-											href="https://www.floridabuilding.org/upload/PR_Instl_Docs/FL17552_R1_II_AD15-11%2002.27.15%20SS.pdf"
-											min-width="20em"
-											class="ma-3"
-										>Building Code approval</v-btn>
-										<v-btn
-											href="https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqvYdq2pQ%2FXXJtTn%2F81FqV7RBEg%2FoHRt6n7BrXMJiv6hFA%3D%3D"
-											min-width="20em"
-											class="ma-3"
-										>Product certification</v-btn>
-									</v-layout>
-								</v-card>
+								
 							</v-flex>
 						</v-layout>
 					</v-card>
