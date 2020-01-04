@@ -1,6 +1,11 @@
 <template>
-	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
-		<input type="hidden" name="form-name" value="ask-question" />
+	<form
+		name="ask-question"
+		method="post"
+		data-netlify="true"
+		data-netlify-honeypot="bot-field"
+		@submit.prevent="handleSubmit"
+	>
 		<v-card color="transparent" class="pa-5">
 			<v-snackbar v-model="snackbar" absolute top right color="success">
 				<span>Message sent!</span>
@@ -20,14 +25,7 @@
 					</div>
 				</template>
 			</v-textarea>
-			<v-btn
-				:disabled="!formIsValid2"
-				text
-				color="success"
-				class="mr-3"
-				type="submit"
-				
-			>Send</v-btn>
+			<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
 		</v-card>
 	</form>
 </template>
@@ -40,13 +38,12 @@ export default {
 	data() {
 		return {
 			form2: {
-				name: '',
-				email: '',
-				number: '',
-				message: ''
+				name: "",
+				email: "",
+				number: "",
+				message: ""
 			},
-			snackbar: false,
-
+			snackbar: false
 		};
 	},
 	computed: {
@@ -67,11 +64,10 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			
-			const jform = JSON.stringify(this.form2);
-			console.log(jform);
-			
-			
+
+			// const jform = JSON.stringify(this.form2);
+			// console.log(jform);
+
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
@@ -79,8 +75,8 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						
-						...jform
+						"form-name": "ask-vuestion",
+						...this.form2
 					}),
 					axiosConfig
 				)
