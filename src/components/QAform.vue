@@ -3,6 +3,7 @@
 		name="ask-question"
 		method="post"
 		data-netlify="true"
+		netlify
 		data-netlify-honeypot="bot-field"
 		@submit.prevent="handleSubmit"
 	>
@@ -11,13 +12,13 @@
 				<span>Message sent!</span>
 				<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 			</v-snackbar>
-			<v-text-field v-model="form2.name" label="Name" required></v-text-field>
+			<v-text-field v-model="form2.name" type="text" label="Name" required></v-text-field>
 
-			<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
+			<v-text-field v-model="form2.email" type="text" label="E-mail" required></v-text-field>
 
-			<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
+			<v-text-field v-model="form2.number" type="text" label="Phone" required></v-text-field>
 
-			<v-textarea v-model="form2.message" color="teal">
+			<v-textarea v-model="form2.message" type="text" color="teal">
 				<template v-slot:label>
 					<div>
 						Message
