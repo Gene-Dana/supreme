@@ -65,7 +65,7 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log("form data!!!");
+			console.log("form data");
 			console.log(this.form2);
 
 			const axiosConfig = {
