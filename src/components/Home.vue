@@ -134,7 +134,7 @@
 										</v-img>
 
 										<v-card-actions>
-											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+											<v-btn to="/accordion" text color="deep-purple accent-4">Learn More</v-btn>
 										</v-card-actions>
 									</v-card>
 									<v-card class="ma-2" max-width="300">
@@ -143,7 +143,7 @@
 										</v-img>
 
 										<v-card-actions>
-											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+											<v-btn to="/panels" text color="deep-purple accent-4">Learn More</v-btn>
 										</v-card-actions>
 									</v-card>
 									<v-card class="ma-2" max-width="300">
@@ -152,7 +152,7 @@
 										</v-img>
 
 										<v-card-actions>
-											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
+											<v-btn to="/rolldown" text color="deep-purple accent-4">Learn More</v-btn>
 										</v-card-actions>
 									</v-card>
 								</v-layout>
@@ -160,7 +160,13 @@
 
 								<!----------------------- Important Information Section ------------------------------->
 								<v-card flat class="mt-1">
-									<v-card-text class="display-1 font-weight-black black--text text-center justify-center">Important Information</v-card-text>
+									<v-card-text
+										class="display-1 font-weight-black black--text text-center justify-center"
+									>Important Information</v-card-text>
+									<p>
+										Linked here are specific documents necessary for 
+
+									</p>
 								</v-card>
 
 								<v-divider></v-divider>
