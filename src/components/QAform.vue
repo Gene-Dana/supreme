@@ -30,6 +30,9 @@ export default {
 		};
 	},
 	methods: {
+		updatePanelist(ev) {
+			this.currentPanelist = ev.target.value;
+		},
 		encode(data) {
 			return Object.keys(data)
 				.map(
