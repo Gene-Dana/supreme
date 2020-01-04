@@ -40,10 +40,10 @@ export default {
 	data() {
 		return {
 			form2: {
-				name: "",
-				email: "",
-				number: "",
-				message: ""
+				name: '',
+				email: '',
+				number: '',
+				message: ''
 			},
 			snackbar: false,
 
@@ -68,6 +68,8 @@ export default {
 		handleSubmit() {
 			/* eslint no-console: */
 			console.log(this.form2)
+			console.log(this.form2.toJSON())
+			
 			
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
