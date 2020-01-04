@@ -34,7 +34,6 @@
 
 <script>
 import axios from "axios";
-import qs from "querystring";
 
 export default {
 	name: "QAForm",
@@ -68,8 +67,9 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log(...qs.stringify(this.form2));
+			
 			const jform = JSON.stringify(this.form2);
+			console.log(jform);
 			
 			
 			const axiosConfig = {
