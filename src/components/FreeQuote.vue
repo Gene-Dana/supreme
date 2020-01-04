@@ -1,5 +1,8 @@
 <template>
 	<v-container min-width="100%" max-width="100%" class="pa-0 ma-0" fluid>
+		<v-layout>
+			<v-img height="7em" src="../assets/scary.jpg"></v-img>
+		</v-layout>
 		<v-layout column>
 			<v-flex>
 				<v-card class="pa-0 ma-0" color="grey lighten-3" id="dashboard">
