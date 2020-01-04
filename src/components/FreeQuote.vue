@@ -303,8 +303,6 @@ export default {
 				"24G Steel Panels",
 				"Roll Down"
 			],
-			headerOne: ["Standard"],
-			footerAccordion: ["Standard", "Walk-Over (for Doors)", "Removable"],
 			dialog: false,
 			headers: [
 				{
