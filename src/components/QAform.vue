@@ -67,7 +67,7 @@ export default {
 		handleSubmit() {
 			const form = this.form2;
 			/* eslint no-console: */
-			console.log(this.form2);
+			console.log('apparently this is it');
 
 			const config = {
 				headers: {
