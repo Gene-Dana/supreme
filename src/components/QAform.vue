@@ -33,6 +33,7 @@
 
 <script>
 import axios from "axios";
+const qs = require("querystring");
 
 export default {
 	name: "QAForm",
@@ -64,22 +65,17 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
-			const form = this.form2
+			const form = this.form2;
 			/* eslint no-console: */
 			console.log(this.form2);
 
-			const axiosConfig = {
-				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			const config = {
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded"
+				}
 			};
 			axios
-				.post(
-					"/",
-					this.encode({
-						"form-name": "ask-questions",
-						...form
-					}),
-					axiosConfig
-				)
+				.post(url, qs.stringify(form), config)
 				.then(() => {
 					this.$router.push("thanks");
 				})
