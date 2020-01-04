@@ -180,7 +180,7 @@ const slide8 = require("../assets/accord1.jpg");
 const slide9 = require("../assets/accord2.jpg");
 const slide10 = require("../assets/accord3.jpg");
 const slide11 = require("../assets/accord4.jpg");
-import axios from "axios";
+
 import QAform from "./QAform";
 
 export default {
@@ -189,105 +189,10 @@ export default {
 		VideoPlayer,
 		QAform
 	},
-	methods: {
-		resetForm() {
-			this.form = Object.assign({}, this.defaultForm);
-			this.$refs.form.reset();
-		},
-		resetForm2() {
-			this.$refs.form2.reset();
-		},
-		// submit() {
-		// 	this.snackbar = true;
-		// 	this.resetForm();
-		// },
-		encode(data) {
-			return Object.keys(data)
-				.map(
-					key =>
-						`${encodeURIComponent(key)}=${encodeURIComponent(
-							data[key]
-						)}`
-				)
-				.join("&");
-		},
-		handleSubmit() {
-			/* eslint no-console: */
-			console.log(this.form);
-
-			const axiosConfig = {
-				header: { "Content-Type": "application/x-www-form-urlencoded" }
-			};
-			axios.post(
-				"/",
-				this.encode({
-					"form-name": "contact",
-					...this.form
-				}),
-				axiosConfig
-			);
-			this.snackbar = true;
-			this.resetForm();
-		},
-		handleSubmit2() {
-			/* eslint no-console: */
-			console.log(this.form2);
-
-			const axiosConfig = {
-				header: { "Content-Type": "application/x-www-form-urlencoded" }
-			};
-			axios
-				.post(
-					"/",
-					this.encode({
-						"form-name": "contact",
-						...this.form2
-					}),
-					axiosConfig
-				)
-				.then(() => {
-					this.snackbar = true;
-					this.resetForm2();
-				})
-				.catch(err => {
-					alert(err);
-				});
-		}
-	},
-	computed: {
-		formIsValid() {
-			return this.form.name && this.form.email && this.form.number;
-		},
-		formIsValid2() {
-			return this.form2.name && this.form2.email && this.form2.number;
-		}
-	},
+	methods: {},
+	computed: {},
 	data() {
-		const defaultForm = Object.freeze({
-			name: "",
-			email: "",
-			number: "",
-			message: ""
-		});
-
 		return {
-			form: Object.assign({}, defaultForm),
-			form2: {
-				name: "",
-				email: "",
-				number: "",
-				message: ""
-			},
-			rules: {
-				email: [
-					val => (val || "").length > 0 || "This field is required"
-				],
-				name: [
-					val => (val || "").length > 0 || "This field is required"
-				]
-			},
-			snackbar: false,
-			defaultForm,
 			items: [
 				{
 					src: slide1

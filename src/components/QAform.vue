@@ -66,7 +66,9 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
+			
 			/* eslint no-console: */
+			console.log('form data!')
 			console.log(this.form2)
 			
 			const axiosConfig = {
@@ -82,7 +84,7 @@ export default {
 					axiosConfig
 				)
 				.then(() => {
-					this.$router.push("thanks");
+					this.snackbar - true;
 				})
 				.catch(() => {
 					this.$router.push("404");
