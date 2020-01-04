@@ -77,10 +77,7 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-question",
-						"form-something" : "something",
-						"form-something2" : this.form2.name,
-
+						"form-name": "ask-questions",
 						...this.form2
 					}),
 					axiosConfig
