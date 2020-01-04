@@ -122,7 +122,7 @@
 											</template>
 										</v-textarea>
 
-										<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" @click.prevent="handleSubmit2">Send</v-btn>
+										<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit" @click.prevent="handleSubmit2">Send</v-btn>
 									</form>
 								</v-card>
 							</v-flex>
