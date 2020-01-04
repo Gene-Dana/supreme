@@ -47,7 +47,7 @@ export default {
 			},
 			snackbar: false,
 
-		};
+		}
 	},
 	computed: {
 		formIsValid2() {
@@ -78,13 +78,13 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-question",
+						"form-name": "ask-questions",
 						...this.form2
 					}),
 					axiosConfig
 				)
 				.then(() => {
-					this.snackbar - true;
+					this.snackbar = true;
 				})
 				.catch(() => {
 					this.$router.push("404");
