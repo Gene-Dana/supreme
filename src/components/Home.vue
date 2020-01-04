@@ -98,7 +98,7 @@
 										<span>Message sent!</span>
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
-									<v-form ref="form" @submit.prevent="submit">
+									<v-form ref="form" @submit.prevent="handleSubmit" data-netlify="true">
 										<v-text-field v-model="form.name" label="Name" required></v-text-field>
 
 										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
@@ -183,7 +183,6 @@
 										</ul>
 									</v-card-text>
 								</v-card>
-								
 							</v-flex>
 						</v-layout>
 					</v-card>
@@ -217,6 +216,34 @@ export default {
 		submit() {
 			this.snackbar = true;
 			this.resetForm();
+		},
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					key =>
+						`${encodeURIComponent(key)}=${encodeURIComponent(
+							data[key]
+						)}`
+				)
+				.join("&");
+		},
+		handleSubmit() {
+			console.log(this.form);
+			alert("Your request has been submitted!"); // display string message
+			this.snackbar = true;
+			this.resetForm();
+
+			const axiosConfig = {
+				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			};
+			axios.post(
+				"/",
+				this.encode({
+					"form-name": "contact",
+					...this.form
+				}),
+				axiosConfig
+			);
 		}
 	},
 	computed: {
