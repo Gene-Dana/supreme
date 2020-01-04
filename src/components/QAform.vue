@@ -75,7 +75,7 @@ export default {
 				}
 			};
 			axios
-				.post(url, qs.stringify(form), config)
+				.post('/', qs.stringify(form), config)
 				.then(() => {
 					this.$router.push("thanks");
 				})
