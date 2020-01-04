@@ -37,7 +37,7 @@
 										>
 											South Florida region, including Miami-Dade, Broward,
 											and Palm Beach Counties.
-										</span> We are licensed and insured and we you welcomed to vist us at 3610 NW 118 Ave #3, Coral Springs.
+										</span> We are licensed and insured and we you welcomed to vist our shop at 3610 NW 118 Ave #3, Coral Springs.
 									</p>
 
 									<p>
