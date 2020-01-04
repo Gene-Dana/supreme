@@ -159,7 +159,11 @@
 								<v-divider></v-divider>
 
 								<!----------------------- Important Information Section ------------------------------->
+								<v-card flat class="mt-1">
+									<v-card-text class="display-1 font-weight-black black--text text-center justify-center">Important Information</v-card-text>
+								</v-card>
 
+								<v-divider></v-divider>
 								<!--------------------- Begin Guarantee Section --------------------------------->
 								<v-card class="mt-4">
 									<v-card-title class="red">
