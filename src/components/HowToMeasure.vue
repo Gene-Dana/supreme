@@ -135,30 +135,7 @@
 								>
 									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
 								</v-card>
-								<v-card color="transparent" class="pa-5">
-									<v-snackbar v-model="snackbar" absolute top right color="success">
-										<span>Message sent!</span>
-										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
-									</v-snackbar>
-									<v-form ref="form" @submit.prevent="submit">
-										<v-text-field v-model="form.name" label="Name" required></v-text-field>
-
-										<v-text-field v-model="form.email" label="E-mail">required</v-text-field>
-
-										<v-text-field v-model="form.number" label="Phone" required></v-text-field>
-
-										<v-textarea v-model="form.message" color="teal">
-											<template v-slot:label>
-												<div>
-													Message
-													<small>(optional)</small>
-												</div>
-											</template>
-										</v-textarea>
-
-										<v-btn :disabled="!formIsValid" text color="success" class="mr-3" type="submit">Send</v-btn>
-									</v-form>
-								</v-card>
+								<QAform></QAform>
 							</v-flex>
 						</v-layout>
 					</v-card>
@@ -168,9 +145,11 @@
 	</v-container>
 </template>
 <script>
+import QAform from "./QAform";
+
 export default {
 	name: "HowToMeasure",
-	components: {},
+	components: { QAform },
 	methods: {
 		resetForm() {
 			this.form = Object.assign({}, this.defaultForm);

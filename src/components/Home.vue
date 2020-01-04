@@ -93,44 +93,6 @@
 								>
 									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
 								</v-card>
-								<!-- <v-card color="transparent" class="pa-5">
-									<v-snackbar v-model="snackbar" absolute top right color="success">
-										<span>Message sent!</span>
-										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
-									</v-snackbar>
-									<form
-										
-										method="POST"
-										data-netlify="true"
-										id="form2"
-										ref="form2"
-										@submit.prevent="handleSubmit2"
-									>
-										<v-text-field v-model="form2.name" label="Name" required></v-text-field>
-
-										<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
-
-										<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
-
-										<v-textarea v-model="form.message" color="teal">
-											<template v-slot:label>
-												<div>
-													Message
-													<small>(optional)</small>
-												</div>
-											</template>
-										</v-textarea>
-
-										<v-btn
-											:disabled="!formIsValid2"
-											text
-											color="success"
-											class="mr-3"
-											type="submit"
-											@click.prevent="handleSubmit2"
-										>Send</v-btn>
-									</form>
-								</v-card>-->
 
 								<QAform></QAform>
 							</v-flex>

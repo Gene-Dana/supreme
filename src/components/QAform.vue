@@ -66,6 +66,9 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
+			/* eslint no-console: */
+			console.log(this.form2);
+			
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
