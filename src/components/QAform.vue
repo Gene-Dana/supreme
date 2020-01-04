@@ -68,7 +68,6 @@ export default {
 		handleSubmit() {
 			/* eslint no-console: */
 			console.log(this.form2)
-			console.log(this.form2.toJSON())
 			
 			
 			const axiosConfig = {
