@@ -1,12 +1,13 @@
 <template>
 	<form
-		name="ask-question"
+		name="ask-questions"
 		method="post"
 		data-netlify="true"
 		data-netlify-honeypot="bot-field"
 		@submit.prevent="handleSubmit"
 	>
-		<input type="hidden" name="form-name" value="ask-question" />
+		<input type="hidden" name="form-name-hidden" value="ask-question" />
+
 		<v-card color="transparent" class="pa-5">
 			<v-snackbar v-model="snackbar" absolute top right color="success">
 				<span>Message sent!</span>
@@ -67,7 +68,7 @@ export default {
 		handleSubmit() {
 			const form = this.form2;
 			/* eslint no-console: */
-			console.log('apparently this is it');
+			console.log(form);
 
 			const config = {
 				headers: {
@@ -75,7 +76,7 @@ export default {
 				}
 			};
 			axios
-				.post('/', qs.stringify(form), config)
+				.post('/', qs.stringify(this.form2), config)
 				.then(() => {
 					this.$router.push("thanks");
 				})
