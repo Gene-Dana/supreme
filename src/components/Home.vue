@@ -99,19 +99,19 @@
 										<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 									</v-snackbar>
 									<form
-										name="form"
+										name="form2"
 										netlify
 										method="POST"
 										data-netlify="true"
-										id="form"
-										ref="form"
-										@submit.prevent="handleSubmit"
+										id="form2"
+										ref="form2"
+										@submit.prevent="handleSubmit2"
 									>
-										<v-text-field v-model="form.name" label="Name" required></v-text-field>
+										<v-text-field v-model="form2.name" label="Name" required></v-text-field>
 
-										<v-text-field v-model="form.email" label="E-mail" required></v-text-field>
+										<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
 
-										<v-text-field v-model="form.number" label="Phone" required></v-text-field>
+										<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
 
 										<v-textarea v-model="form.message" color="teal">
 											<template v-slot:label>
@@ -122,7 +122,7 @@
 											</template>
 										</v-textarea>
 
-										<v-btn :disabled="!formIsValid" text color="success" class="mr-3" type="submit">Send</v-btn>
+										<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" @click.prevent="handleSubmit2">Send</v-btn>
 									</form>
 								</v-card>
 							</v-flex>
@@ -222,6 +222,9 @@ export default {
 			this.form = Object.assign({}, this.defaultForm);
 			this.$refs.form.reset();
 		},
+		resetForm2() {
+			this.$refs.form2.reset();
+		},
 		// submit() {
 		// 	this.snackbar = true;
 		// 	this.resetForm();
@@ -240,8 +243,6 @@ export default {
 			/* eslint no-console: */
 			console.log(this.form);
 
-			this.snackbar = true;
-
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
@@ -253,13 +254,34 @@ export default {
 				}),
 				axiosConfig
 			);
-
+			this.snackbar = true;
 			this.resetForm();
+		},
+		handleSubmit2() {
+			/* eslint no-console: */
+			console.log(this.form2);
+
+			const axiosConfig = {
+				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			};
+			axios.post(
+				"/",
+				this.encode({
+					"form-name": "contact",
+					...this.form2
+				}),
+				axiosConfig
+			);
+			this.snackbar = true;
+			this.resetForm2();
 		}
 	},
 	computed: {
 		formIsValid() {
 			return this.form.name && this.form.email && this.form.number;
+		},
+		formIsValid2() {
+			return this.form2.name && this.form2.email && this.form2.number;
 		}
 	},
 	data() {
@@ -272,6 +294,12 @@ export default {
 
 		return {
 			form: Object.assign({}, defaultForm),
+			form2: {
+				name: "",
+				email: "",
+				number: "",
+				message: ""
+			},
 			rules: {
 				email: [
 					val => (val || "").length > 0 || "This field is required"
