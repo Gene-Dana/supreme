@@ -68,7 +68,8 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log(...qs.stringify(this.form2))
+			console.log(...qs.stringify(this.form2));
+			const jform = JSON.stringify(this.form2);
 			
 			
 			const axiosConfig = {
@@ -79,7 +80,7 @@ export default {
 					"/",
 					this.encode({
 						"form-name": "ask-question",
-						...qs.stringify(this.form2)
+						...jform
 					}),
 					axiosConfig
 				)
