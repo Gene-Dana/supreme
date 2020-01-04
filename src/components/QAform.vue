@@ -1,41 +1,35 @@
 <template>
-	<v-container class="ma-0 pa-0">
-		<form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
-			<v-text-field type="text" label="name" />
-			<v-text-field type="text" label="email" />
-			<v-text-field type="text" label="phone" />
-			<v-textarea type="text" label="message"/>
-		</form>
-		<form
-			name="ask-question"
-			method="post"
-			data-netlify="true"
-			netlify
-			@submit.prevent="handleSubmit"
-		>
-			<v-card color="transparent" class="pa-5">
-				<v-snackbar v-model="snackbar" absolute top right color="success">
-					<span>Message sent!</span>
-					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
-				</v-snackbar>
-				<v-text-field v-model="form2.name" type="text" label="Name" required></v-text-field>
+	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
+		<input type="hidden" name="form-name" value="ask-question" />
+		<v-card color="transparent" class="pa-5">
+			<v-snackbar v-model="snackbar" absolute top right color="success">
+				<span>Message sent!</span>
+				<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+			</v-snackbar>
+			<v-text-field v-model="form2.name" label="Name" required></v-text-field>
 
-				<v-text-field v-model="form2.email" type="text" label="E-mail" required></v-text-field>
+			<v-text-field v-model="form2.email" label="E-mail" required></v-text-field>
 
-				<v-text-field v-model="form2.number" type="text" label="Phone" required></v-text-field>
+			<v-text-field v-model="form2.number" label="Phone" required></v-text-field>
 
-				<v-textarea v-model="form2.message" type="text" color="teal">
-					<template v-slot:label>
-						<div>
-							Message
-							<small>(optional)</small>
-						</div>
-					</template>
-				</v-textarea>
-				<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
-			</v-card>
-		</form>
-	</v-container>
+			<v-textarea v-model="form2.message" color="teal">
+				<template v-slot:label>
+					<div>
+						Message
+						<small>(optional)</small>
+					</div>
+				</template>
+			</v-textarea>
+			<v-btn
+				:disabled="!formIsValid2"
+				text
+				color="success"
+				class="mr-3"
+				type="submit"
+				
+			>Send</v-btn>
+		</v-card>
+	</form>
 </template>
 
 <script>
@@ -46,12 +40,13 @@ export default {
 	data() {
 		return {
 			form2: {
-				name: "",
-				email: "",
-				number: "",
-				message: ""
+				name: '',
+				email: '',
+				number: '',
+				message: ''
 			},
-			snackbar: false
+			snackbar: false,
+
 		};
 	},
 	computed: {
@@ -72,10 +67,9 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log("submitted");
-			// const jform = JSON.stringify(this.form2);
-			// console.log(jform);
-
+			console.log(this.form2)
+			
+			
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
@@ -83,7 +77,7 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-vuestion",
+						"form-name": "ask-question",
 						...this.form2
 					}),
 					axiosConfig
