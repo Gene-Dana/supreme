@@ -68,7 +68,7 @@ export default {
 		handleSubmit() {
 			
 			/* eslint no-console: */
-			console.log('form data!')
+			console.log('form data!!!')
 			console.log(this.form2)
 			
 			const axiosConfig = {
@@ -79,9 +79,7 @@ export default {
 					"/",
 					this.encode({
 						"form-name": "ask-questions",
-						"form-info": this.form2.name,
-						"form-number": this.form2.number,
-
+						...this.form2
 					}),
 					axiosConfig
 				)
