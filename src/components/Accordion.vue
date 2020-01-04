@@ -1,5 +1,5 @@
 <template>
-	<v-container min-width="100%" max-width="100%" class="pa-0" fluid>
+	<v-container min-width="100%" max-width="100%" class="py-0 px-3" fluid>
 		<v-layout>
 			<v-img height="7em" src="../assets/scary.jpg"></v-img>
 		</v-layout>
@@ -18,7 +18,7 @@
 									<v-card-title class="display-2 font-weight-black pa-2 text-center fix">Accordion Shutters</v-card-title>
 								</v-card>
 
-								<v-card flat color="transparent" class="ma-0">
+								<v-card flat color="transparent" class="my-0 mx-3">
 									<v-img height="15em" src="../assets/accordion-product.jpg"></v-img>
 								</v-card>
 

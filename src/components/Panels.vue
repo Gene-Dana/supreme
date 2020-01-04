@@ -1,9 +1,7 @@
 <template>
 	<v-container min-width="100%" max-width="100%" class="pa-0" fluid>
 		<v-layout>
-			<v-carousel height="28em" cycle>
-				<v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
-			</v-carousel>
+			<v-img height="7em" src="../assets/scary.jpg"></v-img>
 		</v-layout>
 
 		<v-layout column>
@@ -12,60 +10,87 @@
 					<v-card class="pa-3 ma-0">
 						<v-layout wrap>
 							<v-flex xs12 sm8 md8 lg8 xl8>
-								<!-- <v-card>
-					<v-img :src="require('../assets/GetNow.png')" min-width="50%"></v-img>
-								</v-card>-->
-
 								<v-card flat wrap color="transparent" class="ma-0">
 									<v-card-title
 										class="display-2 font-weight-black pa-2 text-center fix"
-									>Supreme Hurricane Shutters</v-card-title>
+									>Aluminum and Steel Panel Shutters</v-card-title>
+
+									<v-card-title class="headline pa-2 justify-center center-text fix">by Eyewall Armor®</v-card-title>
 								</v-card>
 
-								<v-card flat color="transparent" class="ma-0">
-									<v-card-title
-										class="headline font-weight-black pa-2 justify-center text-center"
-									>Affordable. Reliable. Hurricane Protection.</v-card-title>
+								<v-card flat color="transparent" class="my-0 mx-3">
+									<v-img height="15em" src="../assets/panel-products.jpg"></v-img>
 								</v-card>
 
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
 									<p>
-										&nbsp; &nbsp; &nbsp; Supreme Hurricane Shutters specializes in top quality hurricane shutters with a focus
-										on supplying shutters all throughout the South Florida region. In short, we are your one stop shop for
-										high quality hurricane shutters. We provide accordion shutters, roll down shutters, and affordable hurricane storm
-										panels that are all approved through the strictest Florida and Miami-Dade building code. We made it a passion to not
-										sell anything under Florida building code standards.
+										Here at Supreme Shutters, we offer Eyewall Armor® StormLoc™ Panels.
+										These are the top of the line in hurricane and storm protection for your home.
+										Our Eyewall Armor® StormLoc™ Panels have 8 exclusive track styles that will fit
+										virtually any and all mounting conditions, and work supremely with your home’s
+										specific design and/or building specifications.
+										<strong>
+											Also production time is usually
+											only
+											<span
+												style="text-decoration: underline;"
+											>3 weeks!</span>
+										</strong>
 									</p>
 									<p>
-										Supreme Hurricane Shutters is a division of All Comfort Solutions, LLC., a leader in Florida
-										Hurricane protection since 2010. As a result, our customers obtain some of the highest levels of hurricane
-										security available at the most affordable price.
+										Protecting your home or business from storm and hurricane damage is extremely
+										important, for obvious reasons, so we want to make sure your investment is well
+										protected. The Eyewall Armor® StormLoc™ Panels are easy to use and last for
+										several years, providing reliable protection for your home. These panels are
+										built to endure even the most extreme weather conditions, year-round.
 									</p>
-									<v-card flat class="pa-5">
-										<VideoPlayer></VideoPlayer>
-									</v-card>
-									<p>
-										From the do-it-yourselfer to the experienced custom builder, we will work with you to design the best combination of
-										defense for your home or business. We are able to accommodate any size order, large or small, commercial or residential.
-										Our Experts will guide you through the Hurricane Protection Process and answer any questions you may have. Give us a call or
-										get a free online estimate today!
-									</p>
-								</v-card>
-								<v-card flat outlined max-height="15em" class="ma-auto pa-3 mb-4" color="grey lighten-4">
-									<v-card max-height="15em" class="mx-auto px-3 text-center" color="blue lighten-3">
-										<v-card-title class="justify-center headline">Have Questions?</v-card-title>
+									<v-card flat wrap color="transparent" class="ma-0">
 										<v-card-title
-											class="justify-center title font-weight-black pt-0"
-											color="light blue darken-4"
-										>(305) 901-9981</v-card-title>
+											class="display-1 font-weight-black pa-2 text-center fix"
+										>.050 Aluminum Storm Panels</v-card-title>
 									</v-card>
-								</v-card>
-							</v-flex>
+									<ul>
+										<li>Protect windows and doors from winds over 150 mph</li>
+										<li>Resist corrosion (aluminum and its alloys are a major component of aerospace engineering)</li>
+										<li>Have a low density for a lightweight product</li>
+										<li>Have a thickness of .050″</li>
+									</ul>
 
+									<v-card flat wrap color="transparent" class="ma-0">
+										<v-card-title
+											class="display-1 font-weight-black pa-2 text-center fix"
+										>24G Galvanized Steel Storm Panels</v-card-title>
+									</v-card>
+									<ul>
+										<li>Protect windows and doors from winds over 150 mph</li>
+										<li>Have a low density for a lightweight product</li>
+										<li>Have a thickness of .023</li>
+									</ul>
+									<p class="mt-5">
+										The Eyewall Armor® StormLoc™ storm panels have undergone
+										extensive research and testing, performing superbly in
+										wind conditions exceeding 180mph, meeting the current
+										Florida Building Code and International Building Code
+										wind standard (ASCE 7-10). They are also in accordance
+										with A.S.T.M. E1886-E1996, and the High Velocity
+										Hurricane Zone (HVHZ) TAS 201, 202 and 203 (formerly
+										Miami-Dade PA 201, 202 & 203), able to withstand
+										substantial impact from debris as tested for 9lb.
+										large missile impact.
+									</p>
+								</v-card>
+								<v-card flat color="transparent" class="ma-3">
+										<v-img min-width="100%" src="../assets/steelPanel.jpg"></v-img>
+									</v-card>
+									<v-card flat color="transparent" class="ma-3">
+										<v-img min-width="100%" src="../assets/plasticPanel.jpg"></v-img>
+									</v-card>
+							</v-flex>
+							<!------------------------ Start Side Panel  ------------------------------------------------------------->
 							<v-flex xs12 sm4 md4 lg4 xl4>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red "
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -89,7 +114,7 @@
 								</router-link>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -120,6 +145,38 @@
 										<v-btn :disabled="!formIsValid" text color="success" class="mr-3" type="submit">Send</v-btn>
 									</v-form>
 								</v-card>
+								<v-card
+									flat
+									color="red"
+									max-width="40em"
+									max-height="15em"
+									class="mx-auto px-3 text-center"
+								>
+									<v-card-title class="justify-center title white--text mt-3">Description</v-card-title>
+								</v-card>
+								<v-card flat color="transparent">
+									<v-card flat color="transparent" class="ma-0">
+										<v-img min-width="10em" class="ma-4" src="../assets/eyewall.gif"></v-img>
+									</v-card>
+
+									<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-light text-justify">
+										<li>Most affordable type of approved storm protection!</li>
+										<li>Our ultra-light .018” (28 gauge), and .023” (24 gauge) galvanized steel Eyewall Armor® panels with rolled safety edges are tested for 9-lb. large missile impact to A.S.T.M. E1886 and E1996 standards for use in the Florida Building Code and throughout the International Building Code areas.</li>
+										<li>Unparalleled Hurricane Protection.</li>
+										<li>Lightweight.</li>
+										<li>Corrosion resistant.</li>
+										<li>Affordable and cost effective</li>
+										<li>Easy Installation.</li>
+										<li>Added property value.</li>
+										<li>Reduced insurance costs.</li>
+										<li>Multiple track options.</li>
+										<li>Panels available in Mill Finish, Galvanized, or Clear.</li>
+										<li>Tracks available in White or Bronze.</li>
+										<li>In-house customer service and technical support.</li>
+										<li>Patented clear-metal-clear applications.</li>
+										<li>Patents #US 6,868,642 B2 and US 6,615,555 B2</li>
+									</v-card>
+								</v-card>
 							</v-flex>
 						</v-layout>
 					</v-card>
@@ -129,17 +186,10 @@
 	</v-container>
 </template>
 <script>
-import VideoPlayer from "./VideoPlayer";
-const slide1 = require("../assets/accordion_banner.jpg");
-const slide3 = require("../assets/plasticPanel.jpg");
-const slide4 = require("../assets/roll.jpg");
-
 export default {
 	name: "Products",
-	
-	components: {
-		VideoPlayer
-	},
+
+	components: {},
 	methods: {
 		resetForm() {
 			this.form = Object.assign({}, this.defaultForm);
@@ -175,18 +225,7 @@ export default {
 			},
 
 			defaultForm,
-			items: [
-				{
-					src: slide1
-				},
-				{
-					src: slide3
-				},
-
-				{
-					src: slide4
-				}
-			]
+			items: []
 		};
 	}
 };

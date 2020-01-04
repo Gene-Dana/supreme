@@ -5,6 +5,7 @@ import Products from './components/Products'
 import Accordion from './components/Accordion'
 import Panels from './components/Panels'
 import Rolldown from './components/Rolldown'
+import HowToMeasure from './components/HowToMeasure'
 
 
 export default [
@@ -40,5 +41,10 @@ export default [
   {
     path: '/rolldown',
     component: Rolldown
-  }
+  },
+  {
+    path: '/how to measure',
+    component: HowToMeasure
+  },
+
 ];

@@ -1,7 +1,5 @@
 <template>
 	<v-container min-width="100%" max-width="100%" class="pa-0" fluid>
-		
-
 		<v-layout column>
 			<v-flex>
 				<v-card class="pa-3 ma-0" color="grey lighten-3" id="dashboard">
@@ -15,82 +13,95 @@
 								<v-card flat color="transparent" class="ma-0">
 									<v-card-title class="display-1 font-weight-black pa-2">How To Measure</v-card-title>
 								</v-card>
-
+								<v-card-title>Procedure</v-card-title>
+								<ul>
+									<li>Begin at the front door and work clockwise around the house.</li>
+									<li>
+										For Windows, horizontally measure from one inside edge of the opening to the parallel inside edge.
+										Then vertically measure from the inside edge of the top to the top of the window sill. All shutters use a
+										track system so make sure you have
+										<span
+											class="font-weight-black red--text"
+										>atleast 3in</span> of flat surface around each window.
+									</li>
+									<li>
+										For Doors, horizontally measure from one inside edge of the opening to the parallel inside edge, vertically
+										measure from the inside edge of the top to the floor.
+									</li>
+									<li>
+										For an instant quote enter measurements into our Free Quote page or email to supremehurricaneshutters@gmail.com
+										and we will have an estimate for you within 48 hours
+									</li>
+								</ul>
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
-									<p>Materials needed to measure:</p>
-									<v-list flat subheader three-line>
+									<v-flex flat class="d-flex justify-center">
+										<v-img
+											src="../assets/window.jpg"
+											lazy-src="https://picsum.photos/id/11/10/6"
+											class="grey lighten-2"
+											max-width="100%"
+											max-height="300"
+										></v-img>
+									</v-flex>
 
-										<v-list-item-group v-model="settings" multiple active-class>
-											<v-list-item>
-												<template v-slot:default="{ active }">
-													<v-list-item-action>
-														<v-checkbox v-model="active"></v-checkbox>
-													</v-list-item-action>
-
-													<v-list-item-content>
-														<v-list-item-title>Notifications</v-list-item-title>
-														<v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
-													</v-list-item-content>
-												</template>
-											</v-list-item>
-
-											<v-list-item>
-												<template v-slot:default="{ active }">
-													<v-list-item-action>
-														<v-checkbox v-model="active"></v-checkbox>
-													</v-list-item-action>
-
-													<v-list-item-content>
-														<v-list-item-title>Sound</v-list-item-title>
-														<v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
-													</v-list-item-content>
-												</template>
-											</v-list-item>
-
-											<v-list-item>
-												<template v-slot:default="{ active }">
-													<v-list-item-action>
-														<v-checkbox v-model="active"></v-checkbox>
-													</v-list-item-action>
-
-													<v-list-item-content>
-														<v-list-item-title>Auto-add widgets</v-list-item-title>
-														<v-list-item-subtitle>Automatically add home screen widgets when downloads complete</v-list-item-subtitle>
-													</v-list-item-content>
-												</template>
-											</v-list-item>
-										</v-list-item-group>
-									</v-list>
+									<p class="red--text headline text-center">Important Note</p>
 									<p>
-										Supreme Hurricane Shutters is a division of All Comfort Solutions, LLC., a leader in Florida
-										Hurricane protection since 2010. As a result, our customers obtain some of the highest levels of hurricane
-										security available at the most affordable price.
-									</p>
-									<v-card flat class="pa-5">
-										<VideoPlayer></VideoPlayer>
-									</v-card>
-									<p>
-										From the do-it-yourselfer to the experienced custom builder, we will work with you to design the best combination of
-										defense for your home or business. We are able to accommodate any size order, large or small, commercial or residential.
-										Our Experts will guide you through the Hurricane Protection Process and answer any questions you may have. Give us a call or
-										get a free online estimate today!
+										When measuring the window or door for a hurricane shutter, make sure that you are measuring
+										from the inner walls or the outermost edge. For example, if the door is inset into the wall,
+										measure from the inner walls of the inset.
 									</p>
 								</v-card>
-								<v-card flat outlined max-height="15em" class="ma-auto pa-3 mb-4" color="grey lighten-4">
-									<v-card max-height="15em" class="mx-auto px-3 text-center" color="blue lighten-3">
-										<v-card-title class="justify-center headline">Have Questions?</v-card-title>
-										<v-card-title
-											class="justify-center title font-weight-black pt-0"
-											color="light blue darken-4"
-										>(305) 901-9981</v-card-title>
-									</v-card>
+								<v-card flat wrap color="transparent" class="ma-0">
+									<v-card-title class="headline font-weight-black pa-2 fix">
+										Measuring for
+										<span
+											style="text-decoration: underline;"
+											class="pl-2"
+										>Accordion & Storm Panels</span>
+									</v-card-title>
+								</v-card>
+								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
+									<p>
+										For Accordion and storm panels you will measure the outside of the opening. If the opening has a board around it you will measure outside of the boarder.
+										If you would like to install the shutters on a board you must have at least 5 inches of flat solid board on all side.
+									</p>
+									<p>Important: If you have a sill measure the height all the way pass the sill as it shows in the first picture. The tracks will be installed right under the sill.</p>
+								</v-card>
+								<v-layout row wrap align-center justify-center class="mb-3">
+									<v-img max-width="45%" src="../assets/measure1.jpg"></v-img>
+
+									<v-img max-width="45%" src="../assets/measure2.jpg"></v-img>
+								</v-layout>
+
+								<v-card flat wrap color="transparent" class="ma-0">
+									<v-card-title class="headline font-weight-black pa-2 fix">
+										Measuring for
+										<span style="text-decoration: underline;" class="pl-2">Rolldown</span>
+									</v-card-title>
+								</v-card>
+
+								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
+									<p>
+										For roll down shutters you will measure the outside of the opening. If the opening has a
+										board around it you will measure outside of the boarder. If you would like to install the
+										shutters on a board you must have at least 3 inches on the right, left and bottom. For the
+										top you must have at least 8 inches.
+									</p>
+									<p>
+										Important Note: Please keep in mind the shutter box can be up to 8 inches so make sure from
+										you also measure the space above your window. You will need at least 8 inches clearance to
+										install the box.
+									</p>
+								</v-card>
+								<v-card flat color="transparent" class="ma-3">
+									<v-img min-width="100%" src="../assets/rollmeasure.jpg"></v-img>
 								</v-card>
 							</v-flex>
 
 							<v-flex xs12 sm4 md4 lg4 xl4>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -114,7 +125,7 @@
 								</router-link>
 								<v-card
 									flat
-									color="red darken-4"
+									color="red"
 									max-width="40em"
 									max-height="15em"
 									class="mx-auto px-3 text-center"
@@ -154,17 +165,9 @@
 	</v-container>
 </template>
 <script>
-import VideoPlayer from "./VideoPlayer";
-const slide1 = require("../assets/slide1.jpg");
-const slide2 = require("../assets/slide2.jpg");
-const slide3 = require("../assets/slide-3.jpg");
-const slide4 = require("../assets/slide4.jpg");
-
 export default {
 	name: "HowToMeasure",
-	components: {
-		VideoPlayer
-	},
+	components: {},
 	methods: {
 		resetForm() {
 			this.form = Object.assign({}, this.defaultForm);
@@ -204,21 +207,13 @@ export default {
 			snackbar: false,
 			terms: false,
 			defaultForm,
-			items: [
-				{
-					src: slide1
-				},
-				{
-					src: slide2
-				},
-				{
-					src: slide3
-				},
-				{
-					src: slide4
-				}
-			]
+			items: []
 		};
 	}
 };
 </script>
+<style scoped>
+.fix {
+	word-break: normal;
+}
+</style>

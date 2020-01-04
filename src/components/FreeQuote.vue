@@ -55,7 +55,6 @@
 											</v-list-item>
 										</v-list-item-group>
 									</v-list>
-									<p class="display-1 font-weight-black pa-2 text-center">How To Measure</p>
 								</v-card>
 
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
@@ -161,7 +160,7 @@
 									max-height="15em"
 									class="mx-auto px-3 mt-7 text-center"
 								>
-									<v-card-title class="justify-center title white--text">OUR PRODUCTS!</v-card-title>
+									<v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
 								</v-card>
 								<router-link to="/about">
 									<v-card class="px-3 py-4" flat>

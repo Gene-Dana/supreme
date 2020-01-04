@@ -1,7 +1,7 @@
 <template>
 	<v-container min-width="100%" max-width="100%" class="pa-0" fluid>
 		<v-layout>
-			<v-carousel height="28em" cycle>
+			<v-carousel lazy height="28em" cycle>
 				<v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
 			</v-carousel>
 		</v-layout>
@@ -30,17 +30,24 @@
 
 								<v-card flat color="transparent" class="mt-4 ma-3 body-1 font-weight-medium text-justify">
 									<p>
-										&nbsp; &nbsp; &nbsp; Supreme Hurricane Shutters specializes in top quality hurricane shutters with a focus
-										on supplying shutters all throughout the South Florida region. In short, we are your one stop shop for
-										high quality hurricane shutters. We provide accordion shutters, roll down shutters, and affordable hurricane storm
-										panels that are all approved through the strictest Florida and Miami-Dade building code. We made it a passion to not
+										Supreme Hurricane Shutters specializes in manufacturing, installation and maintenance
+										of hurricane shutters all throughout the
+										<span
+											class="font-weight-black red--text"
+										>
+											South Florida region, including Miami-Dade, Broward,
+											and Palm Beach Counties
+										</span>. We are licensed and insured as a Florida General Contractor and our shop is located in Sunrise where you can come visit our
+										showroom and warehouse
+									</p>
+
+									<p>
+										In short, we are your one stop shop for
+										high quality hurricane shutters. We provide accordion shutters, storm panel shutters and affordable rolldown
+										shutters that are all approved through the strictest Florida and Miami-Dade building code. We made it a passion to not
 										sell anything under Florida building code standards.
 									</p>
-									<p>
-										Supreme Hurricane Shutters is a division of All Comfort Solutions, LLC., a leader in Florida
-										Hurricane protection since 2010. As a result, our customers obtain some of the highest levels of hurricane
-										security available at the most affordable price.
-									</p>
+
 									<v-card flat class="pa-5">
 										<VideoPlayer></VideoPlayer>
 									</v-card>
@@ -120,9 +127,8 @@
 										<v-card-text class="display-1 font-weight-black black--text">Our Products</v-card-text>
 									</v-card>
 								</v-layout>
-								<v-divider></v-divider>
 								<v-layout justify-center align-center row class="ma-4 mb-4">
-									<v-card class max-width="300">
+									<v-card class="ma-2" max-width="300">
 										<v-img class="white--text align-end" height="200px" src="../assets/accordion4.jpg">
 											<v-card-title>Accordion Shutters</v-card-title>
 										</v-img>
@@ -131,16 +137,16 @@
 											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
 										</v-card-actions>
 									</v-card>
-									<v-card class max-width="300">
+									<v-card class="ma-2" max-width="300">
 										<v-img class="black--text align-end" height="200px" src="../assets/steelPanel.jpg">
-											<v-card-title>Steel Panel Shutters</v-card-title>
+											<v-card-title>Panel Shutters</v-card-title>
 										</v-img>
 
 										<v-card-actions>
 											<v-btn text color="deep-purple accent-4">Learn More</v-btn>
 										</v-card-actions>
 									</v-card>
-									<v-card class max-width="300">
+									<v-card class="ma-2" max-width="300">
 										<v-img class="white--text align-end" height="200px" src="../assets/rolling.jpg">
 											<v-card-title>Rolling Shutters</v-card-title>
 										</v-img>
@@ -151,6 +157,9 @@
 									</v-card>
 								</v-layout>
 								<v-divider></v-divider>
+
+								<!----------------------- Important Information Section ------------------------------->
+
 								<!--------------------- Begin Guarantee Section --------------------------------->
 								<v-card class="mt-4">
 									<v-card-title class="red">
@@ -188,8 +197,14 @@
 <script>
 import VideoPlayer from "./VideoPlayer";
 const slide1 = require("../assets/accordion_banner.jpg");
-const slide3 = require("../assets/plasticPanel.jpg");
 const slide4 = require("../assets/roll.jpg");
+const slide5 = require("../assets/roll1.jpeg");
+const slide6 = require("../assets/roll2.jpeg");
+const slide7 = require("../assets/roll3.jpeg");
+const slide8 = require("../assets/accord1.jpg");
+const slide9 = require("../assets/accord2.jpg");
+const slide10 = require("../assets/accord3.jpg");
+const slide11 = require("../assets/accord4.jpg");
 
 export default {
 	name: "Home",
@@ -235,12 +250,33 @@ export default {
 				{
 					src: slide1
 				},
-				{
-					src: slide3
-				},
+				
 
 				{
 					src: slide4
+				},
+				{
+					src: slide5
+				},
+				{
+					src: slide6
+				},
+
+				{
+					src: slide7
+				},
+				{
+					src: slide8
+				},
+				{
+					src: slide9
+				},
+
+				{
+					src: slide10
+				},
+				{
+					src: slide11
 				}
 			]
 		};
