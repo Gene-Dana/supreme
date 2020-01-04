@@ -72,7 +72,7 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log("submited");
+			console.log("submitted");
 			// const jform = JSON.stringify(this.form2);
 			// console.log(jform);
 
