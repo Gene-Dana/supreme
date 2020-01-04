@@ -14,10 +14,11 @@
 			<v-spacer />
 			<v-flex xs12 sm6 m6 lg6 xl6>
 				<v-card flat color="transparent">
+					<a href="tel:9549473700">
 					<v-card-text
 						class="black--text font-weight-black ma-0 py-0 px-0"
 						:class="fontSize"
-					>CALL NOW (954) 947-3700</v-card-text>
+					>CALL NOW (954) 947-3700</v-card-text></a>
 				</v-card>
 			</v-flex>
 		</v-layout>
