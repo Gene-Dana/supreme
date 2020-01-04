@@ -1,5 +1,5 @@
 <template>
-	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+	<form name="ask-question" method="post" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
 		<input type="hidden" name="form-name" value="ask-question" />
 		<v-card color="transparent" class="pa-5">
 			<v-snackbar v-model="snackbar" absolute top right color="success">
@@ -67,7 +67,7 @@ export default {
 		},
 		handleSubmit() {
 			/* eslint no-console: */
-			console.log(this.form2);
+			
 			
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
