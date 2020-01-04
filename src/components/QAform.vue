@@ -4,7 +4,7 @@
 		method="post"
 		data-netlify="true"
 		netlify
-		data-netlify-honeypot="bot-field"
+	
 		@submit.prevent="handleSubmit"
 	>
 		<v-card color="transparent" class="pa-5">
