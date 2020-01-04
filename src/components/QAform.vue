@@ -64,6 +64,7 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
+			const form = this.form2.toJSON();
 			/* eslint no-console: */
 			console.log(this.form2);
 
@@ -74,8 +75,8 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-question",
-						...this.form
+						"form-name": "ask-questions",
+						...form
 					}),
 					axiosConfig
 				)
