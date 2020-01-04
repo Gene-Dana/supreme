@@ -64,7 +64,7 @@ export default {
 				.join("&");
 		},
 		handleSubmit() {
-			const form = this.form2.toJSON();
+			const form = this.form2
 			/* eslint no-console: */
 			console.log(this.form2);
 
