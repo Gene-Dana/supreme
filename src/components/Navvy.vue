@@ -44,7 +44,7 @@
 											<v-list-item-title>Accordion</v-list-item-title>
 										</v-list-item>
 										<v-list-item to="/panels">
-											<v-list-item-title>Panels</v-list-item-title>
+											<v-list-item-title>Storm Panels</v-list-item-title>
 										</v-list-item>
 										<v-list-item to="/rolldown">
 											<v-list-item-title>Rolldown</v-list-item-title>

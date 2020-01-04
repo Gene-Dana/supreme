@@ -18,7 +18,7 @@
 
 								<v-card flat wrap color="transparent" class="ma-0">
 									<v-card-title
-										class="display-2 font-weight-black pa-2 text-center fix"
+										class="display-2 font-weight-black pa-2 text-center justify-center fix"
 									>Supreme Hurricane Shutters</v-card-title>
 								</v-card>
 
@@ -36,9 +36,8 @@
 											class="font-weight-black red--text"
 										>
 											South Florida region, including Miami-Dade, Broward,
-											and Palm Beach Counties
-										</span>. We are licensed and insured as a Florida General Contractor and our shop is located in Sunrise where you can come visit our
-										showroom and warehouse
+											and Palm Beach Counties.
+										</span> We are licensed and insured and we you welcomed to vist us at 3620 NW 118 Ave #3, Coral Springs.
 									</p>
 
 									<p>

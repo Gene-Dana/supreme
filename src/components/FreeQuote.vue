@@ -356,7 +356,8 @@ export default {
 
 			snackbar: false,
 			snackbar2: false,
-			defaultForm
+			defaultForm,
+			quoteForm
 		};
 	}
 };
