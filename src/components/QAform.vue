@@ -101,8 +101,9 @@ export default {
 					axiosConfig
 				)
 				.then(() => {
-					this.snackbar = true;
-					this.resetForm();
+					// this.snackbar = true;
+					// this.resetForm();
+					this.$router.push("thanks");
 				})
 				.catch(() => {
 					this.$router.push("404");
