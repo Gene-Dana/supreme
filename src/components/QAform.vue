@@ -58,7 +58,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly");
+		console.log("newly2");
 	},
 	methods: {
 		encode(data) {
