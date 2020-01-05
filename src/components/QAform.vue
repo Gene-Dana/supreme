@@ -67,9 +67,13 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly7");
+		console.log("newly8");
 	},
 	methods: {
+		resetForm() {
+			
+			this.$refs.form2.reset();
+		},
 		encode(data) {
 			return Object.keys(data)
 				.map(
@@ -97,7 +101,8 @@ export default {
 					axiosConfig
 				)
 				.then(() => {
-					this.$router.push("thanks");
+					this.snackbar = true;
+					this.resetForm();
 				})
 				.catch(() => {
 					this.$router.push("404");
