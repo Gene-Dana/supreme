@@ -1,14 +1,16 @@
 <template>
 	<v-container class="ma-0 pa-0">
+		
 		<form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
-			<v-text-field type="text" label="Name" ></v-text-field>
+			<input type="text" name="Name" />
 
-			<v-text-field type="text" label="E-mail" ></v-text-field>
+			<input type="text" name="E-mail" />
 
-			<v-text-field type="text" label="Phone" ></v-text-field>
+			<input type="text" name="Phone"/>
 
-			<v-textarea  type="text" color="teal"></v-textarea>
+			<textarea  name="message"/>
 		</form>
+
 		<form name="ask-question" netlify method="POST" data-netlify="true" id="ask-question" @submit.prevent="handleSubmit">
 			
 			<v-card color="transparent" class="pa-5">
@@ -30,14 +32,14 @@
 						</div>
 					</template>
 				</v-textarea>
-				<v-btn :disabled="!formIsValid2" text color="success" class="mr-3" type="submit">Send</v-btn>
+				<button :disabled="!formIsValid2" text color="success" class="mr-3" type="submit" @click.prevent="handleSubmit">Send</button>
 			</v-card>
 		</form>
 	</v-container>
 </template>
 
 <script>
-import axios from "axios";
+
 
 export default {
 	name: "QAForm",
@@ -78,7 +80,7 @@ export default {
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
 			};
-			axios
+			this.$http
 				.post(
 					"/",
 					this.encode({
