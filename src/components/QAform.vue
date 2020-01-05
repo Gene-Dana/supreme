@@ -20,11 +20,11 @@
 					<span>Message sent!</span>
 					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 				</v-snackbar>
-				<v-text-field v-model="form2.name" name="name" label="name" required></v-text-field>
+				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
 
-				<v-text-field v-model="form2.email" name="email" label="email" required></v-text-field>
+				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
 
-				<v-text-field v-model="form2.number" name="number" label="number" required></v-text-field>
+				<v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
 
 				<v-textarea v-model="form2.message" name="message" color="teal">
 					<template v-slot:label>
