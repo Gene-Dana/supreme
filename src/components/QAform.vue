@@ -67,11 +67,10 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly10");
+		console.log("newly11");
 	},
 	methods: {
 		resetForm() {
-			
 			this.$refs.form2.reset();
 		},
 		encode(data) {
@@ -87,6 +86,8 @@ export default {
 		handleSubmit() {
 			/* eslint no-console: */
 			console.log(this.form2);
+			this.snackbar = true;
+			this.resetForm();
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -101,9 +102,7 @@ export default {
 					axiosConfig
 				)
 				.then(() => {
-					// this.snackbar = true;
-					// this.resetForm();
-					this.$router.push("thanks");
+					// this.$router.push("thanks");
 				})
 				.catch(() => {
 					this.$router.push("404");
