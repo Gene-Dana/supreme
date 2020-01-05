@@ -1,7 +1,7 @@
 <template>
 	<v-container class="ma-0 pa-0">
 		
-		<form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+		<form name="ask-question-hid" netlify netlify-honeypot="bot-field" hidden>
 			<input type="text" name="Name" />
 
 			<input type="text" name="E-mail" />
@@ -60,7 +60,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly3");
+		console.log("newly4");
 	},
 	methods: {
 		encode(data) {
