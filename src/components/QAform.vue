@@ -34,14 +34,14 @@
 						</div>
 					</template>
 				</v-textarea>
-				<button
+				<v-btn
 					:disabled="!formIsValid2"
 					text
 					color="success"
 					class="mr-3"
 					type="submit"
 					@click.prevent="handleSubmit"
-				>Send</button>
+				>Send</v-btn>
 			</v-card>
 		</form>
 	</v-container>
