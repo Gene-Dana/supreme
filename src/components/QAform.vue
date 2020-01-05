@@ -7,11 +7,11 @@
 			netlify-honeypot="bot-field"
 			@submit.prevent="handleSubmit"
 		>
-			<input type="hidden" name="Name" />
+			<input type="hidden" name="name" />
 
-			<input type="hidden" name="E-mail" />
+			<input type="hidden" name="email" />
 
-			<input type="hidden" name="Phone" />
+			<input type="hidden" name="number" />
 
 			<textarea type="hidden" name="message" />
 
@@ -20,11 +20,11 @@
 					<span>Message sent!</span>
 					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 				</v-snackbar>
-				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
+				<v-text-field v-model="form2.name" name="name" label="name" required></v-text-field>
 
-				<v-text-field v-model="form2.email" name="E-mail" label="E-mail" required></v-text-field>
+				<v-text-field v-model="form2.email" name="email" label="email" required></v-text-field>
 
-				<v-text-field v-model="form2.number" name="Phone" label="Phone" required></v-text-field>
+				<v-text-field v-model="form2.number" name="number" label="number" required></v-text-field>
 
 				<v-textarea v-model="form2.message" name="message" color="teal">
 					<template v-slot:label>
@@ -67,7 +67,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly6");
+		console.log("newly7");
 	},
 	methods: {
 		encode(data) {
