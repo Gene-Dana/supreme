@@ -1,18 +1,20 @@
 <template>
 	<v-container class="ma-0 pa-0">
-		
-		<form name="ask-question-hid" netlify netlify-honeypot="bot-field" hidden>
-			<input type="text" name="Name" />
+		<form
+			name="ask-question"
+			method="POST"
+			data-netlify="true"
+			netlify-honeypot="bot-field"
+			@submit.prevent="handleSubmit"
+		>
+			<input type="hidden" name="Name" />
 
-			<input type="text" name="E-mail" />
+			<input type="hidden" name="E-mail" />
 
-			<input type="text" name="Phone"/>
+			<input type="hidden" name="Phone" />
 
-			<textarea  name="message"/>
-		</form>
+			<textarea type="hidden" name="message" />
 
-		<form name="ask-question" netlify method="POST" data-netlify="true" id="ask-question" @submit.prevent="handleSubmit">
-			
 			<v-card color="transparent" class="pa-5">
 				<v-snackbar v-model="snackbar" absolute top right color="success">
 					<span>Message sent!</span>
@@ -32,15 +34,20 @@
 						</div>
 					</template>
 				</v-textarea>
-				<button :disabled="!formIsValid2" text color="success" class="mr-3" type="submit" @click.prevent="handleSubmit">Send</button>
+				<button
+					:disabled="!formIsValid2"
+					text
+					color="success"
+					class="mr-3"
+					type="submit"
+					@click.prevent="handleSubmit"
+				>Send</button>
 			</v-card>
 		</form>
 	</v-container>
 </template>
 
 <script>
-
-
 export default {
 	name: "QAForm",
 	data() {
@@ -60,7 +67,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly5");
+		console.log("newly6");
 	},
 	methods: {
 		encode(data) {
