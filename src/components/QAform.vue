@@ -1,20 +1,16 @@
 <template>
 	<v-container class="ma-0 pa-0">
 		<form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
-			<input type="text" name="name" />
-			<input type="text" name="email" />
-			<input type="text" name="phone" />
+			<v-text-field type="text" label="Name" ></v-text-field>
 
-			<textarea name="message"></textarea>
+			<v-text-field type="text" label="E-mail" ></v-text-field>
+
+			<v-text-field type="text" label="Phone" ></v-text-field>
+
+			<v-textarea  type="text" color="teal"></v-textarea>
 		</form>
-		<form
-			name="ask-question"
-			netlify
-			method="POST"
-			data-netlify="true"
-			id="ask-question"
-			@submit.prevent="handleSubmit"
-		>
+		<form name="ask-question" netlify method="POST" data-netlify="true" id="ask-question" @submit.prevent="handleSubmit">
+			
 			<v-card color="transparent" class="pa-5">
 				<v-snackbar v-model="snackbar" absolute top right color="success">
 					<span>Message sent!</span>
