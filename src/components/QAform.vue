@@ -67,11 +67,11 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly11");
+		console.log("newly12");
 	},
 	methods: {
 		resetForm() {
-			this.$refs.form2.reset();
+			this.form2.reset();
 		},
 		encode(data) {
 			return Object.keys(data)
@@ -103,6 +103,7 @@ export default {
 				)
 				.then(() => {
 					// this.$router.push("thanks");
+					console.log("oh yeah she worked")
 				})
 				.catch(() => {
 					this.$router.push("404");
