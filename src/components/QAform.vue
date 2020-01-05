@@ -60,7 +60,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly2");
+		console.log("newly3");
 	},
 	methods: {
 		encode(data) {
