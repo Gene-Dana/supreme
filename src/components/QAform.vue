@@ -67,7 +67,7 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly12");
+		console.log("newly13");
 	},
 	methods: {
 		resetForm() {
@@ -83,11 +83,11 @@ export default {
 				)
 				.join("&");
 		},
-		handleSubmit() {
+		handleSubmit(event) {
 			/* eslint no-console: */
 			console.log(this.form2);
-			this.snackbar = true;
-			this.resetForm();
+			
+			
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -103,7 +103,9 @@ export default {
 				)
 				.then(() => {
 					// this.$router.push("thanks");
+					this.snackbar = true;
 					console.log("oh yeah she worked")
+					event.target.reset();
 				})
 				.catch(() => {
 					this.$router.push("404");
