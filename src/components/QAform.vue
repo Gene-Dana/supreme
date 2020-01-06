@@ -20,6 +20,10 @@
 					<span>Message sent!</span>
 					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
 				</v-snackbar>
+				<v-snackbar v-model="snackbar2" absolute top right color="fail">
+					<span>Message Did Not Succeed!</span>
+					<v-icon dark>mdi-checkbox-flash-off</v-icon>
+				</v-snackbar>
 				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
 
 				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
@@ -58,7 +62,8 @@ export default {
 				number: "",
 				message: ""
 			},
-			snackbar: false
+			snackbar: false,
+			snackbar2: false
 		};
 	},
 	computed: {
@@ -67,11 +72,14 @@ export default {
 		}
 	},
 	created() {
-		console.log("newly13");
+		console.log("newly14");
 	},
 	methods: {
 		resetForm() {
-			this.form2.reset();
+			(this.form2.name = ""),
+				(this.form2.email = ""),
+				(this.form2.number = "");
+			this.form2.message = "";
 		},
 		encode(data) {
 			return Object.keys(data)
@@ -83,11 +91,9 @@ export default {
 				)
 				.join("&");
 		},
-		handleSubmit(event) {
+		handleSubmit( ) {
 			/* eslint no-console: */
 			console.log(this.form2);
-			
-			
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -104,11 +110,12 @@ export default {
 				.then(() => {
 					// this.$router.push("thanks");
 					this.snackbar = true;
-					console.log("oh yeah she worked")
-					event.target.reset();
+					console.log("oh yeah she worked");
+					this.resetForm();
 				})
-				.catch(() => {
-					this.$router.push("404");
+				.catch(err => {
+					console.log(err);
+					this.snackbar2 = true;
 				});
 		}
 	}
