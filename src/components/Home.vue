@@ -91,7 +91,7 @@
 									max-height="15em"
 									class="mx-auto px-3 text-center"
 								>
-									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
+									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US</v-card-title>
 								</v-card>
 
 								<QAform></QAform>
