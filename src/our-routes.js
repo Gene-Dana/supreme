@@ -1,13 +1,13 @@
-import Home from './components/Home.vue'
-import About from './components/About.vue'
-import FreeQuote from './components/FreeQuote.vue'
-import Products from './components/Products.vue'
-import Accordion from './components/Accordion.vue'
-import Panels from './components/Panels.vue'
-import Rolldown from './components/Rolldown.vue'
-import HowToMeasure from './components/HowToMeasure.vue'
-import SubmissionSuccess from './components/SubmissionSuccess.vue'
-import SubmissionFail from './components/SubmissionFail.vue'
+const Home = () => import( /* webpackPrefetch: true */ './components/Home.vue')
+const About = () => import(/* webpackPrefetch: true */ './components/About.vue')
+const FreeQuote = () => import(/* webpackPrefetch: true */ './components/FreeQuote.vue')
+const Products = () => import(/* webpackPrefetch: true */ './components/Products.vue')
+const Accordion = () => import(/* webpackPrefetch: true */ './components/Accordion.vue')
+const Panels = () => import(/* webpackPrefetch: true */ './components/Panels.vue')
+const Rolldown = () => import(/* webpackPrefetch: true */ './components/Rolldown.vue')
+const HowToMeasure = () => import(/* webpackPrefetch: true */ './components/HowToMeasure.vue')
+const SubmissionSuccess = () => import(/* webpackPrefetch: true */ './components/SubmissionSuccess.vue')
+const SubmissionFail = () => import(/* webpackPrefetch: true */ './components/SubmissionFail.vue')
 
 
 export default [
