@@ -173,9 +173,7 @@
 import VideoPlayer from "./VideoPlayer";
 const slide1 = require("../assets/accordion_banner.jpg");
 const slide4 = require("../assets/roll.jpg");
-const slide5 = require("../assets/roll1.jpeg");
-const slide6 = require("../assets/roll2.jpeg");
-const slide7 = require("../assets/roll3.jpeg");
+
 const slide8 = require("../assets/accord1.jpg");
 const slide9 = require("../assets/accord2.jpg");
 const slide10 = require("../assets/accord3.jpg");
@@ -201,16 +199,7 @@ export default {
 				{
 					src: slide4
 				},
-				{
-					src: slide5
-				},
-				{
-					src: slide6
-				},
-
-				{
-					src: slide7
-				},
+				
 				{
 					src: slide8
 				},
