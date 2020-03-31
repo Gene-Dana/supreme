@@ -1,13 +1,13 @@
 import Home from './components/Home.vue'
-import About from './components/About.vue';
-import FreeQuote from './components/FreeQuote'
-import Products from './components/Products'
-import Accordion from './components/Accordion'
-import Panels from './components/Panels'
-import Rolldown from './components/Rolldown'
-import HowToMeasure from './components/HowToMeasure'
-import SubmissionSuccess from './components/SubmissionSuccess'
-import SubmissionFail from './components/SubmissionFail'
+import About from './components/About.vue'
+import FreeQuote from './components/FreeQuote.vue'
+import Products from './components/Products.vue'
+import Accordion from './components/Accordion.vue'
+import Panels from './components/Panels.vue'
+import Rolldown from './components/Rolldown.vue'
+import HowToMeasure from './components/HowToMeasure.vue'
+import SubmissionSuccess from './components/SubmissionSuccess.vue'
+import SubmissionFail from './components/SubmissionFail.vue'
 
 
 export default [

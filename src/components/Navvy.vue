@@ -1,11 +1,11 @@
 <template>
 	<v-container fluid class="ma-0 pa-0">
-		<v-layout row align-center ma-0>
+		<v-layout row align-center ma-0 style="min-height:200px">
 			<v-flex xs12 sm4 m4 lg4>
 				<v-card flat color="transparent">
 					<v-img
 						alt="Supreme Hurricane Shutters Logo"
-						class="shrink mr-2"
+						class="mr-2"
 						contain
 						src="../assets/logo.png"
 					/>
