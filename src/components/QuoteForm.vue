@@ -5,7 +5,7 @@
     <v-divider></v-divider>
     <!-- ================================================================== -->
     <form
-      ref="quoteForm"
+      ref="quote-Form"
       name="quote-form"
       method="POST"
       data-netlify="true"
@@ -340,7 +340,7 @@ export default {
         .post(
           "/",
           this.encode({
-            "form-name": "quoteForm",
+            "form-name": "quote-form",
             ...this.form,
             ...this.shutters
           }),
