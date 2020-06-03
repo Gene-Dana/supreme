@@ -92,120 +92,121 @@
             <tbody>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[0].name" name="name_0"></v-text-field>
+                  <v-text-field v-model="form.name_0" name="name_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[0].height" name="height_0"></v-text-field>
+                  <v-text-field v-model="form.height_0" name="height_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[0].width" name="width_0"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="shutters[1].name" name="name_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[1].height" name="height_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[1].width" name="width_1"></v-text-field>
+                  <v-text-field v-model="form.width_0" name="width_0"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[2].name" name="name_2"></v-text-field>
+                  <v-text-field v-model="form.name_1" name="name_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[2].height" name="height_2"></v-text-field>
+                  <v-text-field v-model="form.height_1" name="height_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[2].width" name="width_2"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="shutters[3].name" name="name_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[3].height" name="height_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[3].width" name="width_3"></v-text-field>
+                  <v-text-field v-model="form.width_1" name="width_1"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[4].name" name="name_4"></v-text-field>
+                  <v-text-field v-model="form.name_2" name="name_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[4].height" name="height_4"></v-text-field>
+                  <v-text-field v-model="form.height_2" name="height_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[4].width" name="width_4"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="shutters[5].name" name="name_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[5].height" name="height_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[5].width" name="width_5"></v-text-field>
+                  <v-text-field v-model="form.width_2" name="width_2"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[6].name" name="name_6"></v-text-field>
+                  <v-text-field v-model="form.name_3" name="name_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[6].height" name="height_6"></v-text-field>
+                  <v-text-field v-model="form.height_3" name="height_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[6].width" name="width_6"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="shutters[7].name" name="name_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[7].height" name="height_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="shutters[7].width" name="width_7"></v-text-field>
+                  <v-text-field v-model="form.width_3" name="width_3"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[8].name" name="name_8"></v-text-field>
+                  <v-text-field v-model="form.name_4" name="name_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[8].height" name="height_8"></v-text-field>
+                  <v-text-field v-model="form.height_4" name="height_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[8].width" name="width_8"></v-text-field>
+                  <v-text-field v-model="form.width_4" name="width_4"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="shutters[9].name" name="name_9"></v-text-field>
+                  <v-text-field v-model="form.name_5" name="name_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[9].height" name="height_9"></v-text-field>
+                  <v-text-field v-model="form.height_5" name="height_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="shutters[9].width" name="width_9"></v-text-field>
+                  <v-text-field v-model="form.width_5" name="width_5"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form.name_6" name="name_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.height_6" name="height_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.width_6" name="width_6"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form.name_7" name="name_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.height_7" name="height_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.width_7" name="width_7"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form.name_8" name="name_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.height_8" name="height_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.width_8" name="width_8"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form.name_9" name="name_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.height_9" name="height_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form.width_9" name="width_9"></v-text-field>
                 </td>
               </tr>
             </tbody>
           </template>
         </v-simple-table>
-        <!-- ========================================================================== -->
       </v-card>
-      <v-layout row wrap justify-center align-center class="pa-3">
+
+      <!-- ========================================================================== -->
+      <v-card>
         <v-snackbar v-model="snackbar" absolute top right color="success">
           <span>Message sent!</span>
           <v-icon dark>mdi-checkbox-marked-circle</v-icon>
@@ -214,111 +215,56 @@
           <span>Message Did Not Succeed!</span>
           <v-icon dark>mdi-checkbox-flash-off</v-icon>
         </v-snackbar>
-        <v-flex xs12 sm12 md4 lg4>
-          <v-text-field
-            class="ma-1"
-            v-model="form.name"
-            type="text"
-            name="name"
-            label="Name"
-            required
-          ></v-text-field>
-        </v-flex>
-        <v-flex xs6 sm6 md4 lg4>
-          <v-text-field
-            class="ma-1"
-            v-model="form.number"
-            type="text"
-            name="number"
-            label="Number"
-            required
-          ></v-text-field>
-        </v-flex>
-        <v-flex xs6 sm6 md4 lg4>
-          <v-text-field
-            class="ma-1"
-            v-model="form.email"
-            type="text"
-            name="email"
-            label="Email"
-            required
-          ></v-text-field>
-        </v-flex>
-        <v-btn
-          :disabled="!formIsValid"
-          text
-          width="10em"
-          color="success"
-          type="submit"
-          @click.prevent="handleSubmit2"
-        >Get Quote</v-btn>
-      </v-layout>
+        <v-layout row wrap justify-center align-center class="pa-5">
+          <v-flex xs12 sm12 md4 lg4>
+            <v-text-field
+              class="ma-1"
+              v-model="form.name"
+              type="text"
+              name="name"
+              label="Name"
+              required
+            ></v-text-field>
+          </v-flex>
+          <v-flex xs6 sm6 md4 lg4>
+            <v-text-field
+              class="ma-1"
+              v-model="form.number"
+              type="text"
+              name="number"
+              label="Number"
+              required
+            ></v-text-field>
+          </v-flex>
+          <v-flex xs6 sm6 md4 lg4>
+            <v-text-field
+              class="ma-1"
+              v-model="form.email"
+              type="text"
+              name="email"
+              label="Email"
+              required
+            ></v-text-field>
+          </v-flex>
+          <v-btn
+            :disabled="!formIsValid"
+            width="10em"
+            color="success"
+            type="submit"
+            @click.prevent="handleSubmit2"
+          >Get Quote</v-btn>
+        </v-layout>
+      </v-card>
     </form>
   </v-container>
 </template>
 
 
 <script>
+//==================================================================
 export default {
   name: "QuoteForm",
-  //=========================================================================
   methods: {
-    initialize() {
-      this.shutters = [
-        {
-          name: "eg. Door",
-          height: "96",
-          width: "36"
-        },
-        {
-          name: "eg. Window 1",
-          height: "40",
-          width: "50"
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        },
-        {
-          name: "",
-          height: "",
-          width: ""
-        }
-      ];
-    },
-
-    //==================================================================
     encode(data) {
       return Object.keys(data)
         .map(
@@ -341,8 +287,7 @@ export default {
           "/",
           this.encode({
             "form-name": "quote-form",
-            ...this.form,
-            ...this.shutters
+            ...this.form
           }),
           axiosConfig
         )
@@ -355,6 +300,7 @@ export default {
         .catch(err => {
           console.log(err);
           this.snackbar2 = true;
+          this.resetForm();
         });
     }
 
@@ -379,15 +325,54 @@ export default {
       ],
       colors: ["White", "Ivory", "Beige", "Brown"],
 
-      shutters: [],
-
       form: {
         name: "",
         email: "",
         number: "",
+
+        name_0: "eg. Door",
+        height_0: "96",
+        width_0: "36",
+
+        name_1: "eg. Window 1",
+        height_1: "40",
+        width_1: "50",
+
+        name_2: "",
+        height_2: "",
+        width_2: "",
+
+        name_3: "",
+        height_3: "",
+        width_3: "",
+
+        name_4: "",
+        height_4: "",
+        width_4: "",
+
+        name_5: "",
+        height_5: "",
+        width_5: "",
+
+        name_6: "",
+        height_6: "",
+        width_6: "",
+
+        name_7: "",
+        height_7: "",
+        width_7: "",
+
+        name_8: "",
+        height_8: "",
+        width_8: "",
+
+        name_9: "",
+        height_9: "",
+        width_9: ""
       },
 
-      snackbar: false
+      snackbar: false,
+      snackbar2: false
     };
   }
 };

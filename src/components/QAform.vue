@@ -16,6 +16,8 @@
 			<textarea type="hidden" name="message" />
 
 			<v-card color="transparent" class="pa-5">
+
+				
 				<v-snackbar v-model="snackbar" absolute top right color="success">
 					<span>Message sent!</span>
 					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
@@ -24,6 +26,8 @@
 					<span>Message Did Not Succeed!</span>
 					<v-icon dark>mdi-checkbox-flash-off</v-icon>
 				</v-snackbar>
+
+
 				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
 
 				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
