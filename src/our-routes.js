@@ -12,7 +12,7 @@ const SubmissionFail = () => import(/* webpackPrefetch: true */ './components/Su
 
 export default [
   // Redirects to /route-one as the default route.
-  {
+  {  
     path: '/',
     redirect: '/home'
   },
