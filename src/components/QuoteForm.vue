@@ -206,6 +206,14 @@
         <!-- ========================================================================== -->
       </v-card>
       <v-layout row wrap justify-center align-center class="pa-3">
+        <v-snackbar v-model="snackbar" absolute top right color="success">
+          <span>Message sent!</span>
+          <v-icon dark>mdi-checkbox-marked-circle</v-icon>
+        </v-snackbar>
+        <v-snackbar v-model="snackbar2" absolute top right color="fail">
+          <span>Message Did Not Succeed!</span>
+          <v-icon dark>mdi-checkbox-flash-off</v-icon>
+        </v-snackbar>
         <v-flex xs12 sm12 md4 lg4>
           <v-text-field
             class="ma-1"
@@ -236,7 +244,14 @@
             required
           ></v-text-field>
         </v-flex>
-        <v-btn width="10em" color="success" type="submit" @click.prevent="handleSubmit2">Get Quote</v-btn>
+        <v-btn
+          :disabled="!formIsValid"
+          text
+          width="10em"
+          color="success"
+          type="submit"
+          @click.prevent="handleSubmit2"
+        >Get Quote</v-btn>
       </v-layout>
     </form>
   </v-container>
@@ -251,12 +266,12 @@ export default {
     initialize() {
       this.shutters = [
         {
-          name: "eg.. Door",
+          name: "eg. Door",
           height: "96",
           width: "36"
         },
         {
-          name: "eg.. Window 1",
+          name: "eg. Window 1",
           height: "40",
           width: "50"
         },
@@ -303,48 +318,6 @@ export default {
       ];
     },
 
-    editItem(item) {
-      this.editedIndex = this.shutters.indexOf(item);
-      this.editedItem = Object.assign({}, item);
-      this.dialog = true;
-    },
-
-    deleteItem(item) {
-      const index = this.shutters.indexOf(item);
-      confirm("Are you sure you want to delete this item?") &&
-        this.shutters.splice(index, 1);
-    },
-
-    close() {
-      this.dialog = false;
-      setTimeout(() => {
-        this.editedItem = Object.assign({}, this.defaultItem);
-        this.editedIndex = -1;
-      }, 300);
-    },
-
-    save() {
-      if (this.editedIndex > -1) {
-        console.log("edited Existing");
-        Object.assign(this.shutters[this.editedIndex], this.editedItem);
-      } else {
-        console.log("edited New");
-
-        this.shutters.push(this.editedItem);
-        console.log("edit" + this.shutters[0].name);
-      }
-
-      this.close();
-    },
-
-    resetForm() {
-      this.form = Object.assign({}, this.defaultForm);
-      this.$refs.form.reset();
-    },
-    submit() {
-      this.snackbar = true;
-      this.resetForm();
-    },
     //==================================================================
     encode(data) {
       return Object.keys(data)
@@ -360,7 +333,6 @@ export default {
 
       console.log("edit: in Handle submit");
 
-     
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
@@ -369,20 +341,20 @@ export default {
           "/",
           this.encode({
             "form-name": "quoteForm",
-			...this.form,
-			...this.shutters
+            ...this.form,
+            ...this.shutters
           }),
           axiosConfig
         )
         .then(() => {
           // this.$router.push("thanks");
-          // this.snackbar = true;
+          this.snackbar = true;
           console.log("oh yeah she worked");
-          // this.resetForm();
+          this.resetForm();
         })
         .catch(err => {
           console.log(err);
-          // this.snackbar2 = true;
+          this.snackbar2 = true;
         });
     }
 
@@ -391,14 +363,6 @@ export default {
   computed: {
     formIsValid() {
       return this.form.name && this.form.email && this.form.number;
-    },
-    formTitle() {
-      return this.editedIndex === -1 ? "Add Shutter" : "Edit Item";
-    }
-  },
-  watch: {
-    dialog(val) {
-      val || this.close();
     }
   },
 
@@ -406,19 +370,6 @@ export default {
     this.initialize();
   },
   data() {
-    const defaultForm = Object.freeze({
-      name: "",
-      email: "",
-      number: "",
-      message: ""
-    });
-    const quoteForm = Object.freeze({
-      name: "",
-      email: "",
-      number: "",
-      message: ""
-    });
-
     return {
       types: [
         "Accordion",
@@ -427,53 +378,16 @@ export default {
         "Roll Down"
       ],
       colors: ["White", "Ivory", "Beige", "Brown"],
-      dialog: false,
-      headers: [
-        {
-          text: "Opening Name",
-          align: "left",
-          value: "name",
-          sortable: false
-        },
-        { text: "Width (in)", value: "width", sortable: false },
-        { text: "Height (in)", value: "height", sortable: false },
-        { text: "Shutter Type", value: "type", sortable: false },
-        { text: "Color", value: "color", sortable: false },
-        { text: "Actions", value: "action", sortable: false }
-      ],
+
       shutters: [],
-      editedIndex: -1,
-      editedItem: {
+
+      form: {
         name: "",
-        width: "",
-        height: "",
-        type: "",
-        color: ""
-      },
-      defaultItem: {
-        name: "",
-        width: "",
-        height: "",
-        type: "",
-        color: ""
-      },
-      //Data for the Contact Us form
-      form: Object.assign({}, defaultForm),
-      rules: {
-        email: [val => (val || "").length > 0 || "This field is required"],
-        name: [val => (val || "").length > 0 || "This field is required"]
-      },
-      //Data for the Contact Us form
-      qform: Object.assign({}, quoteForm),
-      rules2: {
-        email: [val => (val || "").length > 0 || "This field is required"],
-        name: [val => (val || "").length > 0 || "This field is required"]
+        email: "",
+        number: "",
       },
 
-      snackbar: false,
-
-      defaultForm,
-      quoteForm
+      snackbar: false
     };
   }
 };
