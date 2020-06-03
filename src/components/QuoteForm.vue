@@ -6,11 +6,11 @@
     <!-- ================================================================== -->
     <form
       ref="quoteForm"
-      name="quote_form"
+      name="quote-form"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      @submit.prevent="handleSubmit"
+      @submit.prevent="handleSubmit2"
     >
       <input type="hidden" name="name" />
 
@@ -221,7 +221,7 @@
             required
           ></v-text-field>
         </v-flex>
-        <v-btn width="10em" type="submit" @click.prevent="handleSubmit" color="green">Get Quote</v-btn>
+        <v-btn width="10em" color="success" type="submit" @click.prevent="handleSubmit2" >Get Quote</v-btn>
       </v-layout>
     </form>
   </v-container>
@@ -295,7 +295,7 @@ export default {
         )
         .join("&");
     },
-    handleSubmit() {
+    handleSubmit2() {
       /* eslint no-console: */
       /* eslint no-mixed-spaces-and-tabs: */
       /* eslint no-unused-vars: */
