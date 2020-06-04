@@ -11,53 +11,54 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       @submit.prevent="handleSubmit2"
+      hidden
     >
-      <input type="hidden" name="name" />
-      <input type="hidden" name="email" />
-      <input type="hidden" name="number" />
+      <input type="text" name="name" />
+      <input type="text" name="email" />
+      <input type="text" name="number" />
 
-      <input type="hidden" name="type" />
-      <input type="hidden" name="color" />
+      <input type="text" name="type" />
+      <input type="text" name="color" />
 
-      <input type="hidden" name="name_0" />
-      <input type="hidden" name="height_0" />
-      <input type="hidden" name="width_0" />
+      <input type="text" name="name_0" />
+      <input type="text" name="height_0" />
+      <input type="text" name="width_0" />
 
-      <input type="hidden" name="name_1" />
-      <input type="hidden" name="height_1" />
-      <input type="hidden" name="width_1" />
+      <input type="text" name="name_1" />
+      <input type="text" name="height_1" />
+      <input type="text" name="width_1" />
 
-      <input type="hidden" name="name_2" />
-      <input type="hidden" name="height_2" />
-      <input type="hidden" name="width_2" />
+      <input type="text" name="name_2" />
+      <input type="text" name="height_2" />
+      <input type="text" name="width_2" />
 
-      <input type="hidden" name="name_3" />
-      <input type="hidden" name="height_3" />
-      <input type="hidden" name="width_3" />
+      <input type="text" name="name_3" />
+      <input type="text" name="height_3" />
+      <input type="text" name="width_3" />
 
-      <input type="hidden" name="name_4" />
-      <input type="hidden" name="height_4" />
-      <input type="hidden" name="width_4" />
+      <input type="text" name="name_4" />
+      <input type="text" name="height_4" />
+      <input type="text" name="width_4" />
 
-      <input type="hidden" name="name_5" />
-      <input type="hidden" name="height_5" />
-      <input type="hidden" name="width_5" />
+      <input type="text" name="name_5" />
+      <input type="text" name="height_5" />
+      <input type="text" name="width_5" />
 
-      <input type="hidden" name="name_6" />
-      <input type="hidden" name="height_6" />
-      <input type="hidden" name="width_6" />
+      <input type="text" name="name_6" />
+      <input type="text" name="height_6" />
+      <input type="text" name="width_6" />
 
-      <input type="hidden" name="name_7" />
-      <input type="hidden" name="height_7" />
-      <input type="hidden" name="width_7" />
+      <input type="text" name="name_7" />
+      <input type="text" name="height_7" />
+      <input type="text" name="width_7" />
 
-      <input type="hidden" name="name_8" />
-      <input type="hidden" name="height_8" />
-      <input type="hidden" name="width_8" />
+      <input type="text" name="name_8" />
+      <input type="text" name="height_8" />
+      <input type="text" name="width_8" />
 
-      <input type="hidden" name="name_9" />
-      <input type="hidden" name="height_9" />
-      <input type="hidden" name="width_9" />
+      <input type="text" name="name_9" />
+      <input type="text" name="height_9" />
+      <input type="text" name="width_9" />
 
       <v-card class="pa-3">
         <v-simple-table>
@@ -80,6 +81,8 @@
             </tbody>
           </template>
         </v-simple-table>
+
+
         <v-simple-table>
           <template v-slot:default>
             <thead>
@@ -256,6 +259,8 @@
         </v-layout>
       </v-card>
     </form>
+
+
   </v-container>
 </template>
 
