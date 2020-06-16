@@ -386,11 +386,10 @@ export default {
 </script>
 
  -->
-
- <template>
+<template>
 	<v-container class="ma-0 pa-0">
 		<form
-			name="quote-form"
+			name="ask-question"
 			method="POST"
 			data-netlify="true"
 			netlify-honeypot="bot-field"
@@ -417,13 +416,13 @@ export default {
 				</v-snackbar>
 
 
-				<v-text-field v-model="quoteform.name" name="name" label="Name" required></v-text-field>
+				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
 
-				<v-text-field v-model="quoteform.email" name="email" label="Email" required></v-text-field>
+				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
 
-				<v-text-field v-model="quoteform.number" name="number" label="Number" required></v-text-field>
+				<v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
 
-				<v-textarea v-model="quoteform.message" name="message" color="teal">
+				<v-textarea v-model="form2.message" name="message" color="teal">
 					<template v-slot:label>
 						<div>
 							Message
@@ -449,7 +448,7 @@ export default {
 	name: "QAForm",
 	data() {
 		return {
-			quoteform: {
+			form2: {
 				name: "",
 				email: "",
 				number: "",
@@ -461,7 +460,7 @@ export default {
 	},
 	computed: {
 		formIsValid2() {
-			return this.quoteform.name && this.quoteform.email && this.quoteform.number;
+			return this.form2.name && this.form2.email && this.form2.number;
 		}
 	},
 	created() {
@@ -469,10 +468,10 @@ export default {
 	},
 	methods: {
 		resetForm() {
-			(this.quoteform.name = ""),
-				(this.quoteform.email = ""),
-				(this.quoteform.number = "");
-			this.quoteform.message = "";
+			(this.form2.name = ""),
+				(this.form2.email = ""),
+				(this.form2.number = "");
+			this.form2.message = "";
 		},
 		encode(data) {
 			return Object.keys(data)
@@ -486,7 +485,7 @@ export default {
 		},
 		handleSubmit( ) {
 			/* eslint no-console: */
-			console.log(this.quoteform);
+			console.log(this.form2);
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -495,8 +494,8 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "quote-form",
-						...this.quoteform
+						"form-name": "ask-question",
+						...this.form2
 					}),
 					axiosConfig
 				)
