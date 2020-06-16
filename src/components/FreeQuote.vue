@@ -15,7 +15,7 @@
 									<v-list flat subheader three-line>
 										<v-list-item-group multiple active-class>
 											<v-list-item>
-												<template v-slot:default="{ active }">
+												<template>
 													<v-list-item-action>
 														<v-checkbox v-model="active"></v-checkbox>
 													</v-list-item-action>
@@ -31,7 +31,7 @@
 											</v-list-item>
 
 											<v-list-item>
-												<template v-slot:default="{ active }">
+												<template>
 													<v-list-item-action>
 														<v-checkbox v-model="active"></v-checkbox>
 													</v-list-item-action>
@@ -44,7 +44,7 @@
 											</v-list-item>
 
 											<v-list-item>
-												<template v-slot:default="{ active }">
+												<template>
 													<v-list-item-action>
 														<v-checkbox v-model="active"></v-checkbox>
 													</v-list-item-action>
