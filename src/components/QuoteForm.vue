@@ -409,7 +409,47 @@ export default {
 				name: "",
 				email: "",
 				number: "",
-				message: ""
+        message: "",
+        
+        name_0: "eg. Door",
+        height_0: "96",
+        width_0: "36",
+
+        name_1: "eg. Window 1",
+        height_1: "40",
+        width_1: "50",
+
+        name_2: "",
+        height_2: "",
+        width_2: "",
+
+        name_3: "",
+        height_3: "",
+        width_3: "",
+
+        name_4: "",
+        height_4: "",
+        width_4: "",
+
+        name_5: "",
+        height_5: "",
+        width_5: "",
+
+        name_6: "",
+        height_6: "",
+        width_6: "",
+
+        name_7: "",
+        height_7: "",
+        width_7: "",
+
+        name_8: "",
+        height_8: "",
+        width_8: "",
+
+        name_9: "",
+        height_9: "",
+        width_9: ""
 			},
 			snackbar: false,
 			snackbar2: false
