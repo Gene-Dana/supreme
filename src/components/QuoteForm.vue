@@ -456,7 +456,16 @@ export default {
 			<textarea type="hidden" name="message" />
 
 			<v-card color="transparent" class="pa-5">
-        <v-simple-table>
+				
+				<v-snackbar v-model="snackbar" absolute top right color="success">
+					<span>Message sent!</span>
+					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+				</v-snackbar>
+				<v-snackbar v-model="snackbar2" absolute top right color="fail">
+					<span>Message Did Not Succeed!</span>
+					<v-icon dark>mdi-checkbox-flash-off</v-icon>
+				</v-snackbar>
+ <v-simple-table>
           <template v-slot:default>
             <thead>
               <tr>
@@ -468,127 +477,117 @@ export default {
             <tbody>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_0" name="name_0"></v-text-field>
+                  <v-text-field v-model="quoteform.name_0" name="name_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_0" name="height_0"></v-text-field>
+                  <v-text-field v-model="quoteform.height_0" name="height_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_0" name="width_0"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form.name_1" name="name_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.height_1" name="height_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.width_1" name="width_1"></v-text-field>
+                  <v-text-field v-model="quoteform.width_0" name="width_0"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_2" name="name_2"></v-text-field>
+                  <v-text-field v-model="quoteform.name_1" name="name_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_2" name="height_2"></v-text-field>
+                  <v-text-field v-model="quoteform.height_1" name="height_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_2" name="width_2"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form.name_3" name="name_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.height_3" name="height_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.width_3" name="width_3"></v-text-field>
+                  <v-text-field v-model="quoteform.width_1" name="width_1"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_4" name="name_4"></v-text-field>
+                  <v-text-field v-model="quoteform.name_2" name="name_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_4" name="height_4"></v-text-field>
+                  <v-text-field v-model="quoteform.height_2" name="height_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_4" name="width_4"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form.name_5" name="name_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.height_5" name="height_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.width_5" name="width_5"></v-text-field>
+                  <v-text-field v-model="quoteform.width_2" name="width_2"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_6" name="name_6"></v-text-field>
+                  <v-text-field v-model="quoteform.name_3" name="name_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_6" name="height_6"></v-text-field>
+                  <v-text-field v-model="quoteform.height_3" name="height_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_6" name="width_6"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form.name_7" name="name_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.height_7" name="height_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form.width_7" name="width_7"></v-text-field>
+                  <v-text-field v-model="quoteform.width_3" name="width_3"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_8" name="name_8"></v-text-field>
+                  <v-text-field v-model="quoteform.name_4" name="name_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_8" name="height_8"></v-text-field>
+                  <v-text-field v-model="quoteform.height_4" name="height_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_8" name="width_8"></v-text-field>
+                  <v-text-field v-model="quoteform.width_4" name="width_4"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form.name_9" name="name_9"></v-text-field>
+                  <v-text-field v-model="quoteform.name_5" name="name_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.height_9" name="height_9"></v-text-field>
+                  <v-text-field v-model="quoteform.height_5" name="height_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form.width_9" name="width_9"></v-text-field>
+                  <v-text-field v-model="quoteform.width_5" name="width_5"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="quoteform.name_6" name="name_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.height_6" name="height_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.width_6" name="width_6"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="quoteform.name_7" name="name_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.height_7" name="height_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.width_7" name="width_7"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="quoteform.name_8" name="name_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.height_8" name="height_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.width_8" name="width_8"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="quoteform.name_9" name="name_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.height_9" name="height_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="quoteform.width_9" name="width_9"></v-text-field>
                 </td>
               </tr>
             </tbody>
           </template>
         </v-simple-table>
-				
-				<v-snackbar v-model="snackbar" absolute top right color="success">
-					<span>Message sent!</span>
-					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
-				</v-snackbar>
-				<v-snackbar v-model="snackbar2" absolute top right color="fail">
-					<span>Message Did Not Succeed!</span>
-					<v-icon dark>mdi-checkbox-flash-off</v-icon>
-				</v-snackbar>
-
 
 				<v-text-field v-model="quoteform.name" name="name" label="Name" required></v-text-field>
 
