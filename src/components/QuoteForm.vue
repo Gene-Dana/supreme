@@ -1,7 +1,7 @@
  <template>
   <v-container class="ma-0 pa-0">
     <form
-      name="ask-questions"
+      name="quote-form"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
@@ -52,13 +52,13 @@
       <input type="hidden" name="height_9" />
       <input type="hidden" name="width_9" />
 
-      <input type="hidden" name="name" />
+      <input type="hidden" name="name1" />
 
-      <input type="hidden" name="email" />
+      <input type="hidden" name="email1" />
 
-      <input type="hidden" name="number" />
+      <input type="hidden" name="number1" />
 
-      <textarea type="hidden" name="message" />
+      <textarea type="hidden" name="message1" />
 
       <v-card color="transparent" class="pa-5">
         <v-simple-table>
@@ -194,13 +194,13 @@
           <v-icon dark>mdi-checkbox-flash-off</v-icon>
         </v-snackbar>
 
-        <v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
+        <v-text-field v-model="form2.name" name="name1" label="Name" required></v-text-field>
 
-        <v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
+        <v-text-field v-model="form2.email" name="email1" label="Email" required></v-text-field>
 
-        <v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
+        <v-text-field v-model="form2.number" name="number1" label="Number" required></v-text-field>
 
-        <v-textarea v-model="form2.message" name="message" color="teal">
+        <v-textarea v-model="form2.message" name="message1" color="teal">
           <template v-slot:label>
             <div>
               Message
@@ -308,7 +308,7 @@ export default {
         .post(
           "/",
           this.encode({
-            "form-name": "ask-questions",
+            "form-name": "quote-form",
             ...this.form2
           }),
           axiosConfig
