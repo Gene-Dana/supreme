@@ -74,7 +74,7 @@
 								>
 									<v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
 								</v-card>
-								<QAform> </QAform>
+								<!-- <QAform> </QAform> -->
 							</v-flex>
 						</v-layout>
 					</v-card>
@@ -84,12 +84,12 @@
 	</v-container>
 </template>
 <script>
-import QAform from "./QAform";
+// import QAform from "./QAform";
 import QuoteForm from "./QuoteForm"
 
 export default {
 	name: "FreeQuote",
-	components: { QAform, QuoteForm},
+	components: { QuoteForm},
 	
 };
 </script>
