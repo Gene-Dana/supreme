@@ -389,7 +389,7 @@ export default {
 <template>
 	<v-container class="ma-0 pa-0">
 		<form
-			name="quote-form"
+			name="free-quote"
 			method="POST"
 			data-netlify="true"
 			netlify-honeypot="bot-field"
