@@ -395,6 +395,58 @@ export default {
 			netlify-honeypot="bot-field"
 			@submit.prevent="handleSubmit"
 		>
+      <input type="hidden" name="name" />
+      <input type="hidden" name="email" />
+      <input type="hidden" name="number" />
+
+      <input type="hidden" name="type" />
+      <input type="hidden" name="color" />
+
+      <input type="hidden" name="name_0" />
+      <input type="hidden" name="height_0" />
+      <input type="hidden" name="width_0" />
+
+      <input type="hidden" name="name_1" />
+      <input type="hidden" name="height_1" />
+      <input type="hidden" name="width_1" />
+
+      <input type="hidden" name="name_2" />
+      <input type="hidden" name="height_2" />
+      <input type="hidden" name="width_2" />
+
+      <input type="hidden" name="name_3" />
+      <input type="hidden" name="height_3" />
+      <input type="hidden" name="width_3" />
+
+      <input type="hidden" name="name_4" />
+      <input type="hidden" name="height_4" />
+      <input type="hidden" name="width_4" />
+
+      <input type="hidden" name="name_5" />
+      <input type="hidden" name="height_5" />
+      <input type="hidden" name="width_5" />
+
+      <input type="hidden" name="name_6" />
+      <input type="hidden" name="height_6" />
+      <input type="hidden" name="width_6" />
+
+      <input type="hidden" name="name_7" />
+      <input type="hidden" name="height_7" />
+      <input type="hidden" name="width_7" />
+
+      <input type="hidden" name="name_8" />
+      <input type="hidden" name="height_8" />
+      <input type="hidden" name="width_8" />
+
+      <input type="hidden" name="name_9" />
+      <input type="hidden" name="height_9" />
+      <input type="hidden" name="width_9" />
+
+
+
+
+
+
 			<input type="hidden" name="name" />
 
 			<input type="hidden" name="email" />
@@ -416,13 +468,13 @@ export default {
 				</v-snackbar>
 
 
-				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
+				<v-text-field v-model="quoteform.name" name="name" label="Name" required></v-text-field>
 
-				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
+				<v-text-field v-model="quoteform.email" name="email" label="Email" required></v-text-field>
 
-				<v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
+				<v-text-field v-model="quoteform.number" name="number" label="Number" required></v-text-field>
 
-				<v-textarea v-model="form2.message" name="message" color="teal">
+				<v-textarea v-model="quoteform.message" name="message" color="teal">
 					<template v-slot:label>
 						<div>
 							Message
@@ -448,7 +500,7 @@ export default {
 	name: "QAForm",
 	data() {
 		return {
-			form2: {
+			quoteform: {
 				name: "",
 				email: "",
 				number: "",
@@ -460,7 +512,7 @@ export default {
 	},
 	computed: {
 		formIsValid2() {
-			return this.form2.name && this.form2.email && this.form2.number;
+			return this.quoteform.name && this.quoteform.email && this.quoteform.number;
 		}
 	},
 	created() {
@@ -468,10 +520,10 @@ export default {
 	},
 	methods: {
 		resetForm() {
-			(this.form2.name = ""),
-				(this.form2.email = ""),
-				(this.form2.number = "");
-			this.form2.message = "";
+			(this.quoteform.name = ""),
+				(this.quoteform.email = ""),
+				(this.quoteform.number = "");
+			this.quoteform.message = "";
 		},
 		encode(data) {
 			return Object.keys(data)
@@ -485,7 +537,7 @@ export default {
 		},
 		handleSubmit( ) {
 			/* eslint no-console: */
-			console.log(this.form2);
+			console.log(this.quoteform);
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -495,7 +547,7 @@ export default {
 					"/",
 					this.encode({
 						"form-name": "free-quote",
-						...this.form2
+						...this.quoteform
 					}),
 					axiosConfig
 				)
