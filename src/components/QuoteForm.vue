@@ -494,7 +494,7 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-question",
+						"form-name": "free-quote",
 						...this.form2
 					}),
 					axiosConfig
