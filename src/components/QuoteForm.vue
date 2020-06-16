@@ -6,6 +6,7 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       @submit.prevent="handleSubmit2"
+      enctype=“application/x-www-form-urlencoded” 
     >
       <!-- 
     <input type="hidden" name="type" />
