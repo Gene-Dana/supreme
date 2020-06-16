@@ -1,7 +1,7 @@
 <template>
 	<v-container class="ma-0 pa-3">
 		<form
-			name="ask-question"
+			name="new-form"
 			method="POST"
 			data-netlify="true"
 			netlify-honeypot="bot-field"
@@ -28,13 +28,13 @@
 				</v-snackbar>
 
 
-				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
+				<v-text-field v-model="newform.name" name="name" label="Name" required></v-text-field>
 
-				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
+				<v-text-field v-model="newform.email" name="email" label="Email" required></v-text-field>
 
-				<v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
+				<v-text-field v-model="newform.number" name="number" label="Number" required></v-text-field>
 
-				<v-textarea v-model="form2.message" name="message" color="teal">
+				<v-textarea v-model="newform.message" name="message" color="teal">
 					<template v-slot:label>
 						<div>
 							Message
@@ -57,10 +57,10 @@
 
 <script>
 export default {
-	name: "QAForm",
+	name: "newform",
 	data() {
 		return {
-			form2: {
+			newform: {
 				name: "",
 				email: "",
 				number: "",
@@ -72,7 +72,7 @@ export default {
 	},
 	computed: {
 		formIsValid2() {
-			return this.form2.name && this.form2.email && this.form2.number;
+			return this.newform.name && this.newform.email && this.newform.number;
 		}
 	},
 	created() {
@@ -80,10 +80,10 @@ export default {
 	},
 	methods: {
 		resetForm() {
-			(this.form2.name = ""),
-				(this.form2.email = ""),
-				(this.form2.number = "");
-			this.form2.message = "";
+			(this.newform.name = ""),
+				(this.newform.email = ""),
+				(this.newform.number = "");
+			this.newform.message = "";
 		},
 		encode(data) {
 			return Object.keys(data)
@@ -97,7 +97,7 @@ export default {
 		},
 		handleSubmit( ) {
 			/* eslint no-console: */
-			console.log(this.form2);
+			console.log(this.newform);
 
 			const axiosConfig = {
 				header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -106,8 +106,8 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "ask-question",
-						...this.form2
+						"form-name": "new-form",
+						...this.newform
 					}),
 					axiosConfig
 				)
