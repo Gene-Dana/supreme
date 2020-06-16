@@ -1,7 +1,6 @@
 const Home = () => import( /* webpackPrefetch: true */ './components/Home.vue')
 const About = () => import(/* webpackPrefetch: true */ './components/About.vue')
 const FreeQuote = () => import(/* webpackPrefetch: true */ './components/FreeQuote.vue')
-const Products = () => import(/* webpackPrefetch: true */ './components/Products.vue')
 const Accordion = () => import(/* webpackPrefetch: true */ './components/Accordion.vue')
 const Panels = () => import(/* webpackPrefetch: true */ './components/Panels.vue')
 const Rolldown = () => import(/* webpackPrefetch: true */ './components/Rolldown.vue')
@@ -27,10 +26,6 @@ export default [
   {
     path: '/free quote',
     component: FreeQuote
-  },
-  {
-    path: '/products',
-    component: Products
   },
   {
     path: '/accordion',
