@@ -7,7 +7,7 @@
       netlify-honeypot="bot-field"
       @submit.prevent="handleSubmit"
     >
-      <input type="hidden" name="name" />
+      <!-- <input type="hidden" name="name" />
       <input type="hidden" name="email" />
       <input type="hidden" name="number" />
 
@@ -52,7 +52,7 @@
 
       <input type="hidden" name="name_9" />
       <input type="hidden" name="height_9" />
-      <input type="hidden" name="width_9" />
+      <input type="hidden" name="width_9" /> -->
 
       <input type="hidden" name="name" />
 
@@ -63,7 +63,7 @@
       <textarea type="hidden" name="message" />
 
       <v-card color="transparent" class="pa-5">
-        <v-simple-table>
+        <!-- <v-simple-table>
           <template v-slot:default>
             <thead>
               <tr>
@@ -185,7 +185,7 @@
               </tr>
             </tbody>
           </template>
-        </v-simple-table>
+        </v-simple-table> -->
 
         <v-snackbar v-model="snackbar" absolute top right color="success">
           <span>Message sent!</span>
@@ -233,45 +233,47 @@ export default {
         email: "",
         number: "",
         message: "",
-        name_0: "eg. Door",
-        height_0: "96",
-        width_0: "36",
 
-        name_1: "eg. Window 1",
-        height_1: "40",
-        width_1: "50",
+        
+        // name_0: "eg. Door",
+        // height_0: "96",
+        // width_0: "36",
 
-        name_2: "",
-        height_2: "",
-        width_2: "",
+        // name_1: "eg. Window 1",
+        // height_1: "40",
+        // width_1: "50",
 
-        name_3: "",
-        height_3: "",
-        width_3: "",
+        // name_2: "",
+        // height_2: "",
+        // width_2: "",
 
-        name_4: "",
-        height_4: "",
-        width_4: "",
+        // name_3: "",
+        // height_3: "",
+        // width_3: "",
 
-        name_5: "",
-        height_5: "",
-        width_5: "",
+        // name_4: "",
+        // height_4: "",
+        // width_4: "",
 
-        name_6: "",
-        height_6: "",
-        width_6: "",
+        // name_5: "",
+        // height_5: "",
+        // width_5: "",
 
-        name_7: "",
-        height_7: "",
-        width_7: "",
+        // name_6: "",
+        // height_6: "",
+        // width_6: "",
 
-        name_8: "",
-        height_8: "",
-        width_8: "",
+        // name_7: "",
+        // height_7: "",
+        // width_7: "",
 
-        name_9: "",
-        height_9: "",
-        width_9: ""
+        // name_8: "",
+        // height_8: "",
+        // width_8: "",
+
+        // name_9: "",
+        // height_9: "",
+        // width_9: ""
 
       },
       snackbar: false,
