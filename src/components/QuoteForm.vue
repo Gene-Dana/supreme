@@ -1,9 +1,11 @@
+<!--
+
 <template>
   <v-container class="ma-0 pa-0">
     <v-divider></v-divider>
     <p class="text-center display-1 font-weight-black">Free Quote Form</p>
     <v-divider></v-divider>
-    <!-- ================================================================== -->
+   
     <form
       ref="quote-Form"
       name="quote-form"
@@ -208,7 +210,7 @@
         </v-simple-table>
       </v-card>
 
-      <!-- ========================================================================== -->
+     ==========================================================================
       <v-card>
         <v-snackbar v-model="snackbar" absolute top right color="success">
           <span>Message sent!</span>
@@ -380,5 +382,135 @@ export default {
       snackbar2: false
     };
   }
+};
+</script>
+
+ -->
+
+ <template>
+	<v-container class="ma-0 pa-0">
+		<form
+			name="ask-question"
+			method="POST"
+			data-netlify="true"
+			netlify-honeypot="bot-field"
+			@submit.prevent="handleSubmit"
+		>
+			<input type="hidden" name="name" />
+
+			<input type="hidden" name="email" />
+
+			<input type="hidden" name="number" />
+
+			<textarea type="hidden" name="message" />
+
+			<v-card color="transparent" class="pa-5">
+
+				
+				<v-snackbar v-model="snackbar" absolute top right color="success">
+					<span>Message sent!</span>
+					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+				</v-snackbar>
+				<v-snackbar v-model="snackbar2" absolute top right color="fail">
+					<span>Message Did Not Succeed!</span>
+					<v-icon dark>mdi-checkbox-flash-off</v-icon>
+				</v-snackbar>
+
+
+				<v-text-field v-model="quoteform.name" name="name" label="Name" required></v-text-field>
+
+				<v-text-field v-model="quoteform.email" name="email" label="Email" required></v-text-field>
+
+				<v-text-field v-model="quoteform.number" name="number" label="Number" required></v-text-field>
+
+				<v-textarea v-model="quoteform.message" name="message" color="teal">
+					<template v-slot:label>
+						<div>
+							Message
+							<small>(optional)</small>
+						</div>
+					</template>
+				</v-textarea>
+				<v-btn
+					:disabled="!formIsValid2"
+					text
+					color="success"
+					class="mr-3"
+					type="submit"
+					@click.prevent="handleSubmit"
+				>Send</v-btn>
+			</v-card>
+		</form>
+	</v-container>
+</template>
+
+<script>
+export default {
+	name: "QAForm",
+	data() {
+		return {
+			quoteform: {
+				name: "",
+				email: "",
+				number: "",
+				message: ""
+			},
+			snackbar: false,
+			snackbar2: false
+		};
+	},
+	computed: {
+		formIsValid2() {
+			return this.quoteform.name && this.quoteform.email && this.quoteform.number;
+		}
+	},
+	created() {
+		console.log("newly14");
+	},
+	methods: {
+		resetForm() {
+			(this.quoteform.name = ""),
+				(this.quoteform.email = ""),
+				(this.quoteform.number = "");
+			this.quoteform.message = "";
+		},
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					key =>
+						`${encodeURIComponent(key)}=${encodeURIComponent(
+							data[key]
+						)}`
+				)
+				.join("&");
+		},
+		handleSubmit( ) {
+			/* eslint no-console: */
+			console.log(this.quoteform);
+
+			const axiosConfig = {
+				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			};
+			this.$http
+				.post(
+					"/",
+					this.encode({
+						"form-name": "ask-question",
+						...this.quoteform
+					}),
+					axiosConfig
+				)
+				.then(() => {
+					// this.$router.push("thanks");
+					this.snackbar = true;
+					console.log("oh yeah she worked");
+					this.resetForm();
+				})
+				.catch(err => {
+					console.log(err);
+					this.snackbar2 = true;
+				});
+		}
+	}
 };
 </script>
