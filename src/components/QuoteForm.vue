@@ -346,7 +346,7 @@ export default {
  <template>
 	<v-container class="ma-0 pa-0">
 		<form
-			name="free-quote"
+			name="ask-question"
 			method="POST"
 			data-netlify="true"
 			netlify-honeypot="bot-field"
@@ -451,7 +451,7 @@ export default {
 				.post(
 					"/",
 					this.encode({
-						"form-name": "free-quote",
+						"form-name": "ask-question",
 						...this.form2
 					}),
 					axiosConfig
