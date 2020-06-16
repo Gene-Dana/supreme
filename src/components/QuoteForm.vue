@@ -225,7 +225,7 @@
 
 <script>
 export default {
-  name: "QAForm",
+  name: "QuoteForm",
   data() {
     return {
       form2: {
@@ -234,7 +234,7 @@ export default {
         number: "",
         message: "",
 
-        
+
         // name_0: "eg. Door",
         // height_0: "96",
         // width_0: "36",
