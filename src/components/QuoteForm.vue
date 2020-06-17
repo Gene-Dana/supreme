@@ -1,3 +1,4 @@
+ <!--
  <template>
   <v-container class="ma-0 pa-0">
     <form
@@ -8,9 +9,9 @@
       @submit.prevent="handlesubmit3"
       enctype=“application/x-www-form-urlencoded” 
     >
-      <!-- 
+      
     <input type="hidden" name="type" />
-      <input type="hidden" name="color" />-->
+      <input type="hidden" name="color" />
 
       <input type="hidden" name="name_0" />
       <input type="hidden" name="height_0" />
@@ -325,5 +326,134 @@ export default {
         });
     }
   }
+};
+</script>
+-->
+
+<template>
+	<v-container class="ma-0 pa-3">
+		<form
+			name="ask-new-question"
+			method="POST"
+			data-netlify="true"
+			netlify-honeypot="bot-field"
+			@submit.prevent="handleSubmit"
+		>
+			<input type="hidden" name="name" />
+
+			<input type="hidden" name="email" />
+
+			<input type="hidden" name="number" />
+
+			<textarea type="hidden" name="message" />
+
+			<v-card color="transparent" class="pa-5">
+
+				
+				<v-snackbar v-model="snackbar" absolute top right color="success">
+					<span>Message sent!</span>
+					<v-icon dark>mdi-checkbox-marked-circle</v-icon>
+				</v-snackbar>
+				<v-snackbar v-model="snackbar2" absolute top right color="fail">
+					<span>Message Did Not Succeed!</span>
+					<v-icon dark>mdi-checkbox-flash-off</v-icon>
+				</v-snackbar>
+
+
+				<v-text-field v-model="form2.name" name="name" label="Name" required></v-text-field>
+
+				<v-text-field v-model="form2.email" name="email" label="Email" required></v-text-field>
+
+				<v-text-field v-model="form2.number" name="number" label="Number" required></v-text-field>
+
+				<v-textarea v-model="form2.message" name="message" color="teal">
+					<template v-slot:label>
+						<div>
+							Message
+							<small>(optional)</small>
+						</div>
+					</template>
+				</v-textarea>
+				<v-btn
+					:disabled="!formIsValid2"
+					text
+					color="success"
+					class="mr-3"
+					type="submit"
+					@click.prevent="handleSubmit"
+				>Send</v-btn>
+			</v-card>
+		</form>
+	</v-container>
+</template>
+
+<script>
+export default {
+	name: "QuoteQAForm",
+	data() {
+		return {
+			form2: {
+				name: "",
+				email: "",
+				number: "",
+				message: ""
+			},
+			snackbar: false,
+			snackbar2: false
+		};
+	},
+	computed: {
+		formIsValid2() {
+			return this.form2.name && this.form2.email && this.form2.number;
+		}
+	},
+	created() {
+		console.log("newly14");
+	},
+	methods: {
+		resetForm() {
+			(this.form2.name = ""),
+				(this.form2.email = ""),
+				(this.form2.number = "");
+			this.form2.message = "";
+		},
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					key =>
+						`${encodeURIComponent(key)}=${encodeURIComponent(
+							data[key]
+						)}`
+				)
+				.join("&");
+		},
+		handleSubmit( ) {
+			/* eslint no-console: */
+			console.log(this.form2);
+
+			const axiosConfig = {
+				header: { "Content-Type": "application/x-www-form-urlencoded" }
+			};
+			this.$http
+				.post(
+					"/",
+					this.encode({
+						"form-name": "ask-new-question",
+						...this.form2
+					}),
+					axiosConfig
+				)
+				.then(() => {
+					// this.$router.push("thanks");
+					this.snackbar = true;
+					console.log("oh yeah she worked");
+					this.resetForm();
+				})
+				.catch(err => {
+					console.log(err);
+					this.snackbar2 = true;
+				});
+		}
+	}
 };
 </script>
