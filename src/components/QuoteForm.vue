@@ -339,13 +339,7 @@ export default {
 			netlify-honeypot="bot-field"
 			@submit.prevent="handleSubmit"
 		>
-			<input type="hidden" name="name" />
-
-			<input type="hidden" name="email" />
-
-			<input type="hidden" name="number" />
-
-			<textarea type="hidden" name="message" />
+			<input type="hidden" name="form-name" value="ask-new-question" />
 
 			<v-card color="transparent" class="pa-5">
 
