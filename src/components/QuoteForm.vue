@@ -74,112 +74,112 @@
             <tbody>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_0" name="name_0"></v-text-field>
+                  <v-text-field v-model="form2.name_0" name="name_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_0" name="height_0"></v-text-field>
+                  <v-text-field v-model="form2.height_0" name="height_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_0" name="width_0"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_1" name="name_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_1" name="height_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_1" name="width_1"></v-text-field>
+                  <v-text-field v-model="form2.width_0" name="width_0"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_2" name="name_2"></v-text-field>
+                  <v-text-field v-model="form2.name_1" name="name_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_2" name="height_2"></v-text-field>
+                  <v-text-field v-model="form2.height_1" name="height_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_2" name="width_2"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_3" name="name_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_3" name="height_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_3" name="width_3"></v-text-field>
+                  <v-text-field v-model="form2.width_1" name="width_1"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_4" name="name_4"></v-text-field>
+                  <v-text-field v-model="form2.name_2" name="name_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_4" name="height_4"></v-text-field>
+                  <v-text-field v-model="form2.height_2" name="height_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_4" name="width_4"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_5" name="name_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_5" name="height_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_5" name="width_5"></v-text-field>
+                  <v-text-field v-model="form2.width_2" name="width_2"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_6" name="name_6"></v-text-field>
+                  <v-text-field v-model="form2.name_3" name="name_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_6" name="height_6"></v-text-field>
+                  <v-text-field v-model="form2.height_3" name="height_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_6" name="width_6"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_7" name="name_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_7" name="height_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_7" name="width_7"></v-text-field>
+                  <v-text-field v-model="form2.width_3" name="width_3"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_8" name="name_8"></v-text-field>
+                  <v-text-field v-model="form2.name_4" name="name_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_8" name="height_8"></v-text-field>
+                  <v-text-field v-model="form2.height_4" name="height_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_8" name="width_8"></v-text-field>
+                  <v-text-field v-model="form2.width_4" name="width_4"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_9" name="name_9"></v-text-field>
+                  <v-text-field v-model="form2.name_5" name="name_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_9" name="height_9"></v-text-field>
+                  <v-text-field v-model="form2.height_5" name="height_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_9" name="width_9"></v-text-field>
+                  <v-text-field v-model="form2.width_5" name="width_5"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_6" name="name_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_6" name="height_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_6" name="width_6"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_7" name="name_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_7" name="height_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_7" name="width_7"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_8" name="name_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_8" name="height_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_8" name="width_8"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_9" name="name_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_9" name="height_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_9" name="width_9"></v-text-field>
                 </td>
               </tr>
             </tbody>
@@ -195,13 +195,13 @@
           <v-icon dark>mdi-checkbox-flash-off</v-icon>
         </v-snackbar>
 
-        <v-text-field v-model="form3.name" name="names" label="Name" required></v-text-field>
+        <v-text-field v-model="form2.name" name="names" label="Name" required></v-text-field>
 
-        <v-text-field v-model="form3.email" name="emails" label="Email" required></v-text-field>
+        <v-text-field v-model="form2.email" name="emails" label="Email" required></v-text-field>
 
-        <v-text-field v-model="form3.number" name="numbers" label="Number" required></v-text-field>
+        <v-text-field v-model="form2.number" name="numbers" label="Number" required></v-text-field>
 
-        <v-textarea v-model="form3.message" name="messages" color="teal">
+        <v-textarea v-model="form2.message" name="messages" color="teal">
           <template v-slot:label>
             <div>
               Message
@@ -228,7 +228,7 @@ export default {
   name: "QAForm",
   data() {
     return {
-      form3: {
+      form2: {
         name: "",
         email: "",
         number: "",
@@ -280,7 +280,7 @@ export default {
   },
   computed: {
     formIsValid2() {
-      return this.form3.name && this.form3.email && this.form3.number;
+      return this.form2.name && this.form2.email && this.form2.number;
     }
   },
   created() {
@@ -288,8 +288,8 @@ export default {
   },
   methods: {
     resetForm() {
-      (this.form3.name = ""), (this.form3.email = ""), (this.form3.number = "");
-      this.form3.message = "";
+      (this.form2.name = ""), (this.form2.email = ""), (this.form2.number = "");
+      this.form2.message = "";
     },
     encode(data) {
       return Object.keys(data)
@@ -300,7 +300,7 @@ export default {
     },
     handlesubmit3() {
       /* eslint no-console: */
-      console.log(this.form3);
+      console.log(this.form2);
 
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
@@ -310,7 +310,7 @@ export default {
           "/",
           this.encode({
             "form-name": "quote-form",
-            ...this.form3
+            ...this.form2
           }),
           axiosConfig
         )
@@ -354,112 +354,112 @@ export default {
             <tbody>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_0" name="name_0"></v-text-field>
+                  <v-text-field v-model="form2.name_0" name="name_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_0" name="height_0"></v-text-field>
+                  <v-text-field v-model="form2.height_0" name="height_0"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_0" name="width_0"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_1" name="name_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_1" name="height_1"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_1" name="width_1"></v-text-field>
+                  <v-text-field v-model="form2.width_0" name="width_0"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_2" name="name_2"></v-text-field>
+                  <v-text-field v-model="form2.name_1" name="name_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_2" name="height_2"></v-text-field>
+                  <v-text-field v-model="form2.height_1" name="height_1"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_2" name="width_2"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_3" name="name_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_3" name="height_3"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_3" name="width_3"></v-text-field>
+                  <v-text-field v-model="form2.width_1" name="width_1"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_4" name="name_4"></v-text-field>
+                  <v-text-field v-model="form2.name_2" name="name_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_4" name="height_4"></v-text-field>
+                  <v-text-field v-model="form2.height_2" name="height_2"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_4" name="width_4"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_5" name="name_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_5" name="height_5"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_5" name="width_5"></v-text-field>
+                  <v-text-field v-model="form2.width_2" name="width_2"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_6" name="name_6"></v-text-field>
+                  <v-text-field v-model="form2.name_3" name="name_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_6" name="height_6"></v-text-field>
+                  <v-text-field v-model="form2.height_3" name="height_3"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_6" name="width_6"></v-text-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <v-text-field v-model="form3.name_7" name="name_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.height_7" name="height_7"></v-text-field>
-                </td>
-                <td>
-                  <v-text-field v-model="form3.width_7" name="width_7"></v-text-field>
+                  <v-text-field v-model="form2.width_3" name="width_3"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_8" name="name_8"></v-text-field>
+                  <v-text-field v-model="form2.name_4" name="name_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_8" name="height_8"></v-text-field>
+                  <v-text-field v-model="form2.height_4" name="height_4"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_8" name="width_8"></v-text-field>
+                  <v-text-field v-model="form2.width_4" name="width_4"></v-text-field>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <v-text-field v-model="form3.name_9" name="name_9"></v-text-field>
+                  <v-text-field v-model="form2.name_5" name="name_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.height_9" name="height_9"></v-text-field>
+                  <v-text-field v-model="form2.height_5" name="height_5"></v-text-field>
                 </td>
                 <td>
-                  <v-text-field v-model="form3.width_9" name="width_9"></v-text-field>
+                  <v-text-field v-model="form2.width_5" name="width_5"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_6" name="name_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_6" name="height_6"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_6" name="width_6"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_7" name="name_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_7" name="height_7"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_7" name="width_7"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_8" name="name_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_8" name="height_8"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_8" name="width_8"></v-text-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <v-text-field v-model="form2.name_9" name="name_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.height_9" name="height_9"></v-text-field>
+                </td>
+                <td>
+                  <v-text-field v-model="form2.width_9" name="width_9"></v-text-field>
                 </td>
               </tr>
             </tbody>
