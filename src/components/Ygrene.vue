@@ -32,23 +32,23 @@
 
                   <v-layout align-center justify-center row class="ma-4 mb-4">
                     <v-card flat class="ma-2" width="130">
-                      <v-img aspect-ratio="3" contain src="../assets/yg1.png"></v-img>
+                      <v-img aspect-ratio="2" contain src="../assets/yg1.png"></v-img>
                       <v-card-text>No money out of pocket</v-card-text>
                     </v-card>
                     <v-card flat class="ma-2" width="130">
-                      <v-img aspect-ratio="3" contain src="../assets/yg2.png"></v-img>
+                      <v-img aspect-ratio="2" contain src="../assets/yg2.png"></v-img>
                       <v-card-text>No Payments For Up To A Year Or More</v-card-text>
                     </v-card>
                     <v-card flat class="ma-2" width="130">
-                      <v-img aspect-ratio="3" contain src="../assets/yg3.png"></v-img>
+                      <v-img aspect-ratio="2" contain src="../assets/yg3.png"></v-img>
                       <v-card-text>Approval Based Primarily on Home Equity</v-card-text>
                     </v-card>
                     <v-card flat class="ma-2" width="130">
-                      <v-img aspect-ratio="3" contain src="../assets/yg4.png"></v-img>
+                      <v-img aspect-ratio="2" contain src="../assets/yg4.png"></v-img>
                       <v-card-text>No Minimum Credit Score Required</v-card-text>
                     </v-card>
                     <v-card flat class="ma-2" width="130">
-                      <v-img aspect-ratio="3" contain src="../assets/yg5.png"></v-img>
+                      <v-img aspect-ratio="2" contain src="../assets/yg5.png"></v-img>
                       <v-card-text>Get Prequalified In Minutes</v-card-text>
                     </v-card>
                   </v-layout>
@@ -58,43 +58,18 @@
                       class="display-1 font-weight-black pa-2 text-center fix"
                     >Ygrene simplifies the home improvement financing process.</v-card-title>
                   </v-card>
-  <v-card flat>
-                  <iframe
-                    class
-                    id="vimeo-184027168"
-                    width="100%"
-                   
-                    src="//player.vimeo.com/video/184027168?width=640&amp;height=360&amp;color=00adef&amp;portrait=1&amp;title=1&amp;byline=1&amp;autoplay=0&amp;loop=0&amp;player_id=vimeo-184027168"
-                    allowfullscreen
-                  ></iframe>
-  </v-card>
+                  <v-card flat>
+                    <iframe
+                      class
+                      id="vimeo-184027168"
+                      width="100%"
+                      src="//player.vimeo.com/video/184027168?width=640&amp;height=360&amp;color=00adef&amp;portrait=1&amp;title=1&amp;byline=1&amp;autoplay=0&amp;loop=0&amp;player_id=vimeo-184027168"
+                      allowfullscreen
+                    ></iframe>
+                  </v-card>
                 </v-card>
 
                 <v-divider></v-divider>
-                <!----------------------- Permitting Information Section ------------------------------->
-
-                <v-card flat>
-                  <v-card flat class="mt-1">
-                    <v-card-title
-                      class="display-1 font-weight-black black--text text-center justify-center fix"
-                    >Permitting Information</v-card-title>
-                    <v-card-text
-                      class="black--text text-center justify-center"
-                    >Linked here are specific documents necessary for home owners to apply for the shutters permit</v-card-text>
-                  </v-card>
-                  <v-layout align-center justify-center row>
-                    <v-btn
-                      href="https://www.floridabuilding.org/upload/PR_Instl_Docs/FL17552_R1_II_AD15-11%2002.27.15%20SS.pdf"
-                      min-width="20em"
-                      class="ma-3"
-                    >Building Code approval</v-btn>
-                    <v-btn
-                      href="https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqvYdq2pQ%2FXXJtTn%2F81FqV7RBEg%2FoHRt6n7BrXMJiv6hFA%3D%3D"
-                      min-width="20em"
-                      class="ma-3"
-                    >Product certification</v-btn>
-                  </v-layout>
-                </v-card>
               </v-flex>
               <!------------------------ Start Side Panel  ------------------------------------------------------------->
               <v-flex xs12 sm4 md4 lg4 xl4>
@@ -105,7 +80,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">GET A FREE QUOTE TODAY!</v-card-title>
                 </v-card>
                 <router-link to="/free quote">
                   <v-card class="px-3 py-4" flat>
@@ -133,10 +108,8 @@
                   max-width="40em"
                   max-height="15em"
                   class="mx-auto px-3 text-center"
-                >
-                  
-                </v-card>
-                
+                ></v-card>
+
                 <v-card
                   flat
                   color="red"
@@ -144,7 +117,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">QUESTIONS? CONTACT US!</v-card-title>
                 </v-card>
                 <QAform></QAform>
                 <v-card
@@ -154,40 +127,6 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text mt-3">Description</v-card-title>
-                </v-card>
-                <v-card flat color="transparent">
-                  <v-card flat color="transparent" class="ma-0">
-                    <v-img min-width="10em" class="ma-4" src="../assets/genesis.png"></v-img>
-                  </v-card>
-
-                  <v-card
-                    flat
-                    color="transparent"
-                    class="mt-4 ma-3 body-1 font-weight-light text-justify"
-                  >
-                    <p>
-                      Genesis Accordion Hurricane shutters are the shutters that we source and they
-                      can withstand wind load pressure of +150/-200.
-                      Also, they have been designed to be used in high rises, going up to the 50th floor,
-                      making them a great manufacturing option due to their versatility.
-                    </p>
-                    <p>
-                      Three centermate options available, (Centermate, Unibox, Unimate). Our centermates
-                      are made of one single piece, not requiring
-                      a male and female. The unimate option allows for the use of locking pins and push lock.
-                    </p>
-                    <p>
-                      Compact stacking is a great feature of the Genesis Shutter. The unimate centermate makes
-                      it possible for the shutter stack to take up less space. This feature gives the shutters,
-                      when opened, a more elegant and discreet look.
-                    </p>
-                    <p>
-                      Genesis has a blade coverage of 7 inches, where most shutters have coverage of 6 to 6.5
-                      inches. This allows for less shutter blades to cover the same area. Keep in mind that
-                      shutter strength is not diminished due to this feature.
-                    </p>
-                  </v-card>
                 </v-card>
               </v-flex>
             </v-layout>
