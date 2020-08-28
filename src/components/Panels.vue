@@ -30,10 +30,10 @@
                   class="mt-4 ma-3 body-1 font-weight-medium text-justify"
                 >
                   <p>
-                    Here at Supreme Shutters, we offer Eyewall Armor® StormLoc™ Panels.
+                    Here at Supreme Hurricane Shutters, we offer Eyewall Armor® StormLoc™ Panels.
                     These are the top of the line in hurricane and storm protection for your home.
                     Our Eyewall Armor® StormLoc™ Panels have 8 exclusive track styles that will fit
-                    virtually any and all mounting conditions, and work supremely with your home’s
+                    virtually any and all mounting conditions, and work supremely with any home’s
                     specific design and/or building specifications.
                     <strong>
                       Also production time is usually
@@ -47,7 +47,7 @@
                     Protecting your home or business from storm and hurricane damage is extremely
                     important, for obvious reasons, so we want to make sure your investment is well
                     protected. The Eyewall Armor® StormLoc™ Panels are easy to use and last for
-                    several years, providing reliable protection for your home. These panels are
+                    many years, providing long-term reliable protection for your home. These panels are
                     built to endure even the most extreme weather conditions, year-round.
                   </p>
                   <v-card flat wrap color="transparent" class="ma-0">
@@ -82,7 +82,7 @@
                     Hurricane Zone (HVHZ) TAS 201, 202 and 203 (formerly
                     Miami-Dade PA 201, 202 & 203), able to withstand
                     substantial impact from debris as tested for 9lb.
-                    large missile impact.
+                    large missile impact. Available in steel and clear.
                   </p>
                 </v-card>
                 <v-card flat color="transparent" class="ma-3">

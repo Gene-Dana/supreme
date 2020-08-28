@@ -67,15 +67,7 @@
                     <li>Provides Excellent Security and Storm Protection</li>
                     <li>Available Colors: White, Ivory, Beige, and Bronze</li>
                   </ul>
-                  <v-card flat wrap color="transparent" class="ma-0">
-                    <v-card-title
-                      class="display-1 font-weight-black pa-2 text-center fix"
-                    >Colors Available:</v-card-title>
-                  </v-card>
-
-                  <v-card flat color="transparent" class="ma-3">
-                    <v-img min-width="100%" src="../assets/colors.png"></v-img>
-                  </v-card>
+                 
                   <v-card flat color="transparent" class="ma-3">
                     <v-img min-width="100%" src="../assets/roll1.jpeg"></v-img>
                   </v-card>

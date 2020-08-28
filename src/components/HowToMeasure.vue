@@ -16,23 +16,29 @@
                 <v-card flat color="transparent" class="ma-0">
                   <v-card-title class="display-1 font-weight-black pa-2">How To Measure</v-card-title>
                 </v-card>
+                <p class="red--text headline text-center">Important Note</p>
+                <p>
+                  When measuring the window or door for a hurricane shutter, make sure that you are measuring
+                  from the inner walls or the outermost edge. For example, if the door is inset into the wall,
+                  measure from the inner walls of the inset.
+                </p>
                 <v-card-title>Procedure</v-card-title>
                 <ul>
                   <li>Begin at the front door and work clockwise around the house.</li>
                   <li>
-                    For Windows, horizontally measure from one inside edge of the opening to the parallel inside edge.
-                    Then vertically measure from the inside edge of the top to the top of the window sill. All shutters use a
-                    track system so make sure you have
+                    For windows, horizontally measure from the inside edge of the opening.
+                    Then vertically measure from the inside edge of the top to the bottom. All shutters use a
+                    track system so make sure you then add
                     <span
                       class="font-weight-black red--text"
-                    >atleast 3in</span> of flat surface around each window.
+                    >atleast 3in</span> of flat surface to each measurement.
                   </li>
                   <li>
-                    For Doors, horizontally measure from one inside edge of the opening to the parallel inside edge, vertically
+                    For doors, horizontally measure from one inside edge of the openings, vertically
                     measure from the inside edge of the top to the floor.
                   </li>
                   <li>
-                    For an instant quote enter measurements into our Free Quote page or email to supremehurricaneshutters@gmail.com
+                    For a quote please enter measurements into our Free Quote page or email dimensions to supremehurricaneshutters@gmail.com
                     and we will have an estimate for you within 48 hours
                   </li>
                 </ul>
@@ -50,13 +56,6 @@
                       max-height="300"
                     ></v-img>
                   </v-flex>
-
-                  <p class="red--text headline text-center">Important Note</p>
-                  <p>
-                    When measuring the window or door for a hurricane shutter, make sure that you are measuring
-                    from the inner walls or the outermost edge. For example, if the door is inset into the wall,
-                    measure from the inner walls of the inset.
-                  </p>
                 </v-card>
                 <v-card flat wrap color="transparent" class="ma-0">
                   <v-card-title class="headline font-weight-black pa-2 fix">
@@ -73,7 +72,7 @@
                   class="mt-4 ma-3 body-1 font-weight-medium text-justify"
                 >
                   <p>
-                    For Accordion and storm panels you will measure the outside of the opening. If the opening has a board around it you will measure outside of the boarder.
+                    For Accordion and storm panels you will measure the outside of the opening. If the opening has a board around it you will measure outside of the border.
                     If you would like to install the shutters on a board you must have at least 5 inches of flat solid board on all side.
                   </p>
                   <p>Important: If you have a sill measure the height all the way pass the sill as it shows in the first picture. The tracks will be installed right under the sill.</p>
@@ -98,7 +97,7 @@
                 >
                   <p>
                     For roll down shutters you will measure the outside of the opening. If the opening has a
-                    board around it you will measure outside of the boarder. If you would like to install the
+                    board around it you will measure outside of the border. If you would like to install the
                     shutters on a board you must have at least 3 inches on the right, left and bottom. For the
                     top you must have at least 8 inches.
                   </p>

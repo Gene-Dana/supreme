@@ -41,12 +41,12 @@
                     >
                       South Florida region, including Miami-Dade, Broward,
                       and Palm Beach Counties.
-                    </span> We are licensed and insured and we you welcomed to vist our shop at 3610 NW 118 Ave #3, Coral Springs.
+                    </span> We are licensed and insured.
                   </p>
 
                   <p>
                     In short, we are your one stop shop for
-                    high quality hurricane shutters. We provide accordion shutters, storm panel shutters and affordable rolldown
+                    high-quality hurricane shutters. We provide accordion shutters, storm panel shutters and affordable rolldown
                     shutters that are all approved through the strictest Florida and Miami-Dade building code. We made it a passion to not
                     sell anything under Florida building code standards.
                   </p>
@@ -57,7 +57,7 @@
                   <p>
                     From the do-it-yourselfer to the experienced custom builder, we will work with you to design the best combination of
                     defense for your home or business. We are able to accommodate any size order, large or small, commercial or residential.
-                    Our Experts will guide you through the Hurricane Protection Process and answer any questions you may have. Give us a call or
+                    Our experts will guide you through the Hurricane Protection Process and answer any questions you may have. Give us a call or
                     get a free online estimate today!
                   </p>
                 </v-card>

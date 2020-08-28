@@ -31,8 +31,8 @@
                 >
                   <p>
                     Accordion Shutters are one of the most popular choice of storm protection for homeowners and businesses
-                    throughout South Florida and surrounding areas. Accordion Shutters provide simple but highly effective
-                    means of storm protection. The Accordion Shutter provides protection against category 5 winds, flying
+                    throughout South Florida and surrounding areas. Accordion shutters provide simple but highly effective
+                    means of storm protection. The accordion shutter provides protection against category 5 winds, flying
                     debris, theft and forced entry, reduces noise, and provides everyday privacy when in use.
                   </p>
                   <v-card flat wrap color="transparent" class="ma-0">
@@ -41,26 +41,16 @@
                     >Accordion Shutters Design</v-card-title>
                   </v-card>
                   <p>
-                    The Accordion Shutter is a durable shutter that moves horizontally between an upper and lower track, with
+                    The accordion shutter is a durable shutter that moves horizontally between an upper and lower track, with
                     interlocking aluminum blades making up the shutter’s protective wall. Covering large spans, these shutters
                     can be folded away for an unobstructed view. Also for larger areas, there can be a center opening,
                     allowing half of the shutter to move towards the left. From the inside or out, these shutters can be
-                    closed, locked, and secured, keeping your belongings safe. Your home or business are structures that are
-                    well thought out when it comes to layout, color, and more. We have gone to great lengths to ensure that
-                    our accordion style shutters can match with many different types of homes so that they do not stick out
-                    too much.
+                    closed, locked, and secured, keeping your home safe. We have gone to great lengths to ensure that
+                    our accordion style shutters can match with many different types of homes.
                   </p>
                 </v-card>
 
-                <v-card flat wrap color="transparent" class="ma-0">
-                  <v-card-title
-                    class="display-1 font-weight-black pa-2 text-center fix"
-                  >Colors Available:</v-card-title>
-                </v-card>
-
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/colors.png"></v-img>
-                </v-card>
+    
                 <v-card flat color="transparent" class="ma-3">
                   <v-img min-width="100%" src="../assets/accord1.jpg"></v-img>
                 </v-card>
