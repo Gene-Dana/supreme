@@ -12,6 +12,17 @@
 						<v-card-text class="pa-2 font-weight-bold white--text">(954) 947-3700</v-card-text>
 					</v-card>
 				</a>
+				<a href="tel:8773424747" style="text-decoration: none;">
+					<v-card flat tile class="transparent">
+						<v-icon class="text-no-wrap font-weight-black white--text">phone</v-icon>
+					</v-card>
+				</a>
+				<a href="tel:8773424747">
+					<v-card flat class="transparent">
+						<v-card-text class="pa-2 font-weight-bold white--text">(877) 342-4747</v-card-text>
+					</v-card>
+				</a>
+
 
 				<v-spacer />
 

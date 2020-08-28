@@ -1,7 +1,7 @@
 <template>
 	<v-container fluid class="ma-0 pa-0">
 		<v-layout row align-center ma-0 style="min-height:200px">
-			<v-flex xs12 sm4 m4 lg4>
+			<v-flex xs12 sm12 m12 lg12>
 				<v-card flat color="transparent">
 					<v-img
 						alt="Supreme Hurricane Shutters Logo"
@@ -11,16 +11,30 @@
 					/>
 				</v-card>
 			</v-flex>
-			<v-spacer />
-			<v-flex xs12 sm6 m6 lg6 xl6>
+			<!-- <v-spacer /> -->
+			<!-- <v-flex xs12 sm6 m6 lg6 xl6>
 				<v-card flat color="transparent">
 					<a href="tel:9549473700">
 					<v-card-text
 						class="black--text font-weight-black ma-0 py-0 px-0"
 						:class="fontSize"
-					>CALL NOW (954) 947-3700</v-card-text></a>
+					>CALL NOW</v-card-text></a>
 				</v-card>
-			</v-flex>
+				<v-card flat color="transparent">
+					<a href="tel:9549473700">
+					<v-card-text
+						class="black--text font-weight-black ma-0 py-0 px-0"
+						:class="fontSize"
+					>(954) 947-3700</v-card-text></a>
+				</v-card>
+				<v-card flat color="transparent">
+					<a href="tel:9549473700">
+					<v-card-text
+						class="black--text font-weight-black ma-0 py-0 px-0"
+						:class="fontSize"
+					>(877) 342-4747</v-card-text></a>
+				</v-card>
+			</v-flex> -->
 		</v-layout>
 
 		<v-layout align-center>
