@@ -1,5 +1,5 @@
 <template>
-  <v-container min-width="100%" max-width="100%" class="pa-0" fluid>
+  <v-container min-width="100%" max-width="100%" class="py-0 px-3" fluid>
     <v-layout>
       <v-img height="7em" src="../assets/scary.jpg"></v-img>
     </v-layout>
@@ -10,18 +10,18 @@
           <v-card class="pa-3 ma-0">
             <v-layout wrap>
               <v-flex xs12 sm8 md8 lg8 xl8>
+                <!-- <v-card>
+					<v-img :src="require('../assets/GetNow.png')" min-width="50%"></v-img>
+                </v-card>-->
+
                 <v-card flat wrap color="transparent" class="ma-0">
                   <v-card-title
                     class="display-2 font-weight-black pa-2 text-center fix"
-                  >Aluminum and Steel Storm Panel</v-card-title>
-
-                  <v-card-title
-                    class="headline pa-2 justify-center center-text fix"
-                  >by Eyewall Armor®</v-card-title>
+                  >Impact Garage Doors</v-card-title>
                 </v-card>
 
                 <v-card flat color="transparent" class="my-0 mx-3">
-                  <v-img height="15em" src="../assets/panel-products.jpg"></v-img>
+                  <v-img height="15em" src="../assets/impact_product.jpg"></v-img>
                 </v-card>
 
                 <v-card
@@ -29,67 +29,51 @@
                   color="transparent"
                   class="mt-4 ma-3 body-1 font-weight-medium text-justify"
                 >
-                  <p>
-                    Here at Supreme Shutters, we offer Eyewall Armor® StormLoc™ Panels.
-                    These are the top of the line in hurricane and storm protection for your home.
-                    Our Eyewall Armor® StormLoc™ Panels have 8 exclusive track styles that will fit
-                    virtually any and all mounting conditions, and work supremely with your home’s
-                    specific design and/or building specifications.
-                    <strong>
-                      Also production time is usually
-                      only
-                      <span
-                        style="text-decoration: underline;"
-                      >3 weeks!</span>
-                    </strong>
-                  </p>
-                  <p>
-                    Protecting your home or business from storm and hurricane damage is extremely
-                    important, for obvious reasons, so we want to make sure your investment is well
-                    protected. The Eyewall Armor® StormLoc™ Panels are easy to use and last for
-                    several years, providing reliable protection for your home. These panels are
-                    built to endure even the most extreme weather conditions, year-round.
-                  </p>
+                  <p>Miami-Dade and Broward Counties require all garage doors meet the large missile impact rating, regardless if the garage door has windows or not. Impact windows are available in these Counties. If your home needs a solidly constructed garage door, read on to learn how Supreme Hurricane Shutters can help.</p>
                   <v-card flat wrap color="transparent" class="ma-0">
                     <v-card-title
                       class="display-1 font-weight-black pa-2 text-center fix"
-                    >.050 Aluminum Storm Panels</v-card-title>
+                    >The Importance of Impact Garage Doors</v-card-title>
                   </v-card>
-                  <ul>
-                    <li>Protect windows and doors from winds over 150 mph</li>
-                    <li>Resist corrosion (aluminum and its alloys are a major component of aerospace engineering)</li>
-                    <li>Have a low density for a lightweight product</li>
-                    <li>Have a thickness of .050″</li>
-                  </ul>
+                  <p>“As the largest opening on a house, the loss of a garage door during a hurricane can lead to an uncontrolled buildup of internal pressure resulting in a complete or partial blowout of the entire roof system and supporting walls” and “Garage doors are now considered to be one of the most important parts of a building’s structure in regards to maintaining its structural integrity during a hurricane,” said Mark Westerfield, manager of product development and engineering for Clopay. Building Products Company, the largest U.S. manufacturer of residential garage doors.</p>
+                  <p>“To meet the new codes, garage doors must have heavier gauge tracking and springs to help keep them in place under extreme wind loads,” added Westerfield. “Retrofitting a door with new hardware won’t provide the same structural integrity as a new door in the event of a storm.” Homeowners who have not replaced their garage door since the code took effect should consider installing a code-approved, reinforced model.</p>
+                  <p>Insurance companies in Miami-Dade and Broward counties most of the time give substantial discounts for garage doors and other exterior building products that meet or exceed the local building code, including meeting wind-borne debris requirements not mandated. This means that installing a new garage door with the large missile impact rating may reduce your insurance premiums. Please check with your insurance agent for details.</p>
+                </v-card>
 
-                  <v-card flat wrap color="transparent" class="ma-0">
+                <v-card flat color="transparent" class="ma-3">
+                  <v-img min-width="100%" src="../assets/garage1.jpg"></v-img>
+                </v-card>
+                <v-card flat color="transparent" class="ma-3">
+                  <v-img min-width="100%" src="../assets/garage2.jpg"></v-img>
+                </v-card>
+                <v-card flat color="transparent" class="ma-3">
+                  <v-img min-width="100%" src="../assets/garage3.jpg"></v-img>
+                </v-card>
+               
+                <v-divider></v-divider>
+                <!----------------------- Permitting Information Section ------------------------------->
+
+                <v-card flat>
+                  <v-card flat class="mt-1">
                     <v-card-title
-                      class="display-1 font-weight-black pa-2 text-center fix"
-                    >24G Galvanized Steel Storm Panels</v-card-title>
+                      class="display-1 font-weight-black black--text text-center justify-center fix"
+                    >Permitting Information</v-card-title>
+                    <v-card-text
+                      class="black--text text-center justify-center"
+                    >Linked here are specific documents necessary for home owners to apply for the shutters permit</v-card-text>
                   </v-card>
-                  <ul>
-                    <li>Protect windows and doors from winds over 150 mph</li>
-                    <li>Have a low density for a lightweight product</li>
-                    <li>Have a thickness of .023</li>
-                  </ul>
-                  <p class="mt-5">
-                    The Eyewall Armor® StormLoc™ storm panels have undergone
-                    extensive research and testing, performing superbly in
-                    wind conditions exceeding 180mph, meeting the current
-                    Florida Building Code and International Building Code
-                    wind standard (ASCE 7-10). They are also in accordance
-                    with A.S.T.M. E1886-E1996, and the High Velocity
-                    Hurricane Zone (HVHZ) TAS 201, 202 and 203 (formerly
-                    Miami-Dade PA 201, 202 & 203), able to withstand
-                    substantial impact from debris as tested for 9lb.
-                    large missile impact.
-                  </p>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/steelPanel.jpg"></v-img>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/plasticPanel.jpg"></v-img>
+                  <v-layout align-center justify-center row>
+                    <v-btn
+                      href="https://www.floridabuilding.org/upload/PR_Instl_Docs/FL17552_R1_II_AD15-11%2002.27.15%20SS.pdf"
+                      min-width="20em"
+                      class="ma-3"
+                    >Building Code approval</v-btn>
+                    <v-btn
+                      href="https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqvYdq2pQ%2FXXJtTn%2F81FqV7RBEg%2FoHRt6n7BrXMJiv6hFA%3D%3D"
+                      min-width="20em"
+                      class="ma-3"
+                    >Product certification</v-btn>
+                  </v-layout>
                 </v-card>
               </v-flex>
               <!------------------------ Start Side Panel  ------------------------------------------------------------->
@@ -160,7 +144,7 @@
                 </v-card>
                 <v-card flat color="transparent">
                   <v-card flat color="transparent" class="ma-0">
-                    <v-img min-width="10em" class="ma-4" src="../assets/eyewall.gif"></v-img>
+                    <v-img min-width="10em" class="ma-4" src="../assets/genesis.png"></v-img>
                   </v-card>
 
                   <v-card
@@ -168,21 +152,27 @@
                     color="transparent"
                     class="mt-4 ma-3 body-1 font-weight-light text-justify"
                   >
-                    <li>Most affordable type of approved storm protection!</li>
-                    <li>Our ultra-light .018” (28 gauge), and .023” (24 gauge) galvanized steel Eyewall Armor® panels with rolled safety edges are tested for 9-lb. large missile impact to A.S.T.M. E1886 and E1996 standards for use in the Florida Building Code and throughout the International Building Code areas.</li>
-                    <li>Unparalleled Hurricane Protection.</li>
-                    <li>Lightweight.</li>
-                    <li>Corrosion resistant.</li>
-                    <li>Affordable and cost effective</li>
-                    <li>Easy Installation.</li>
-                    <li>Added property value.</li>
-                    <li>Reduced insurance costs.</li>
-                    <li>Multiple track options.</li>
-                    <li>Panels available in Mill Finish, Galvanized, or Clear.</li>
-                    <li>Tracks available in White or Bronze.</li>
-                    <li>In-house customer service and technical support.</li>
-                    <li>Patented clear-metal-clear applications.</li>
-                    <li>Patents #US 6,868,642 B2 and US 6,615,555 B2</li>
+                    <p>
+                      Genesis Accordion Hurricane shutters are the shutters that we source and they
+                      can withstand wind load pressure of +150/-200.
+                      Also, they have been designed to be used in high rises, going up to the 50th floor,
+                      making them a great manufacturing option due to their versatility.
+                    </p>
+                    <p>
+                      Three centermate options available, (Centermate, Unibox, Unimate). Our centermates
+                      are made of one single piece, not requiring
+                      a male and female. The unimate option allows for the use of locking pins and push lock.
+                    </p>
+                    <p>
+                      Compact stacking is a great feature of the Genesis Shutter. The unimate centermate makes
+                      it possible for the shutter stack to take up less space. This feature gives the shutters,
+                      when opened, a more elegant and discreet look.
+                    </p>
+                    <p>
+                      Genesis has a blade coverage of 7 inches, where most shutters have coverage of 6 to 6.5
+                      inches. This allows for less shutter blades to cover the same area. Keep in mind that
+                      shutter strength is not diminished due to this feature.
+                    </p>
                   </v-card>
                 </v-card>
               </v-flex>
@@ -197,7 +187,7 @@
 import QAform from "./QAform";
 
 export default {
-  name: "panels",
+  name: "Products",
 
   components: { QAform },
   methods: {

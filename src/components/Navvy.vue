@@ -49,6 +49,9 @@
 										<v-list-item to="/rolldown">
 											<v-list-item-title>Rolldown</v-list-item-title>
 										</v-list-item>
+										<v-list-item to="/garage">
+											<v-list-item-title>Impact Garage Doors</v-list-item-title>
+										</v-list-item>
 									</v-list>
 								</v-menu>
 							</v-card>
