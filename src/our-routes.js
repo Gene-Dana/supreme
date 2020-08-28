@@ -5,13 +5,19 @@ const Accordion = () => import(/* webpackPrefetch: true */ './components/Accordi
 const Panels = () => import(/* webpackPrefetch: true */ './components/Panels.vue')
 const Rolldown = () => import(/* webpackPrefetch: true */ './components/Rolldown.vue')
 const Garage = () => import(/* webpackPrefetch: true */ './components/Garage.vue')
+const Ygrene = () => import(/* webpackPrefetch: true */ './components/Ygrene.vue')
 const HowToMeasure = () => import(/* webpackPrefetch: true */ './components/HowToMeasure.vue')
 const SubmissionSuccess = () => import(/* webpackPrefetch: true */ './components/SubmissionSuccess.vue')
 const SubmissionFail = () => import(/* webpackPrefetch: true */ './components/SubmissionFail.vue')
 
 
+
 export default [
   // Redirects to /route-one as the default route.
+  {  
+    path: '/ygrene',
+    component: Ygrene,
+  },
   {  
     path: '/',
     redirect: '/home'

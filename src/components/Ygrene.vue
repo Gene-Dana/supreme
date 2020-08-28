@@ -14,14 +14,8 @@
 					<v-img :src="require('../assets/GetNow.png')" min-width="50%"></v-img>
                 </v-card>-->
 
-                <v-card flat wrap color="transparent" class="ma-0">
-                  <v-card-title
-                    class="display-2 font-weight-black pa-2 text-center fix"
-                  >Accordion Shutters</v-card-title>
-                </v-card>
-
                 <v-card flat color="transparent" class="my-0 mx-3">
-                  <v-img height="15em" src="../assets/accordion-product.jpg"></v-img>
+                  <v-img height src="../assets/ygrene_banner.png"></v-img>
                 </v-card>
 
                 <v-card
@@ -29,50 +23,53 @@
                   color="transparent"
                   class="mt-4 ma-3 body-1 font-weight-medium text-justify"
                 >
-                  <p>
-                    Accordion Shutters are one of the most popular choice of storm protection for homeowners and businesses
-                    throughout South Florida and surrounding areas. Accordion Shutters provide simple but highly effective
-                    means of storm protection. The Accordion Shutter provides protection against category 5 winds, flying
-                    debris, theft and forced entry, reduces noise, and provides everyday privacy when in use.
-                  </p>
                   <v-card flat wrap color="transparent" class="ma-0">
+                    <v-card-title class="display-1 font-weight-black pa-2 text-center fix">
+                      Zero down financing
+                      for home repairs that simply can’t wait
+                    </v-card-title>
+                  </v-card>
+
+                  <v-layout align-center justify-center row class="ma-4 mb-4">
+                    <v-card flat class="ma-2" width="130">
+                      <v-img aspect-ratio="3" contain src="../assets/yg1.png"></v-img>
+                      <v-card-text>No money out of pocket</v-card-text>
+                    </v-card>
+                    <v-card flat class="ma-2" width="130">
+                      <v-img aspect-ratio="3" contain src="../assets/yg2.png"></v-img>
+                      <v-card-text>No Payments For Up To A Year Or More</v-card-text>
+                    </v-card>
+                    <v-card flat class="ma-2" width="130">
+                      <v-img aspect-ratio="3" contain src="../assets/yg3.png"></v-img>
+                      <v-card-text>Approval Based Primarily on Home Equity</v-card-text>
+                    </v-card>
+                    <v-card flat class="ma-2" width="130">
+                      <v-img aspect-ratio="3" contain src="../assets/yg4.png"></v-img>
+                      <v-card-text>No Minimum Credit Score Required</v-card-text>
+                    </v-card>
+                    <v-card flat class="ma-2" width="130">
+                      <v-img aspect-ratio="3" contain src="../assets/yg5.png"></v-img>
+                      <v-card-text>Get Prequalified In Minutes</v-card-text>
+                    </v-card>
+                  </v-layout>
+
+                  <v-card flat wrap color="transparent" class="ma-0 mb-4">
                     <v-card-title
                       class="display-1 font-weight-black pa-2 text-center fix"
-                    >Accordion Shutters Design</v-card-title>
+                    >Ygrene simplifies the home improvement financing process.</v-card-title>
                   </v-card>
-                  <p>
-                    The Accordion Shutter is a durable shutter that moves horizontally between an upper and lower track, with
-                    interlocking aluminum blades making up the shutter’s protective wall. Covering large spans, these shutters
-                    can be folded away for an unobstructed view. Also for larger areas, there can be a center opening,
-                    allowing half of the shutter to move towards the left. From the inside or out, these shutters can be
-                    closed, locked, and secured, keeping your belongings safe. Your home or business are structures that are
-                    well thought out when it comes to layout, color, and more. We have gone to great lengths to ensure that
-                    our accordion style shutters can match with many different types of homes so that they do not stick out
-                    too much.
-                  </p>
+  <v-card flat>
+                  <iframe
+                    class
+                    id="vimeo-184027168"
+                    width="100%"
+                   
+                    src="//player.vimeo.com/video/184027168?width=640&amp;height=360&amp;color=00adef&amp;portrait=1&amp;title=1&amp;byline=1&amp;autoplay=0&amp;loop=0&amp;player_id=vimeo-184027168"
+                    allowfullscreen
+                  ></iframe>
+  </v-card>
                 </v-card>
 
-                <v-card flat wrap color="transparent" class="ma-0">
-                  <v-card-title
-                    class="display-1 font-weight-black pa-2 text-center fix"
-                  >Colors Available:</v-card-title>
-                </v-card>
-
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/colors.png"></v-img>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/accord1.jpg"></v-img>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/accord2.jpg"></v-img>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/accord3.jpg"></v-img>
-                </v-card>
-                <v-card flat color="transparent" class="ma-3">
-                  <v-img min-width="100%" src="../assets/accord4.jpg"></v-img>
-                </v-card>
                 <v-divider></v-divider>
                 <!----------------------- Permitting Information Section ------------------------------->
 
@@ -110,24 +107,24 @@
                 >
                   <v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
                 </v-card>
-               <router-link to="/accordion">
+                <router-link to="/free quote">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/accordion_banner.png"></v-img>
+                    <v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/panels">
+                <router-link to="/free quote">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/panel_banner.png"></v-img>
+                    <v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/rolldown">
+                <router-link to="/free quote">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/rolldown_banner.png"></v-img>
+                    <v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/garage">
+                <router-link to="/free quote">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/impact_banner.png"></v-img>
+                    <v-img width="100%" src="../assets/impact_garage.jpg"></v-img>
                   </v-card>
                 </router-link>
                 <v-card
@@ -137,15 +134,9 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text fix">100% FINANCING AVAILABLE</v-card-title>
+                  
                 </v-card>
-                <v-card>
-                  <router-link to="/ygrene">
-                    <v-card class="px-3 py-4 mb-3" flat>
-                      <v-img width="100%" src="../assets/ygrene.jpg"></v-img>
-                    </v-card>
-                  </router-link>
-                </v-card>
+                
                 <v-card
                   flat
                   color="red"
@@ -153,7 +144,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text fix">QUESTIONS? CONTACT US!</v-card-title>
+                  <v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
                 </v-card>
                 <QAform></QAform>
                 <v-card
@@ -163,7 +154,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text mt-3 fix">Description</v-card-title>
+                  <v-card-title class="justify-center title white--text mt-3">Description</v-card-title>
                 </v-card>
                 <v-card flat color="transparent">
                   <v-card flat color="transparent" class="ma-0">

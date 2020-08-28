@@ -37,7 +37,7 @@
                   </v-card>
                   <p>“As the largest opening on a house, the loss of a garage door during a hurricane can lead to an uncontrolled buildup of internal pressure resulting in a complete or partial blowout of the entire roof system and supporting walls” and “Garage doors are now considered to be one of the most important parts of a building’s structure in regards to maintaining its structural integrity during a hurricane,” said Mark Westerfield, manager of product development and engineering for Clopay. Building Products Company, the largest U.S. manufacturer of residential garage doors.</p>
                   <p>“To meet the new codes, garage doors must have heavier gauge tracking and springs to help keep them in place under extreme wind loads,” added Westerfield. “Retrofitting a door with new hardware won’t provide the same structural integrity as a new door in the event of a storm.” Homeowners who have not replaced their garage door since the code took effect should consider installing a code-approved, reinforced model.</p>
-                  <p>Insurance companies in Miami-Dade and Broward counties most of the time give substantial discounts for garage doors and other exterior building products that meet or exceed the local building code, including meeting wind-borne debris requirements not mandated. This means that installing a new garage door with the large missile impact rating may reduce your insurance premiums. Please check with your insurance agent for details.</p>
+                  <p>Most insurance companies give substantial discounts for garage doors and other exterior building products that meet or exceed the local building code, including meeting wind-borne debris requirements not mandated. This means that installing a new garage door with the large missile impact rating may reduce your insurance premiums. Please check with your insurance agent for details.</p>
                 </v-card>
 
                 <v-card flat color="transparent" class="ma-3">
@@ -51,30 +51,7 @@
                 </v-card>
                
                 <v-divider></v-divider>
-                <!----------------------- Permitting Information Section ------------------------------->
-
-                <v-card flat>
-                  <v-card flat class="mt-1">
-                    <v-card-title
-                      class="display-1 font-weight-black black--text text-center justify-center fix"
-                    >Permitting Information</v-card-title>
-                    <v-card-text
-                      class="black--text text-center justify-center"
-                    >Linked here are specific documents necessary for home owners to apply for the shutters permit</v-card-text>
-                  </v-card>
-                  <v-layout align-center justify-center row>
-                    <v-btn
-                      href="https://www.floridabuilding.org/upload/PR_Instl_Docs/FL17552_R1_II_AD15-11%2002.27.15%20SS.pdf"
-                      min-width="20em"
-                      class="ma-3"
-                    >Building Code approval</v-btn>
-                    <v-btn
-                      href="https://www.floridabuilding.org/pr/pr_app_dtl.aspx?param=wGEVXQwtDqvYdq2pQ%2FXXJtTn%2F81FqV7RBEg%2FoHRt6n7BrXMJiv6hFA%3D%3D"
-                      min-width="20em"
-                      class="ma-3"
-                    >Product certification</v-btn>
-                  </v-layout>
-                </v-card>
+                
               </v-flex>
               <!------------------------ Start Side Panel  ------------------------------------------------------------->
               <v-flex xs12 sm4 md4 lg4 xl4>
@@ -85,26 +62,26 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">GET A FREE QUOTE TODAY!</v-card-title>
                 </v-card>
-                <router-link to="/free quote">
+               <router-link to="/accordion">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/accordion_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/panels">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/panel_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/rolldown">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/rolldown_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/garage">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/impact_garage.jpg"></v-img>
+                    <v-img width="100%" src="../assets/impact_banner.png"></v-img>
                   </v-card>
                 </router-link>
                 <v-card
@@ -114,14 +91,14 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">FINANCING AVAILABLE</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">100% FINANCING AVAILABLE</v-card-title>
                 </v-card>
                 <v-card>
-                  <a href="https://ygrene.com/">
+                  <router-link to="/ygrene">
                     <v-card class="px-3 py-4 mb-3" flat>
                       <v-img width="100%" src="../assets/ygrene.jpg"></v-img>
                     </v-card>
-                  </a>
+                  </router-link>
                 </v-card>
                 <v-card
                   flat
@@ -130,7 +107,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">QUESTIONS? CONTACT US!</v-card-title>
                 </v-card>
                 <QAform></QAform>
                 <v-card

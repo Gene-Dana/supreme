@@ -123,24 +123,24 @@
                 >
                   <v-card-title class="justify-center title white--text">GET A FREE QUOTE TODAY!</v-card-title>
                 </v-card>
-                <router-link to="/free quote">
+                <router-link to="/accordion">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/accordion-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/accordion_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/panels">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/storm-panel-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/panel_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/rolldown">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/rolldown-shutter-pricing.jpg"></v-img>
+                    <v-img width="100%" src="../assets/rolldown_banner.png"></v-img>
                   </v-card>
                 </router-link>
-                <router-link to="/free quote">
+                <router-link to="/garage">
                   <v-card class="px-3 py-4" flat>
-                    <v-img width="100%" src="../assets/impact_garage.jpg"></v-img>
+                    <v-img width="100%" src="../assets/impact_banner.png"></v-img>
                   </v-card>
                 </router-link>
                 <v-card
@@ -150,14 +150,16 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">FINANCING AVAILABLE</v-card-title>
+                  <v-card-title
+                    class="justify-center title white--text fix"
+                  >100% FINANCING AVAILABLE</v-card-title>
                 </v-card>
                 <v-card>
-                  <a href="https://ygrene.com/">
+                  <router-link to="/ygrene">
                     <v-card class="px-3 py-4 mb-3" flat>
                       <v-img width="100%" src="../assets/ygrene.jpg"></v-img>
                     </v-card>
-                  </a>
+                  </router-link>
                 </v-card>
                 <v-card
                   flat
@@ -166,7 +168,7 @@
                   max-height="15em"
                   class="mx-auto px-3 text-center"
                 >
-                  <v-card-title class="justify-center title white--text">QUESTIONS? CONTACT US!</v-card-title>
+                  <v-card-title class="justify-center title white--text fix">QUESTIONS? CONTACT US!</v-card-title>
                 </v-card>
                 <QAform></QAform>
               </v-flex>

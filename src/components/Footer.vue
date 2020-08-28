@@ -4,9 +4,9 @@
       <v-btn to="/home" color="white" text rounded class="my-2">Home</v-btn>
       <v-btn to="/how to measure" color="white" text rounded class="my-2">How To Measure</v-btn>
       <v-btn to="/Free Quote" color="white" text rounded class="my-2">Free Quote</v-btn>
-      <v-col class="red py-4 text-center white--text" cols="12">
+      <v-col class="red py-4 text-center white--text " cols="12">
         {{ new Date().getFullYear() }} —
-        <strong>Supreme Hurricane Shutters CC# 20-AL-21960-X </strong>
+        <strong>Supreme Hurricane Shutters</strong> <p class="fix" >CC# 20-AL-21960-X </p>
         
       </v-col>
     </v-row>
@@ -20,3 +20,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.fix {
+  word-break: normal;
+}
+</style>
