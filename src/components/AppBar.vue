@@ -5,14 +5,14 @@
         <v-layout align-center justify-center>
           <v-flex>
             <v-layout justify-center row>
-              <a href="tel:9549473700" style="text-decoration: none;">
+              <a href="tel:9543614945" style="text-decoration: none;">
                 <v-card flat tile class="transparent">
                   <v-icon class="text-no-wrap font-weight-black white--text">phone</v-icon>
                 </v-card>
               </a>
-              <a href="tel:9549473700">
+              <a href="tel:9543614945">
                 <v-card flat class="transparent">
-                  <v-card-text class="pa-2 font-weight-bold white--text">(954) 947-3700</v-card-text>
+                  <v-card-text class="pa-2 font-weight-bold white--text">(954) 361-4945</v-card-text>
                 </v-card>
               </a>
             </v-layout>
