@@ -1,5 +1,3 @@
-
-
 <template>
   <v-container class="ma-0 pa-3">
     <form
@@ -115,7 +113,7 @@ export default {
       axios({
         method: "post",
         url:
-          "https://us-central1-mail-server-301117.cloudfunctions.net/sendMail?type=supreme&location=main&name=" +
+          "https://us-central1-mail-server-301117.cloudfunctions.net/sendMail?type=supreme&location=south_fl&name=" +
           this.form2.name +
           "&number=" +
           this.form2.number +
